@@ -75,9 +75,9 @@ export default function PartnersSection() {
           100+ Corporate Partners & 40+ School Partners
         </p>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <div className="flex gap-8 animate-scroll">
-            {[...partnerLogos, ...partnerLogos, ...partnerLogos].map((partner, index) => (
+            {[...partnerLogos, ...partnerLogos].map((partner, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 w-40 h-24 bg-white rounded-md flex items-center justify-center p-4 border"
@@ -100,11 +100,12 @@ export default function PartnersSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% / 3));
+            transform: translateX(-50%);
           }
         }
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 15s linear infinite;
+          display: flex;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
