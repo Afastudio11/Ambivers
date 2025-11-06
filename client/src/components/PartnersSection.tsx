@@ -78,17 +78,17 @@ export default function PartnersSection() {
         </p>
 
         <div className="relative overflow-hidden">
-          <div className="flex gap-8 animate-scroll">
+          <div className="flex gap-12 animate-scroll">
             {[...partnerLogos, ...partnerLogos].map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-40 h-24 bg-white rounded-md flex items-center justify-center p-4 border"
+                className="flex-shrink-0 flex items-center justify-center"
                 data-testid={`partner-logo-${index}`}
               >
                 <img 
                   src={partner.logo} 
                   alt={partner.name}
-                  className="max-w-full max-h-full object-contain"
+                  className="h-16 w-auto object-contain logo-white-filter"
                 />
               </div>
             ))}
@@ -106,12 +106,16 @@ export default function PartnersSection() {
           }
         }
         .animate-scroll {
-          animation: scroll 22s linear infinite;
+          animation: scroll 50s linear infinite;
           display: inline-flex;
           width: max-content;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
+        }
+        .logo-white-filter {
+          filter: brightness(0) invert(1);
+          opacity: 0.9;
         }
       `}</style>
     </section>
