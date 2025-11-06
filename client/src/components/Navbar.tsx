@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@assets/WhatsApp Image 2025-11-06 at 19.50.48_f5eb7dd9_1762447219533.jpg";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,33 +38,34 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 hover-elevate rounded-md p-2 -ml-2"
+            className="flex items-center hover-elevate rounded-md p-2 -ml-2"
             data-testid="button-logo"
           >
-            <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">A</span>
-            </div>
-            <span className="font-bold text-xl">Ambivers</span>
+            <img 
+              src={logoImage} 
+              alt="Ambivers" 
+              className="h-10 w-auto object-contain"
+            />
           </button>
 
           <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection("program")}
-              className="text-foreground hover:text-primary transition-colors" 
+              className="text-foreground hover:text-accent transition-colors font-medium" 
               data-testid="link-program"
             >
               Program
             </button>
             <button 
               onClick={() => scrollToSection("tentang-kami")}
-              className="text-foreground hover:text-primary transition-colors" 
+              className="text-foreground hover:text-accent transition-colors font-medium" 
               data-testid="link-tentang"
             >
               Tentang Kami
             </button>
             <button 
               onClick={() => scrollToSection("testimoni")}
-              className="text-foreground hover:text-primary transition-colors" 
+              className="text-foreground hover:text-accent transition-colors font-medium" 
               data-testid="link-testimoni"
             >
               Testimoni
@@ -94,21 +96,21 @@ export default function Navbar() {
           <div className="px-4 py-6 space-y-4">
             <button
               onClick={() => scrollToSection("program")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2 font-medium"
               data-testid="link-program-mobile"
             >
               Program
             </button>
             <button
               onClick={() => scrollToSection("tentang-kami")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2 font-medium"
               data-testid="link-tentang-mobile"
             >
               Tentang Kami
             </button>
             <button
               onClick={() => scrollToSection("testimoni")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2 font-medium"
               data-testid="link-testimoni-mobile"
             >
               Testimoni
