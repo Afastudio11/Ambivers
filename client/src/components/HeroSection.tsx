@@ -20,36 +20,36 @@ export default function HeroSection() {
       id: 1,
       tag: "@ambivers.foundation",
       bgColor: "bg-purple-600",
-      rotation: "-rotate-12 -translate-x-32 -translate-y-8",
-      zIndex: "z-10"
+      rotation: "-rotate-6",
+      position: "left-0"
     },
     {
       id: 2,
       tag: "@studyabroad",
       bgColor: "bg-yellow-500",
-      rotation: "-rotate-6 -translate-x-16 translate-y-4",
-      zIndex: "z-20"
+      rotation: "-rotate-3",
+      position: "left-1/4 -translate-x-1/2"
     },
     {
       id: 3,
       tag: "@asyp",
       bgColor: "bg-red-600",
-      rotation: "rotate-3 translate-y-2",
-      zIndex: "z-30"
+      rotation: "rotate-2",
+      position: "left-1/2 -translate-x-1/2"
     },
     {
       id: 4,
       tag: "@bimbel.utbk",
       bgColor: "bg-blue-600",
-      rotation: "rotate-6 translate-x-16 -translate-y-6",
-      zIndex: "z-20"
+      rotation: "-rotate-2",
+      position: "left-3/4 -translate-x-1/2"
     },
     {
       id: 5,
       tag: "@ambassador",
       bgColor: "bg-green-600",
-      rotation: "rotate-12 translate-x-32 translate-y-8",
-      zIndex: "z-10"
+      rotation: "rotate-6",
+      position: "right-0"
     }
   ];
 
@@ -64,25 +64,27 @@ export default function HeroSection() {
           </h1>
         </div>
 
-        <div className="relative h-[400px] md:h-[500px] mb-16 flex items-center justify-center perspective-1000">
-          {activityCards.map((card) => (
-            <div
-              key={card.id}
-              className={`absolute w-64 h-80 md:w-80 md:h-96 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:z-50 cursor-pointer ${card.bgColor} ${card.rotation} ${card.zIndex}`}
-              style={{
-                transformStyle: 'preserve-3d',
-              }}
-            >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent p-6">
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                  <span className="text-white text-sm font-medium">{card.tag}</span>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center text-white/30 text-6xl font-bold">
-                  PHOTO
+        <div className="relative h-[300px] md:h-[350px] mb-16 flex items-center justify-center">
+          <div className="flex gap-4 md:gap-6 items-center justify-center flex-wrap max-w-5xl mx-auto px-4">
+            {activityCards.map((card) => (
+              <div
+                key={card.id}
+                className={`w-44 h-56 md:w-56 md:h-72 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 cursor-pointer ${card.bgColor} ${card.rotation}`}
+                style={{
+                  transformStyle: 'preserve-3d',
+                }}
+              >
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent p-4">
+                  <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                    <span className="text-white text-xs font-medium">{card.tag}</span>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center text-white/30 text-5xl md:text-6xl font-bold">
+                    PHOTO
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
