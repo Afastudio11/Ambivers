@@ -1,150 +1,92 @@
-import { useState } from "react";
-import TestimonialCard from "./TestimonialCard";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import photo1 from "@assets/stock_images/professional_headsho_a770d498.jpg";
-import photo2 from "@assets/stock_images/professional_headsho_807d636b.jpg";
-import photo3 from "@assets/stock_images/professional_headsho_f9d70996.jpg";
-import photo4 from "@assets/stock_images/professional_headsho_74055331.jpg";
-import photo5 from "@assets/stock_images/professional_headsho_aaf355ba.jpg";
-import photo6 from "@assets/stock_images/professional_headsho_74c799fc.jpg";
-import photo7 from "@assets/stock_images/professional_headsho_cfb8f0ba.jpg";
-import photo8 from "@assets/stock_images/professional_headsho_8d055f6b.jpg";
-import photo9 from "@assets/stock_images/professional_headsho_f3907cb0.jpg";
-import photo10 from "@assets/stock_images/professional_headsho_bced7773.jpg";
+import { Star } from "lucide-react";
 
 export default function TestimonialsSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const testimonials = [
     {
+      company: "Universitas Indonesia",
+      rating: 4.9,
+      text: "Program Ambivers sangat membantu saya dalam persiapan UTBK. Materi yang diberikan sangat komprehensif dan pembahasan soalnya mudah dipahami.",
       name: "Ridha Alfinanianty",
-      institution: "Ilmu Gizi Universitas Indonesia",
-      text: "Memasuki kelas 12 itu erat banget kaitannya dengan dunia yang kanan kiri nya itu ngebahas tentang sbmptn dan lain-lain. Mulai dari ketatnya saingan, materi yang segunung, dan intinya gimana caranya biar kita bisa menjawab banyak soal secara tepat dengan waktu yang disediakan (mepet) hehe. Alhamdulillah wa syukurillah, ketika lg scroll ig aku ketemu platform yang beneran bikin love at the first sight. Soal-soal yang dibahas beneran sesuai dengan standar ujian masuk PTN.",
-      photo: photo1
+      username: "ridha_alfin_21"
     },
     {
-      name: "Margareth Angelin Chatarina",
-      institution: "Kedokteran Universitas Diponegoro",
-      text: "Menurut aku, ambivers sangat membantu dalam persiapan sbmptn waktu itu. Tahun 2020, covid sedang sangat tinggi penyebarannya sehingga aku tidak bisa keluar untuk bimbel offline. Selain itu, tipe soal utbk yang baru dan hanya tps membuat aku panik. Untungnya, ambivers membantuku dengan menyediakan latihan soal yang sangat variatif dan disertai pembahasan yang mudah dipahami.",
-      photo: photo2
+      company: "Universitas Diponegoro",
+      rating: 4.8,
+      text: "Mentornya sangat responsif dan membantu. Soal-soal latihannya benar-benar mirip dengan soal UTBK yang sebenarnya.",
+      name: "Margareth Angelin",
+      username: "margareth_angel"
     },
     {
+      company: "Universitas Sebelas Maret",
+      rating: 4.9,
+      text: "Sangat bermanfaat! Latihan soal yang variatif dan penjelasan yang detail membantu saya memahami materi dengan baik.",
       name: "Abdan Syakuro",
-      institution: "Sastra Daerah Universitas Sebelas Maret",
-      text: "Testimoni untuk bimbelnya bagus, kak, cukup untuk menambah latihan-latihan soal buat saya yang pada saat itu memang masih kurang sekali kemampuannya, terutama dalam kuantitatif. Jadi menurut saya bimbel yang saya ikuti sangat bermanfaat, juga dengan latihan-latihan soal beserta penjelasannya yang mudah dipahami. Begitu kak untuk testimoni dari saya, terima kasih sudah menjadi salah satu bagian dari kesuksesan saya di UNS.",
-      photo: photo3
+      username: "abdan_syakuro"
     },
     {
+      company: "Universitas Andalas",
+      rating: 5.0,
+      text: "Ambivers benar-benar worth it! Materi lengkap, mentor ramah, dan komunitas yang supportif. Sangat recommended!",
       name: "Intan Putri Syamtomi",
-      institution: "Pendidikan Dokter Universitas Andalas",
-      text: "Aku bener-bener beruntung bisa ketemu ambivers ini. Seperti namanya, orang orang di dalamnya bener-bener ambis ditambah saling berbagi. Materi yang di ajarin pun yang bener-bener aku butuhin, kalo ga tau aku bisa nanya secara personal ke kakaknya atau ke temen-temen di grup dan mereka bener-bener bantuin, walaupun kita dari berbagai provinsi. Ambivers bener-bener worth it sebagai tempat untuk persiapan untuk ujian masuk PTN.",
-      photo: photo4
+      username: "intan_syamtomi"
     },
     {
+      company: "Universitas Sriwijaya",
+      rating: 4.7,
+      text: "Program Student Ambassador sangat meningkatkan personal branding saya. Pengalaman yang luar biasa!",
       name: "Della Nurbait",
-      institution: "Universitas Sriwijaya",
-      text: "Aku merasa Student Ambassador ini meningkatkan personal branding apalagi disertai dengan upgrading class. Pesannya semoga bisa tetap berkontribusi banyak bersama nanti dan semoga bisa meet up sama Student Ambassador 2022. KERENNN POLL",
-      photo: photo5
+      username: "della_nurbait"
     },
     {
-      name: "Nabila Putri Herdianti",
-      institution: "Universitas Negeri Jakarta",
-      text: "Aku seneng banget bisa menjadi bagian dari Student Ambassador kali ini, bisa mendapatkan banyak pengalaman, relasi, menambah wawasan dan juga pengalaman. Semoga kedepannya banyak program-program yang semakin baik dan keren tentunya. Terima kasih Ambivers <3",
-      photo: photo6
-    },
-    {
-      name: "I Gusti Agung Ardhanareswari",
-      institution: "SMA Negeri 1 Kuta, Bali",
-      text: "Awalnya aku iseng daftar Ambivers Summer Youth Program (ASYP) dan ternyata kepilih! Selama 4 hari program, aku banyak belajar hal bermanfaat: personal branding dari Kak Asya, public speaking dari Kak Andika, serta leadership dan project management dari Kak Zeta. Selain materi, aku juga bisa praktik langsung lewat tugas-tugas kreatif dan project plan. Yang paling seru, aku ketemu banyak teman baru dari berbagai daerah!",
-      photo: photo7
-    },
-    {
-      name: "Niputu Sterefi Soyasa",
-      institution: "Peserta ASYP 2023",
-      text: "Kita belajar mengenai personal branding, public speaking, leadership, dan juga project management. Pengalaman yang sangat berharga dan berkesan!",
-      photo: photo8
-    },
-    {
-      name: "Marsya Olivia Irawan",
-      institution: "KIR MAN 2 Kota Bogor",
-      text: "Aku Marsha Olivia Irawan dari KIR MAN 2 Kota Bogor. Selama Ambivers Summer Youth Program 2023, aku belajar banyak hal baru, mulai dari personal branding, public speaking, leadership, hingga project management, yang langsung bisa aku praktikkan. Selain materi, aku dibimbing oleh kakak-kakak berpengalaman dan bertemu teman-teman hebat dari seluruh Indonesia. Pengalaman 4 hari ini benar-benar berkesan dan sangat membantu!",
-      photo: photo9
-    },
-    {
-      name: "Karisma Alif Nuziaki",
-      institution: "Peserta ASYP 2023",
-      text: "Project-project yang diberikan oleh kakak-kakak Ambivers itu sangat mengasah kemampuan kita, sehingga saya rasa ASYP tahun-tahun berikutnya dapat kalian ikuti juga, karena yang pasti ASYP 2023 ini sudah sangat mengajarkan saya banyak hal",
-      photo: photo10
+      company: "Universitas Negeri Jakarta",
+      rating: 4.9,
+      text: "Saya mendapatkan banyak pengalaman, relasi, dan wawasan baru. Program-programnya sangat keren dan bermanfaat!",
+      name: "Nabila Putri",
+      username: "nabila_putri_h"
     }
   ];
 
-  const slides = [];
-  for (let i = 0; i < testimonials.length; i += 2) {
-    slides.push(testimonials.slice(i, i + 2));
-  }
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   return (
-    <section id="testimoni" className="py-20 lg:py-32 bg-background">
+    <section id="testimoni" className="py-20 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
-          Apa Kata Mereka Tentang Belajar bersama Ambivers?
+          Our trusted <span className="bg-[#FF5733] text-white px-3 py-1 rounded-md">Clients</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-16">
-          Testimoni dari pelajar yang telah merasakan manfaat program Ambivers
+        <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+          Our mission is to drive progress and enhance the lives of our customers by delivering superior products and services that exceed expectations.
         </p>
 
-        <div className="relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            {slides[currentSlide]?.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                {...testimonial}
-                testId={`testimonial-${currentSlide}-${index}`}
-              />
-            ))}
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevSlide}
-              data-testid="button-prev-testimonial"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              data-testid={`testimonial-card-${index}`}
             >
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-
-            <div className="flex gap-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentSlide ? "bg-primary" : "bg-muted"
-                  }`}
-                  onClick={() => setCurrentSlide(index)}
-                  data-testid={`dot-${index}`}
-                />
-              ))}
+              <div className="flex items-start justify-between mb-4">
+                <div className="font-bold text-lg text-gray-900">
+                  {testimonial.company}
+                </div>
+                <div className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded-lg">
+                  <span className="font-semibold text-sm">{testimonial.rating}</span>
+                  <Star className="w-4 h-4 fill-green-500 text-green-500" />
+                </div>
+              </div>
+              
+              <p className="text-gray-700 text-sm mb-6 line-clamp-4">
+                {testimonial.text}
+              </p>
+              
+              <div>
+                <div className="font-bold text-gray-900 mb-1">
+                  {testimonial.name}
+                </div>
+                <div className="text-sm text-gray-500">
+                  {testimonial.username}
+                </div>
+              </div>
             </div>
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextSlide}
-              data-testid="button-next-testimonial"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </Button>
-          </div>
+          ))}
         </div>
       </div>
     </section>
