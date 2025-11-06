@@ -67,6 +67,30 @@ export default function PartnersSection() {
     { name: "Mentor", logo: mentorLogo }
   ];
 
+  const row1 = partnerLogos.slice(0, 11);
+  const row2 = partnerLogos.slice(11, 22);
+  const row3 = partnerLogos.slice(22);
+
+  const renderRow = (logos: typeof partnerLogos, index: number, reverse: boolean = false) => (
+    <div key={index} className="relative overflow-hidden mb-8">
+      <div className={`flex gap-12 ${reverse ? 'animate-scroll-reverse' : 'animate-scroll'}`}>
+        {[...logos, ...logos, ...logos].map((partner, idx) => (
+          <div
+            key={idx}
+            className="flex-shrink-0 flex items-center justify-center"
+            data-testid={`partner-logo-row${index}-${idx}`}
+          >
+            <img 
+              src={partner.logo} 
+              alt={partner.name}
+              className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <section className="py-20 bg-card overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -77,22 +101,10 @@ export default function PartnersSection() {
           100+ Corporate Partners & 40+ School Partners
         </p>
 
-        <div className="relative overflow-hidden">
-          <div className="flex gap-12 animate-scroll">
-            {[...partnerLogos, ...partnerLogos].map((partner, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 flex items-center justify-center"
-                data-testid={`partner-logo-${index}`}
-              >
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="h-16 w-auto object-contain logo-white-filter"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="space-y-4">
+          {renderRow(row1, 1, false)}
+          {renderRow(row2, 2, true)}
+          {renderRow(row3, 3, false)}
         </div>
       </div>
 
@@ -102,20 +114,30 @@ export default function PartnersSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% / 2));
+            transform: translateX(calc(-100% / 3));
+          }
+        }
+        @keyframes scroll-reverse {
+          0% {
+            transform: translateX(calc(-100% / 3));
+          }
+          100% {
+            transform: translateX(0);
           }
         }
         .animate-scroll {
-          animation: scroll 50s linear infinite;
+          animation: scroll 60s linear infinite;
           display: inline-flex;
           width: max-content;
         }
-        .animate-scroll:hover {
-          animation-play-state: paused;
+        .animate-scroll-reverse {
+          animation: scroll-reverse 60s linear infinite;
+          display: inline-flex;
+          width: max-content;
         }
-        .logo-white-filter {
-          filter: brightness(0) invert(1);
-          opacity: 0.9;
+        .animate-scroll:hover,
+        .animate-scroll-reverse:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>
