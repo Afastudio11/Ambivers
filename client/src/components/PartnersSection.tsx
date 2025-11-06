@@ -1,68 +1,46 @@
-import globalMillennialLogo from "@assets/1627104491_1762452204203.png";
-import briBankLogo from "@assets/FI004-_-BRI-12_1762452204203.png";
-import unpadLogo from "@assets/1612252446056_1762452204204.jpeg";
-import petaScholarLogo from "@assets/petascholar_1762452204204.jpg";
-import upnVeteranLogo from "@assets/logo_Universitas-Pembangunan-Nasional-Veteran-Jakarta-thumb_1762452204204.png";
-import uiLogo from "@assets/Universitas-Indonesia-Logo_1762452204204.png";
-import campuspediaLogo from "@assets/campuspedia_id_logo_1762452204205.jpeg";
-import nutrifoodLogo from "@assets/nutrifood.jpg";
-import mentorLulusLogo from "@assets/mentor-lulus-kampus.jpg";
-import digifluxLogo from "@assets/digiflux.jpg";
-import byULogo from "@assets/by-u.png";
-import sahabatCpnsLogo from "@assets/sahabat-cpns.png";
-import diBalikMasaRemajaLogo from "@assets/logo biru_1762452204206.png";
-import talentGrowthLogo from "@assets/Logo Talent Growth _1762452204207.png";
-import lifeVitaeLogo from "@assets/IMG_3220_1762452204207.png";
-import jdLogo from "@assets/logo-jd-dark_1762452204207.png";
-import gandengFoundationLogo from "@assets/IMG_9016_1762452204208.png";
-import nyalaOcbcLogo from "@assets/IMG_2579_1762452204208.png";
-import smartMakaraLogo from "@assets/Logo Smart Makara UI_1762452204208.png";
-import grabLogo from "@assets/grab.png";
-import temanSalingBerbagiLogo from "@assets/Yayasan Teman Saling Berbagi_1762452390584.png";
-import fourierLogo from "@assets/Logo Fourier_1762452390584.png";
-import aiesecLogo from "@assets/AIESEC_Logo_1762452390584.png";
-import gokampusLogo from "@assets/Logo GoKampus_1762452390585.png";
-import kelasPejuangLogo from "@assets/kelas-pejuang.png";
-import koperasiIndonesiaLogo from "@assets/koperasi-indonesia.png";
-import dinoTeamLogo from "@assets/dino-team.png";
-import bsiMaslahatLogo from "@assets/BSI-MASLAHAT_1762452390586.png";
-import agrilabsLogo from "@assets/agrilabs.png";
-import infimapLogo from "@assets/infimap.png";
-import bsiBankLogo from "@assets/bsi-bank.jpg";
+import globalMillennialLogo from "@assets/1_1762456733564.png";
+import brightInternshipsLogo from "@assets/2_1762456733564.png";
+import dutuTeamLogo from "@assets/3_1762456733564.png";
+import bsiMaslahatLogo from "@assets/4_1762456733565.png";
+import universitySealLogo from "@assets/5_1762456733565.png";
+import blueCircleLogo from "@assets/6_1762456733565.png";
+import agrilabsLogo from "@assets/7_1762456733565.png";
+import nutrifoodLogo from "@assets/8_1762456733566.png";
+import infimapLogo from "@assets/9_1762456733566.png";
+import bsiBankLogo from "@assets/10_1762456733566.png";
+import grabLogo from "@assets/11_1762456733566.png";
+import gandengFoundationLogo from "@assets/12_1762456733567.png";
+import talentGrowthLogo from "@assets/13_1762456733567.png";
+import jdLogo from "@assets/14_1762456733567.png";
+import nyalaOcbcLogo from "@assets/15_1762456733568.png";
+import smartMakaraLogo from "@assets/16_1762456733568.png";
+import colorfulIconLogo from "@assets/17_1762456733568.png";
+import fourierLogo from "@assets/18_1762456733569.png";
+import aiesecLogo from "@assets/19_1762456733569.png";
+import gokampusLogo from "@assets/20_1762456733564.png";
 
 export default function PartnersSection() {
   const partnerLogos = [
     { name: "Global Millennial Group", logo: globalMillennialLogo },
-    { name: "Bank BRI", logo: briBankLogo },
-    { name: "Universitas Padjadjaran", logo: unpadLogo },
-    { name: "Peta Scholar", logo: petaScholarLogo },
-    { name: "UPN Veteran Jakarta", logo: upnVeteranLogo },
-    { name: "Universitas Indonesia", logo: uiLogo },
-    { name: "Campuspedia", logo: campuspediaLogo },
+    { name: "Bright Internships", logo: brightInternshipsLogo },
+    { name: "Dutu Team", logo: dutuTeamLogo },
+    { name: "BSI Maslahat", logo: bsiMaslahatLogo },
+    { name: "University Partner", logo: universitySealLogo },
+    { name: "Blue Circle Partner", logo: blueCircleLogo },
+    { name: "Agrilabs", logo: agrilabsLogo },
     { name: "Nutrifood", logo: nutrifoodLogo },
-    { name: "Mentor Lulus Kampus", logo: mentorLulusLogo },
-    { name: "Digiflux", logo: digifluxLogo },
-    { name: "by.U", logo: byULogo },
-    { name: "Sahabat CPNS", logo: sahabatCpnsLogo },
-    { name: "Di Balik Masa Remaja", logo: diBalikMasaRemajaLogo },
-    { name: "Talent Growth", logo: talentGrowthLogo },
-    { name: "LifeVitae", logo: lifeVitaeLogo },
-    { name: "JD.id", logo: jdLogo },
+    { name: "Infimap", logo: infimapLogo },
+    { name: "Bank Syariah Indonesia", logo: bsiBankLogo },
+    { name: "Grab", logo: grabLogo },
     { name: "Gandeng Foundation", logo: gandengFoundationLogo },
+    { name: "Talent Growth", logo: talentGrowthLogo },
+    { name: "JD Jalur Dalam", logo: jdLogo },
     { name: "Nyala OCBC NISP", logo: nyalaOcbcLogo },
     { name: "Smart Makara UI", logo: smartMakaraLogo },
-    { name: "Grab", logo: grabLogo },
-    { name: "Yayasan Teman Saling Berbagi", logo: temanSalingBerbagiLogo },
+    { name: "Colorful Partner", logo: colorfulIconLogo },
     { name: "Fourier", logo: fourierLogo },
     { name: "AIESEC", logo: aiesecLogo },
-    { name: "GoKampus", logo: gokampusLogo },
-    { name: "Kelas Pejuang", logo: kelasPejuangLogo },
-    { name: "Koperasi Indonesia Dana Sejahtera", logo: koperasiIndonesiaLogo },
-    { name: "Dino Team", logo: dinoTeamLogo },
-    { name: "BSI Maslahat", logo: bsiMaslahatLogo },
-    { name: "Agrilabs", logo: agrilabsLogo },
-    { name: "Infimap", logo: infimapLogo },
-    { name: "Bank Syariah Indonesia", logo: bsiBankLogo }
+    { name: "GoKampus", logo: gokampusLogo }
   ];
 
   return (
