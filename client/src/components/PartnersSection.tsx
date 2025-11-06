@@ -104,7 +104,7 @@ export default function PartnersSection() {
           }
         }
         .animate-scroll {
-          animation: scroll 16s linear infinite;
+          animation: scroll 22s linear infinite;
           display: inline-flex;
           width: max-content;
         }
