@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section id="testimoni" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
           Apa Kata Mereka Tentang Belajar bersama Ambivers?
