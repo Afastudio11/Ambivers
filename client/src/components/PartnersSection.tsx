@@ -77,7 +77,7 @@ export default function PartnersSection() {
 
         <div className="relative">
           <div className="flex gap-8 animate-scroll">
-            {[...partnerLogos, ...partnerLogos].map((partner, index) => (
+            {[...partnerLogos, ...partnerLogos, ...partnerLogos, ...partnerLogos].map((partner, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 w-40 h-24 bg-white rounded-md flex items-center justify-center p-4 border"
@@ -104,7 +104,7 @@ export default function PartnersSection() {
           }
         }
         .animate-scroll {
-          animation: scroll 60s linear infinite;
+          animation: scroll 40s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
