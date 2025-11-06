@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? "bg-background/95 backdrop-blur-md border-b shadow-sm" : "bg-background/80 backdrop-blur-md border-b"
+      scrolled ? "bg-black/95 backdrop-blur-md border-b border-white/10 shadow-sm" : "bg-black/80 backdrop-blur-md border-b border-white/5"
     }`}>
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -51,21 +51,21 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection("program")}
-              className="text-foreground hover:text-accent transition-colors font-medium" 
+              className="text-white hover:text-[#FFC700] transition-colors font-medium" 
               data-testid="link-program"
             >
               Program
             </button>
             <button 
               onClick={() => scrollToSection("tentang-kami")}
-              className="text-foreground hover:text-accent transition-colors font-medium" 
+              className="text-white hover:text-[#FFC700] transition-colors font-medium" 
               data-testid="link-tentang"
             >
               Tentang Kami
             </button>
             <button 
               onClick={() => scrollToSection("testimoni")}
-              className="text-foreground hover:text-accent transition-colors font-medium" 
+              className="text-white hover:text-[#FFC700] transition-colors font-medium" 
               data-testid="link-testimoni"
             >
               Testimoni
@@ -73,16 +73,16 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" data-testid="button-masuk">
+            <Button variant="ghost" className="text-white hover:text-[#FFC700] hover:bg-white/10" data-testid="button-masuk">
               Masuk
             </Button>
-            <Button data-testid="button-daftar">
+            <Button className="bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar">
               Daftar
             </Button>
           </div>
 
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-menu-toggle"
           >
@@ -92,34 +92,34 @@ export default function Navbar() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden border-t bg-background" data-testid="mobile-menu">
+        <div className="md:hidden border-t border-white/10 bg-black" data-testid="mobile-menu">
           <div className="px-4 py-6 space-y-4">
             <button
               onClick={() => scrollToSection("program")}
-              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2 font-medium"
+              className="block w-full text-left text-white hover:text-[#FFC700] transition-colors py-2 font-medium"
               data-testid="link-program-mobile"
             >
               Program
             </button>
             <button
               onClick={() => scrollToSection("tentang-kami")}
-              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2 font-medium"
+              className="block w-full text-left text-white hover:text-[#FFC700] transition-colors py-2 font-medium"
               data-testid="link-tentang-mobile"
             >
               Tentang Kami
             </button>
             <button
               onClick={() => scrollToSection("testimoni")}
-              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2 font-medium"
+              className="block w-full text-left text-white hover:text-[#FFC700] transition-colors py-2 font-medium"
               data-testid="link-testimoni-mobile"
             >
               Testimoni
             </button>
             <div className="flex flex-col gap-2 pt-4">
-              <Button variant="ghost" className="w-full" data-testid="button-masuk-mobile">
+              <Button variant="ghost" className="w-full text-white hover:text-[#FFC700] hover:bg-white/10" data-testid="button-masuk-mobile">
                 Masuk
               </Button>
-              <Button className="w-full" data-testid="button-daftar-mobile">
+              <Button className="w-full bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar-mobile">
                 Daftar
               </Button>
             </div>
