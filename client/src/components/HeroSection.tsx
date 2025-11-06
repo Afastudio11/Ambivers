@@ -105,7 +105,7 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             onClick={scrollToProgram}
-            className="text-lg px-8 py-6 bg-[#FFC700] text-black hover:bg-[#FFD700]"
+            className="text-lg font-bold px-8 py-6 bg-[#FFC700] text-black hover:bg-[#FFD700]"
             data-testid="button-jelajahi"
           >
             Jelajahi Program Kami
