@@ -1,26 +1,82 @@
+import { useState, useEffect, useRef } from "react";
+
+function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = value / steps;
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      if (currentStep <= steps) {
+        setCount(Math.floor(increment * currentStep));
+      } else {
+        setCount(value);
+        clearInterval(timer);
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [isVisible, value]);
+
+  return (
+    <div ref={counterRef}>
+      {count.toLocaleString()}{suffix}
+    </div>
+  );
+}
+
 export default function StatisticsSection() {
   const stats = [
-    { number: "100+", label: "Corporate Partners" },
-    { number: "40+", label: "School Partners" },
-    { number: "50.000+", label: "Beneficiaries" },
-    { number: "34", label: "Covered Regions" },
-    { number: "90%", label: "Satisfaction of Users" }
+    { value: 100, suffix: "+", label: "Corporate Partners" },
+    { value: 40, suffix: "+", label: "School Partners" },
+    { value: 50000, suffix: "+", label: "Beneficiaries" },
+    { value: 34, suffix: "", label: "Covered Regions" },
+    { value: 90, suffix: "%", label: "Satisfaction of Users" }
   ];
 
   return (
-    <section className="py-20 bg-card">
+    <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16" data-testid="text-stats-title">
+        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16 text-white" data-testid="text-stats-title">
           Ambivers In Number
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center" data-testid={`stat-card-${index}`}>
-              <div className="text-4xl lg:text-6xl font-bold text-primary mb-2" data-testid={`stat-number-${index}`}>
-                {stat.number}
+              <div className="text-4xl lg:text-6xl font-bold text-[#FFC700] mb-2" data-testid={`stat-number-${index}`}>
+                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-sm lg:text-base text-muted-foreground" data-testid={`stat-label-${index}`}>
+              <div className="text-sm lg:text-base text-gray-300" data-testid={`stat-label-${index}`}>
                 {stat.label}
               </div>
             </div>
