@@ -18,6 +18,18 @@ import colorfulIconLogo from "@assets/17_1762456733568.png";
 import fourierLogo from "@assets/18_1762456733569.png";
 import aiesecLogo from "@assets/19_1762456733569.png";
 import gokampusLogo from "@assets/20_1762456733564.png";
+import kliqueLogo from "@assets/21_1762456855225.png";
+import kelasPejuangLogo from "@assets/22_1762456855225.png";
+import sahabatCpnsLogo from "@assets/23_1762456855226.png";
+import lifeVitaeLogo from "@assets/24_1762456855226.png";
+import uiLogo from "@assets/25_1762456855226.png";
+import upnLogo from "@assets/26_1762456855227.png";
+import briBankLogo from "@assets/27_1762456855227.png";
+import petaScholarLogo from "@assets/28_1762456855227.png";
+import campusPediaLogo from "@assets/29_1762456855227.png";
+import byULogo from "@assets/30_1762456855228.png";
+import digifluxLogo from "@assets/31_1762456855228.png";
+import mentorLogo from "@assets/32_1762456855225.png";
 
 export default function PartnersSection() {
   const partnerLogos = [
@@ -40,7 +52,19 @@ export default function PartnersSection() {
     { name: "Colorful Partner", logo: colorfulIconLogo },
     { name: "Fourier", logo: fourierLogo },
     { name: "AIESEC", logo: aiesecLogo },
-    { name: "GoKampus", logo: gokampusLogo }
+    { name: "GoKampus", logo: gokampusLogo },
+    { name: "KLIQUE", logo: kliqueLogo },
+    { name: "Kelas Pejuang", logo: kelasPejuangLogo },
+    { name: "Sahabat CPNS", logo: sahabatCpnsLogo },
+    { name: "LifeVitae", logo: lifeVitaeLogo },
+    { name: "Universitas Indonesia", logo: uiLogo },
+    { name: "UPN Veteran Jakarta", logo: upnLogo },
+    { name: "Bank BRI", logo: briBankLogo },
+    { name: "Peta Scholar", logo: petaScholarLogo },
+    { name: "Campus Pedia", logo: campusPediaLogo },
+    { name: "by.U", logo: byULogo },
+    { name: "Digiflux", logo: digifluxLogo },
+    { name: "Mentor", logo: mentorLogo }
   ];
 
   return (
