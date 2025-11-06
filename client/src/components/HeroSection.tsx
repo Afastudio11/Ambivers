@@ -21,41 +21,41 @@ export default function HeroSection() {
       tag: "@ambivers.foundation",
       bgColor: "bg-purple-600",
       rotation: "-rotate-6",
-      position: "left-0"
+      zIndex: "z-10"
     },
     {
       id: 2,
       tag: "@studyabroad",
       bgColor: "bg-yellow-500",
       rotation: "-rotate-3",
-      position: "left-1/4 -translate-x-1/2"
+      zIndex: "z-20"
     },
     {
       id: 3,
       tag: "@asyp",
       bgColor: "bg-red-600",
       rotation: "rotate-2",
-      position: "left-1/2 -translate-x-1/2"
+      zIndex: "z-30"
     },
     {
       id: 4,
       tag: "@bimbel.utbk",
       bgColor: "bg-blue-600",
       rotation: "-rotate-2",
-      position: "left-3/4 -translate-x-1/2"
+      zIndex: "z-20"
     },
     {
       id: 5,
       tag: "@ambassador",
       bgColor: "bg-green-600",
       rotation: "rotate-6",
-      position: "right-0"
+      zIndex: "z-10"
     }
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-32">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
             <span className="text-white">Tempat untuk menampilkan</span>
@@ -64,12 +64,12 @@ export default function HeroSection() {
           </h1>
         </div>
 
-        <div className="relative h-[300px] md:h-[350px] mb-16 flex items-center justify-center">
-          <div className="flex gap-4 md:gap-6 items-center justify-center flex-wrap max-w-5xl mx-auto px-4">
-            {activityCards.map((card) => (
+        <div className="relative h-[300px] md:h-[400px] mb-16 flex items-center justify-center">
+          <div className="flex items-center justify-center -space-x-12 md:-space-x-16">
+            {activityCards.map((card, index) => (
               <div
                 key={card.id}
-                className={`w-44 h-56 md:w-56 md:h-72 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 cursor-pointer ${card.bgColor} ${card.rotation}`}
+                className={`w-44 h-56 md:w-56 md:h-72 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer ${card.bgColor} ${card.rotation} ${card.zIndex}`}
                 style={{
                   transformStyle: 'preserve-3d',
                 }}
