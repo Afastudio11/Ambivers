@@ -1,4 +1,7 @@
 import { Button } from "@/components/ui/button";
+import photo1 from "@assets/ambivers-photo-1.jpg";
+import photo2 from "@assets/ambivers-photo-2.jpg";
+import photo3 from "@assets/ambivers-photo-3.jpg";
 
 export default function HeroSection() {
   const scrollToProgram = () => {
@@ -21,35 +24,40 @@ export default function HeroSection() {
       tag: "@ambivers.foundation",
       bgColor: "bg-purple-600",
       rotation: "-rotate-6",
-      zIndex: "z-10"
+      zIndex: "z-10",
+      image: photo3
     },
     {
       id: 2,
       tag: "@studyabroad",
       bgColor: "bg-yellow-500",
       rotation: "-rotate-3",
-      zIndex: "z-20"
+      zIndex: "z-20",
+      image: photo1
     },
     {
       id: 3,
       tag: "@asyp",
       bgColor: "bg-red-600",
       rotation: "rotate-2",
-      zIndex: "z-30"
+      zIndex: "z-30",
+      image: photo2
     },
     {
       id: 4,
       tag: "@bimbel.utbk",
       bgColor: "bg-blue-600",
       rotation: "-rotate-2",
-      zIndex: "z-20"
+      zIndex: "z-20",
+      image: photo3
     },
     {
       id: 5,
       tag: "@ambassador",
       bgColor: "bg-green-600",
       rotation: "rotate-6",
-      zIndex: "z-10"
+      zIndex: "z-10",
+      image: photo1
     }
   ];
 
@@ -74,18 +82,19 @@ export default function HeroSection() {
             {activityCards.map((card, index) => (
               <div
                 key={card.id}
-                className={`w-44 h-56 md:w-56 md:h-72 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer ${card.bgColor} ${card.rotation} ${card.zIndex}`}
+                className={`relative w-44 h-56 md:w-56 md:h-72 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer overflow-hidden ${card.rotation} ${card.zIndex}`}
                 style={{
                   transformStyle: 'preserve-3d',
                 }}
               >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent p-4">
-                  <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                    <span className="text-white text-xs font-medium">{card.tag}</span>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center text-white/30 text-5xl md:text-6xl font-bold">
-                    PHOTO
-                  </div>
+                <img 
+                  src={card.image} 
+                  alt={`Ambivers ${card.tag}`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
+                <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full z-10">
+                  <span className="text-white text-xs font-medium">{card.tag}</span>
                 </div>
               </div>
             ))}
