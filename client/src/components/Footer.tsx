@@ -1,6 +1,6 @@
 import { SiInstagram, SiX, SiTiktok, SiLinkedin } from "react-icons/si";
 import { Mail } from "lucide-react";
-import logoImage from "@assets/WhatsApp Image 2025-11-06 at 19.50.48_f5eb7dd9_1762447219533.jpg";
+import logoImage from "@assets/logo-ambivers.png";
 
 export default function Footer() {
   return (
