@@ -56,15 +56,20 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-32">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
             <span className="text-white">Tempat untuk menampilkan</span>
             <br />
             <span className="text-[#FFC700]">karya terbaikmu.</span>
           </h1>
+          
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="text-hero-description">
+            Ambivers memberikan ruang bagi pelajar untuk menampilkan karya dan pencapaian mereka,
+            serta membuka kesempatan lebih luas untuk berkembang.
+          </p>
         </div>
 
-        <div className="relative h-[300px] md:h-[400px] mb-16 flex items-center justify-center">
+        <div className="relative h-[300px] md:h-[400px] mb-12 flex items-center justify-center">
           <div className="flex items-center justify-center -space-x-12 md:-space-x-16">
             {activityCards.map((card, index) => (
               <div
@@ -87,30 +92,15 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto" data-testid="text-hero-description">
-            Ambivers memberikan ruang bagi pelajar untuk menampilkan karya dan pencapaian mereka,
-            serta membuka kesempatan lebih luas untuk berkembang.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 bg-black text-white border-2 border-white hover:bg-white hover:text-black transition-colors"
-              data-testid="button-mulai"
-            >
-              Mulai dari Rp99.99/bln
-            </Button>
-            <Button 
-              size="lg" 
-              onClick={scrollToProgram}
-              variant="ghost"
-              className="text-lg px-8 py-6 text-white hover:text-[#FFC700] hover:bg-white/10"
-              data-testid="button-selengkapnya"
-            >
-              Selengkapnya
-            </Button>
-          </div>
+        <div className="text-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+          <Button 
+            size="lg" 
+            onClick={scrollToProgram}
+            className="text-lg px-8 py-6 bg-[#FFC700] text-black hover:bg-[#FFD700]"
+            data-testid="button-jelajahi"
+          >
+            Jelajahi Program Kami
+          </Button>
         </div>
       </div>
     </section>
