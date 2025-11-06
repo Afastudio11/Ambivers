@@ -92,7 +92,7 @@ export default function PartnersSection() {
   );
 
   return (
-    <section className="py-20 bg-card overflow-hidden">
+    <section className="py-20 overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-partners-title">
           Our Partners
