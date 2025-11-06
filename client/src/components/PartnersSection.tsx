@@ -100,11 +100,11 @@ export default function PartnersSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-75%);
           }
         }
         .animate-scroll {
-          animation: scroll 40s linear infinite;
+          animation: scroll 25s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
