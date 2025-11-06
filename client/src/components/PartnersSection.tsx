@@ -17,6 +17,18 @@ import jdLogo from "@assets/logo-jd-dark_1762452204207.png";
 import gandengFoundationLogo from "@assets/IMG_9016_1762452204208.png";
 import nyalaOcbcLogo from "@assets/IMG_2579_1762452204208.png";
 import smartMakaraLogo from "@assets/Logo Smart Makara UI_1762452204208.png";
+import grabLogo from "@assets/grab.png";
+import temanSalingBerbagiLogo from "@assets/Yayasan Teman Saling Berbagi_1762452390584.png";
+import fourierLogo from "@assets/Logo Fourier_1762452390584.png";
+import aiesecLogo from "@assets/AIESEC_Logo_1762452390584.png";
+import gokampusLogo from "@assets/Logo GoKampus_1762452390585.png";
+import kelasPejuangLogo from "@assets/kelas-pejuang.png";
+import koperasiIndonesiaLogo from "@assets/koperasi-indonesia.png";
+import dinoTeamLogo from "@assets/dino-team.png";
+import bsiMaslahatLogo from "@assets/BSI-MASLAHAT_1762452390586.png";
+import agrilabsLogo from "@assets/agrilabs.png";
+import infimapLogo from "@assets/infimap.png";
+import bsiBankLogo from "@assets/bsi-bank.jpg";
 
 export default function PartnersSection() {
   const partnerLogos = [
@@ -38,7 +50,19 @@ export default function PartnersSection() {
     { name: "JD.id", logo: jdLogo },
     { name: "Gandeng Foundation", logo: gandengFoundationLogo },
     { name: "Nyala OCBC NISP", logo: nyalaOcbcLogo },
-    { name: "Smart Makara UI", logo: smartMakaraLogo }
+    { name: "Smart Makara UI", logo: smartMakaraLogo },
+    { name: "Grab", logo: grabLogo },
+    { name: "Yayasan Teman Saling Berbagi", logo: temanSalingBerbagiLogo },
+    { name: "Fourier", logo: fourierLogo },
+    { name: "AIESEC", logo: aiesecLogo },
+    { name: "GoKampus", logo: gokampusLogo },
+    { name: "Kelas Pejuang", logo: kelasPejuangLogo },
+    { name: "Koperasi Indonesia Dana Sejahtera", logo: koperasiIndonesiaLogo },
+    { name: "Dino Team", logo: dinoTeamLogo },
+    { name: "BSI Maslahat", logo: bsiMaslahatLogo },
+    { name: "Agrilabs", logo: agrilabsLogo },
+    { name: "Infimap", logo: infimapLogo },
+    { name: "Bank Syariah Indonesia", logo: bsiBankLogo }
   ];
 
   return (
