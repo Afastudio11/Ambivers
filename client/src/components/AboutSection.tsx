@@ -1,7 +1,7 @@
-import aboutPhoto1 from "@assets/generated_images/About_section_grid_photo_1_9d542f8e.png";
-import aboutPhoto2 from "@assets/generated_images/About_section_grid_photo_2_5f9c4eca.png";
-import aboutPhoto3 from "@assets/generated_images/About_section_grid_photo_3_a4561e16.png";
-import aboutPhoto4 from "@assets/generated_images/About_section_grid_photo_4_73076f62.png";
+import aboutPhoto1 from "@assets/selfie-time-26356foo.jpg_sharp.jpg_1762451240814.jpg";
+import aboutPhoto2 from "@assets/IMG20220806150217_Original_1762451240815.jpg";
+import aboutPhoto3 from "@assets/DSCF0449_1762451240816.jpg";
+import aboutPhoto4 from "@assets/selfie-time-26356foo.jpg_sharp.jpg_1762451240814.jpg";
 
 export default function AboutSection() {
   return (
