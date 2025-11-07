@@ -1,8 +1,20 @@
+import { useState } from "react";
+import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import utbkImg from "@assets/generated_images/UTBK_exam_preparation_illustration_b7ac0acd.png";
+import majorSelectionImg from "@assets/generated_images/College_major_selection_illustration_67050b7e.png";
+import studyAbroadImg from "@assets/generated_images/Study_abroad_scholarship_illustration_65c7b73b.png";
+import mentoringImg from "@assets/generated_images/Mentoring_program_illustration_c7797291.png";
+import studyStrategyImg from "@assets/generated_images/Effective_study_strategies_illustration_84643aa3.png";
+import portfolioImg from "@assets/generated_images/University_portfolio_building_illustration_bec1a407.png";
+import softSkillsImg from "@assets/generated_images/Digital_soft_skills_development_7fe69c97.png";
+import techCareerImg from "@assets/generated_images/Technology_career_opportunities_illustration_46d098fa.png";
+import domesticScholarshipImg from "@assets/generated_images/Domestic_scholarship_success_illustration_84323294.png";
 
 interface BlogPost {
   id: number;
@@ -15,25 +27,27 @@ interface BlogPost {
   author: string;
 }
 
+const categories = ["All", "Pendidikan", "Karir", "Beasiswa", "Pengembangan Diri", "Tips & Trik"];
+
 const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Tips Sukses Menghadapi UTBK 2024",
-    excerpt: "Panduan lengkap dan strategi efektif untuk menghadapi Ujian Tulis Berbasis Komputer dengan percaya diri dan hasil maksimal.",
+    excerpt: "Panduan lengkap dan strategi efektif untuk menghadapi Ujian Tulis Berbasis Komputer dengan percaya diri dan hasil maksimal. Pelajari teknik-teknik yang terbukti meningkatkan skor UTBK.",
     category: "Pendidikan",
     date: "15 Januari 2024",
     readTime: "5 menit",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=500&fit=crop",
+    image: utbkImg,
     author: "Tim Ambivers"
   },
   {
     id: 2,
     title: "Cara Memilih Jurusan Kuliah yang Tepat",
-    excerpt: "Memilih jurusan kuliah adalah keputusan penting. Simak tips dan pertimbangan yang perlu kamu pikirkan sebelum menentukan pilihan.",
+    excerpt: "Memilih jurusan kuliah adalah keputusan penting yang akan mempengaruhi masa depanmu. Simak tips dan pertimbangan yang perlu kamu pikirkan sebelum menentukan pilihan.",
     category: "Karir",
     date: "12 Januari 2024",
     readTime: "7 menit",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop",
+    image: majorSelectionImg,
     author: "Tim Ambivers"
   },
   {
@@ -43,118 +57,264 @@ const blogPosts: BlogPost[] = [
     category: "Beasiswa",
     date: "8 Januari 2024",
     readTime: "6 menit",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=500&fit=crop",
+    image: studyAbroadImg,
     author: "Tim Ambivers"
   },
   {
     id: 4,
     title: "Manfaat Mengikuti Program Mentoring",
-    excerpt: "Temukan bagaimana program mentoring dapat membantumu mengembangkan potensi dan mencapai tujuan akademis serta karir.",
+    excerpt: "Temukan bagaimana program mentoring dapat membantumu mengembangkan potensi dan mencapai tujuan akademis serta karir dengan bimbingan mentor berpengalaman.",
     category: "Pengembangan Diri",
     date: "5 Januari 2024",
     readTime: "4 menit",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
+    image: mentoringImg,
     author: "Tim Ambivers"
   },
   {
     id: 5,
     title: "Strategi Belajar Efektif untuk Siswa SMA",
-    excerpt: "Tingkatkan produktivitas belajarmu dengan strategi dan teknik yang sudah terbukti efektif untuk siswa SMA.",
+    excerpt: "Tingkatkan produktivitas belajarmu dengan strategi dan teknik yang sudah terbukti efektif untuk siswa SMA dalam mempersiapkan ujian dan masa depan.",
     category: "Pendidikan",
     date: "2 Januari 2024",
     readTime: "5 menit",
-    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=500&fit=crop",
+    image: studyStrategyImg,
     author: "Tim Ambivers"
   },
   {
     id: 6,
     title: "Membangun Portofolio untuk Pendaftaran Universitas",
-    excerpt: "Pelajari cara membuat portofolio yang menarik dan menonjol untuk meningkatkan peluang diterima di universitas impian.",
+    excerpt: "Pelajari cara membuat portofolio yang menarik dan menonjol untuk meningkatkan peluang diterima di universitas impian dengan tips dari para ahli.",
     category: "Karir",
     date: "29 Desember 2023",
     readTime: "6 menit",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop",
+    image: portfolioImg,
+    author: "Tim Ambivers"
+  },
+  {
+    id: 7,
+    title: "Mengembangkan Soft Skills di Era Digital",
+    excerpt: "Di era digital, soft skills seperti komunikasi dan kolaborasi menjadi semakin penting. Pelajari cara mengembangkan kemampuan ini untuk kesuksesan karirmu.",
+    category: "Pengembangan Diri",
+    date: "27 Desember 2023",
+    readTime: "5 menit",
+    image: softSkillsImg,
+    author: "Tim Ambivers"
+  },
+  {
+    id: 8,
+    title: "Peluang Karir di Bidang Teknologi",
+    excerpt: "Eksplorasi berbagai peluang karir menarik di industri teknologi yang terus berkembang dan cara mempersiapkan diri untuk memasuki dunia kerja.",
+    category: "Karir",
+    date: "23 Desember 2023",
+    readTime: "6 menit",
+    image: techCareerImg,
+    author: "Tim Ambivers"
+  },
+  {
+    id: 9,
+    title: "Tips Mendapatkan Beasiswa Dalam Negeri",
+    excerpt: "Raih impianmu kuliah dengan beasiswa dalam negeri. Ketahui tips dan trik untuk mempersiapkan aplikasi beasiswa yang sukses.",
+    category: "Beasiswa",
+    date: "20 Desember 2023",
+    readTime: "5 menit",
+    image: domesticScholarshipImg,
     author: "Tim Ambivers"
   }
 ];
 
 export default function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
+    const matchesSearch = searchQuery === "" || 
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const featuredPost = blogPosts[0];
+  const topReads = blogPosts.slice(1, 4);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white" data-testid="text-blog-title">
-              Insight & <span className="text-[#FFC700]">Blog</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="text-blog-subtitle">
-              Dapatkan wawasan, tips, dan inspirasi untuk perjalanan pendidikanmu
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
+      <div className="pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Card 
-                key={post.id} 
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-gray-200 group"
-                data-testid={`card-blog-${post.id}`}
-              >
-                <div className="relative h-48 overflow-hidden bg-gray-200">
+          <div className="grid lg:grid-cols-[2fr,1fr] gap-8 mb-16">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="text-latest-title">
+                The Latest
+              </h2>
+              
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-gray-200 group" data-testid="card-featured">
+                <div className="relative h-[400px] overflow-hidden bg-white">
                   <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    data-testid={`img-blog-${post.id}`}
+                    src={featuredPost.image} 
+                    alt={featuredPost.title}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                    data-testid="img-featured"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-[#FFC700] text-black text-xs font-semibold px-3 py-1 rounded-full" data-testid={`text-category-${post.id}`}>
-                      {post.category}
+                  <div className="absolute top-6 left-6">
+                    <span className="bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded-md shadow-md" data-testid="text-featured-category">
+                      {featuredPost.category}
                     </span>
                   </div>
                 </div>
                 
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                    <div className="flex items-center gap-1" data-testid={`text-date-${post.id}`}>
-                      <Calendar className="w-4 h-4" />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center gap-1" data-testid={`text-readtime-${post.id}`}>
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
+                <CardContent className="p-8">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#FFC700] transition-colors" data-testid="text-featured-title">
+                    {featuredPost.title}
+                  </h3>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                    <span data-testid="text-featured-date">{featuredPost.date}</span>
+                    <span>|</span>
+                    <span data-testid="text-featured-author">{featuredPost.author}</span>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed" data-testid="text-featured-excerpt">
+                    {featuredPost.excerpt}
+                  </p>
+                  
+                  <Link href={`/blog/${featuredPost.id}`} data-testid="link-featured-read">
+                    <Button 
+                      className="bg-gray-900 hover:bg-[#FFC700] hover:text-black text-white transition-colors"
+                      data-testid="button-featured-read"
+                    >
+                      Read more
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6" data-testid="text-topreads-title">
+                Top Reads
+              </h2>
+              
+              <div className="space-y-4">
+                {topReads.map((post) => (
+                  <Link key={post.id} href={`/blog/${post.id}`} data-testid={`link-topread-${post.id}`}>
+                    <Card 
+                      className="overflow-hidden hover:shadow-lg transition-all duration-300 border-gray-200 group cursor-pointer"
+                      data-testid={`card-topread-${post.id}`}
+                    >
+                      <div className="flex gap-4 p-4">
+                        <div className="relative w-32 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-white">
+                          <img 
+                            src={post.image} 
+                            alt={post.title}
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                            data-testid={`img-topread-${post.id}`}
+                          />
+                        </div>
+                        
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#FFC700] transition-colors" data-testid={`text-topread-title-${post.id}`}>
+                            {post.title}
+                          </h4>
+                          <div className="flex items-center gap-2 text-xs text-gray-500">
+                            <span data-testid={`text-topread-date-${post.id}`}>{post.date}</span>
+                            <span>|</span>
+                            <span data-testid={`text-topread-author-${post.id}`}>{post.author}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-gray-900" data-testid="text-categories-title">
+                Browse by categories
+              </h2>
+              
+              <div className="relative w-64">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <Input 
+                  placeholder="Search blogs"
+                  className="pl-10 border-gray-300"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  data-testid="input-search"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-5 py-2.5 rounded-full font-medium transition-all duration-200 ${
+                    selectedCategory === category
+                      ? "bg-gray-900 text-white shadow-md"
+                      : "bg-white text-gray-700 border border-gray-300 hover:border-gray-900 hover:bg-gray-50"
+                  }`}
+                  data-testid={`button-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPosts.map((post) => (
+              <Link key={post.id} href={`/blog/${post.id}`} data-testid={`link-blog-${post.id}`}>
+                <Card 
+                  className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 group cursor-pointer h-full"
+                  data-testid={`card-blog-${post.id}`}
+                >
+                  <div className="relative h-48 overflow-hidden bg-white">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                      data-testid={`img-blog-${post.id}`}
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white text-gray-900 text-xs font-semibold px-3 py-1.5 rounded-md shadow" data-testid={`text-category-${post.id}`}>
+                        {post.category}
+                      </span>
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#FFC700] transition-colors" data-testid={`text-title-${post.id}`}>
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3" data-testid={`text-excerpt-${post.id}`}>
-                    {post.excerpt}
-                  </p>
-                  
-                  <Button 
-                    variant="ghost" 
-                    className="group/btn p-0 h-auto text-[#FFC700] hover:text-[#FFD700] hover:bg-transparent font-semibold"
-                    data-testid={`button-read-${post.id}`}
-                  >
-                    Baca Selengkapnya
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                      <span data-testid={`text-date-${post.id}`}>{post.date}</span>
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#FFC700] transition-colors" data-testid={`text-title-${post.id}`}>
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3" data-testid={`text-excerpt-${post.id}`}>
+                      {post.excerpt}
+                    </p>
+                    
+                    <Button 
+                      variant="ghost" 
+                      className="p-0 h-auto text-gray-900 hover:text-[#FFC700] hover:bg-transparent font-semibold text-sm"
+                      data-testid={`button-read-${post.id}`}
+                    >
+                      Read More
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>
