@@ -84,9 +84,8 @@ export default function TestimonialsSection() {
     }
   ];
 
-  const row1 = testimonials.slice(0, 4);
-  const row2 = testimonials.slice(4, 7);
-  const row3 = testimonials.slice(7);
+  const row1 = testimonials.slice(0, 5);
+  const row2 = testimonials.slice(5);
 
   const renderRow = (testimonials: typeof row1, index: number, reverse: boolean = false) => (
     <div key={index} className="relative overflow-hidden mb-8">
@@ -116,13 +115,10 @@ export default function TestimonialsSection() {
                 {testimonial.name}
               </div>
               {testimonial.major && (
-                <div className="text-sm text-gray-600 mb-1">
+                <div className="text-sm text-gray-600">
                   {testimonial.major}
                 </div>
               )}
-              <div className="text-sm text-gray-500">
-                {testimonial.username}
-              </div>
             </div>
           </div>
         ))}
@@ -134,15 +130,18 @@ export default function TestimonialsSection() {
     <section id="testimoni" className="py-20 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
-          Apa Kata Mereka Tentang{" "}
-          <span className="bg-[#FFC727] text-black px-3 py-1 rounded-md">Belajar bersama Ambivers?</span>
+          Apa Kata Mereka Tentang Belajar bersama Ambivers?
         </h2>
       </div>
 
-      <div className="w-full">
-        {renderRow(row1, 0, false)}
-        {renderRow(row2, 1, true)}
-        {renderRow(row3, 2, false)}
+      <div className="relative max-w-7xl mx-auto">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+        
+        <div className="overflow-hidden">
+          {renderRow(row1, 0, false)}
+          {renderRow(row2, 1, true)}
+        </div>
       </div>
 
       <style>{`

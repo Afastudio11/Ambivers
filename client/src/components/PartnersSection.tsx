@@ -93,15 +93,20 @@ export default function PartnersSection() {
 
   return (
     <section className="py-20 overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-12">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-partners-title">
           Our Partners
         </h2>
         <p className="text-center text-muted-foreground mb-12" data-testid="text-partners-subtitle">
           100+ Corporate Partners & 40+ School Partners
         </p>
+      </div>
 
-        <div className="space-y-4">
+      <div className="relative max-w-7xl mx-auto">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        
+        <div className="overflow-hidden space-y-4">
           {renderRow(row1, 1, false)}
           {renderRow(row2, 2, true)}
           {renderRow(row3, 3, false)}
