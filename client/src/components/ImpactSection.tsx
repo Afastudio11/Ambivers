@@ -16,28 +16,13 @@ export default function ImpactSection() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center">
             <img 
               src={indonesiaMapImage} 
               alt="Peta Indonesia"
               className="w-full max-w-4xl h-auto"
               data-testid="map-indonesia"
             />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md" data-testid="stat-students">
-              <div className="text-4xl font-bold text-[#FFC700] mb-2">50.000+</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Pelajar Terdampak</div>
-            </div>
-            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md" data-testid="stat-provinces">
-              <div className="text-4xl font-bold text-[#FFC700] mb-2">34</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Provinsi di Indonesia</div>
-            </div>
-            <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md" data-testid="stat-cities">
-              <div className="text-4xl font-bold text-[#FFC700] mb-2">100+</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Kota & Kabupaten</div>
-            </div>
           </div>
         </div>
       </div>
