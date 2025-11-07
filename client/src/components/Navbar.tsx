@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "wouter";
 import logoImage from "@assets/logo-ambivers.png";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,13 +72,13 @@ export default function Navbar() {
             >
               Testimoni
             </button>
-            <a 
-              href="#"
+            <Link 
+              href="/blog"
               className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium`}
               data-testid="link-blog"
             >
               Insight & Blog
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
@@ -122,13 +124,14 @@ export default function Navbar() {
             >
               Testimoni
             </button>
-            <a
-              href="#"
+            <Link
+              href="/blog"
               className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
               data-testid="link-blog-mobile"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Insight & Blog
-            </a>
+            </Link>
             <div className="flex flex-col gap-2 pt-4">
               <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
                 Masuk
