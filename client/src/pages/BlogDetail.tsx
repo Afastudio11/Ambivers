@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import utbkImg from "@assets/generated_images/UTBK_exam_preparation_illustration_b7ac0acd.png";
 import majorSelectionImg from "@assets/generated_images/College_major_selection_illustration_67050b7e.png";
@@ -250,7 +251,7 @@ export default function BlogDetail() {
         <Navbar />
         <div className="pt-32 pb-20 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog tidak ditemukan</h1>
-          <Link href="/blog">
+          <Link href="/blog" data-testid="link-back-to-blog-fallback">
             <Button data-testid="button-back-to-blog">Kembali ke Blog</Button>
           </Link>
         </div>
@@ -300,13 +301,15 @@ export default function BlogDetail() {
             </div>
           </div>
 
-          <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-8 bg-gray-200">
-            <img 
-              src={post.image} 
-              alt={post.title}
-              className="w-full h-full object-contain"
-              data-testid="img-featured"
-            />
+          <div className="w-full rounded-xl overflow-hidden mb-8 bg-gray-200">
+            <AspectRatio ratio={16 / 9}>
+              <img 
+                src={post.image} 
+                alt={post.title}
+                className="w-full h-full object-contain"
+                data-testid="img-featured"
+              />
+            </AspectRatio>
           </div>
 
           <div 
@@ -338,13 +341,15 @@ export default function BlogDetail() {
               {relatedPosts.map((relatedPost) => (
                 <Link key={relatedPost.id} href={`/blog/${relatedPost.id}`} data-testid={`link-related-${relatedPost.id}`}>
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 group cursor-pointer" data-testid={`card-related-${relatedPost.id}`}>
-                    <div className="relative h-48 overflow-hidden bg-gray-200">
-                      <img 
-                        src={relatedPost.image} 
-                        alt={relatedPost.title}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                        data-testid={`img-related-${relatedPost.id}`}
-                      />
+                    <div className="bg-gray-200">
+                      <AspectRatio ratio={16 / 9}>
+                        <img 
+                          src={relatedPost.image} 
+                          alt={relatedPost.title}
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                          data-testid={`img-related-${relatedPost.id}`}
+                        />
+                      </AspectRatio>
                     </div>
                     
                     <CardContent className="p-6">

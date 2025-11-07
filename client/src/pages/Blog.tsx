@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Calendar, Clock, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import utbkImg from "@assets/generated_images/UTBK_exam_preparation_illustration_b7ac0acd.png";
@@ -150,13 +151,15 @@ export default function Blog() {
               </h2>
               
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-gray-200 group" data-testid="card-featured">
-                <div className="relative h-[400px] overflow-hidden bg-white">
-                  <img 
-                    src={featuredPost.image} 
-                    alt={featuredPost.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                    data-testid="img-featured"
-                  />
+                <div className="relative bg-white">
+                  <AspectRatio ratio={16 / 9}>
+                    <img 
+                      src={featuredPost.image} 
+                      alt={featuredPost.title}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                      data-testid="img-featured"
+                    />
+                  </AspectRatio>
                   <div className="absolute top-6 left-6">
                     <span className="bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded-md shadow-md" data-testid="text-featured-category">
                       {featuredPost.category}
@@ -204,13 +207,15 @@ export default function Blog() {
                       data-testid={`card-topread-${post.id}`}
                     >
                       <div className="flex gap-4 p-4">
-                        <div className="relative w-32 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-white">
-                          <img 
-                            src={post.image} 
-                            alt={post.title}
-                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                            data-testid={`img-topread-${post.id}`}
-                          />
+                        <div className="w-32 flex-shrink-0 rounded-lg overflow-hidden bg-white">
+                          <AspectRatio ratio={16 / 9}>
+                            <img 
+                              src={post.image} 
+                              alt={post.title}
+                              className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                              data-testid={`img-topread-${post.id}`}
+                            />
+                          </AspectRatio>
                         </div>
                         
                         <div className="flex-1 min-w-0">
@@ -271,16 +276,18 @@ export default function Blog() {
             {filteredPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`} data-testid={`link-blog-${post.id}`}>
                 <Card 
-                  className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 group cursor-pointer h-full"
+                  className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 group cursor-pointer h-full flex flex-col"
                   data-testid={`card-blog-${post.id}`}
                 >
-                  <div className="relative h-48 overflow-hidden bg-white">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                      data-testid={`img-blog-${post.id}`}
-                    />
+                  <div className="relative bg-white">
+                    <AspectRatio ratio={16 / 9}>
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        data-testid={`img-blog-${post.id}`}
+                      />
+                    </AspectRatio>
                     <div className="absolute top-4 left-4">
                       <span className="bg-white text-gray-900 text-xs font-semibold px-3 py-1.5 rounded-md shadow" data-testid={`text-category-${post.id}`}>
                         {post.category}
@@ -288,7 +295,7 @@ export default function Blog() {
                     </div>
                   </div>
                   
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
                       <span data-testid={`text-date-${post.id}`}>{post.date}</span>
                     </div>
@@ -297,13 +304,13 @@ export default function Blog() {
                       {post.title}
                     </h3>
                     
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3" data-testid={`text-excerpt-${post.id}`}>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1" data-testid={`text-excerpt-${post.id}`}>
                       {post.excerpt}
                     </p>
                     
                     <Button 
                       variant="ghost" 
-                      className="p-0 h-auto text-gray-900 hover:text-[#FFC700] hover:bg-transparent font-semibold text-sm"
+                      className="p-0 h-auto text-gray-900 hover:text-[#FFC700] hover:bg-transparent font-semibold text-sm self-start"
                       data-testid={`button-read-${post.id}`}
                     >
                       Read More
