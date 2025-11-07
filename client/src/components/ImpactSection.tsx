@@ -1,5 +1,4 @@
-import { ComposableMap, Geographies, Geography, GeographyProps } from "react-simple-maps";
-import indonesiaGeoJSON from "@/data/indonesia-map.json";
+import indonesiaMapImage from "@assets/Document_1762520193879.png";
 
 export default function ImpactSection() {
   return (
@@ -17,36 +16,13 @@ export default function ImpactSection() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-            <ComposableMap
-              projection="geoMercator"
-              projectionConfig={{
-                center: [118, -2],
-                scale: 900,
-              }}
-              className="w-full h-auto"
+          <div className="flex justify-center mb-12">
+            <img 
+              src={indonesiaMapImage} 
+              alt="Peta Indonesia"
+              className="w-full max-w-4xl h-auto"
               data-testid="map-indonesia"
-            >
-              <Geographies geography={indonesiaGeoJSON}>
-                {({ geographies }: { geographies: any[] }) =>
-                  geographies.map((geo: any) => (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill="#FFC700"
-                      stroke="#000000"
-                      strokeWidth={0.5}
-                      className="hover:fill-[#FFD700] transition-colors duration-200 cursor-pointer"
-                      style={{
-                        default: { outline: "none" },
-                        hover: { outline: "none" },
-                        pressed: { outline: "none" },
-                      }}
-                    />
-                  ))
-                }
-              </Geographies>
-            </ComposableMap>
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
