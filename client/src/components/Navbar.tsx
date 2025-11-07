@@ -70,6 +70,13 @@ export default function Navbar() {
             >
               Testimoni
             </button>
+            <a 
+              href="#"
+              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium`}
+              data-testid="link-blog"
+            >
+              Insight & Blog
+            </a>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
@@ -115,6 +122,13 @@ export default function Navbar() {
             >
               Testimoni
             </button>
+            <a
+              href="#"
+              className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
+              data-testid="link-blog-mobile"
+            >
+              Insight & Blog
+            </a>
             <div className="flex flex-col gap-2 pt-4">
               <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
                 Masuk
