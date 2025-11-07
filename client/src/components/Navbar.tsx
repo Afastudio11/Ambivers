@@ -106,12 +106,16 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" className={`${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk">
-              Masuk
-            </Button>
-            <Button className="bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar">
-              Daftar
-            </Button>
+            <Link href="/coming-soon">
+              <Button variant="ghost" className={`${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk">
+                Masuk
+              </Button>
+            </Link>
+            <Link href="/coming-soon">
+              <Button className="bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar">
+                Daftar
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -157,12 +161,16 @@ export default function Navbar() {
               Insight & Blog
             </Link>
             <div className="flex flex-col gap-2 pt-4">
-              <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
-                Masuk
-              </Button>
-              <Button className="w-full bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar-mobile">
-                Daftar
-              </Button>
+              <Link href="/coming-soon" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
+                  Masuk
+                </Button>
+              </Link>
+              <Link href="/coming-soon" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar-mobile">
+                  Daftar
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

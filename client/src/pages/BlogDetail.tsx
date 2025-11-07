@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -244,6 +245,10 @@ export default function BlogDetail() {
   const [, params] = useRoute("/blog/:id");
   const blogId = params?.id ? parseInt(params.id) : null;
   const post = blogPosts.find(p => p.id === blogId);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [blogId]);
 
   if (!post) {
     return (
