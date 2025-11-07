@@ -12,9 +12,6 @@ export default function AboutSection() {
             <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-testid="text-about-title">
               Ambivers didirikan pada tahun <span className="text-primary">2020</span> dengan fokus pada bidang pendidikan dan pengembangan sumber daya manusia
             </h2>
-            <p className="text-lg text-muted-foreground" data-testid="text-about-impact">
-              Ambivers telah memberikan dampak kepada <span className="font-bold text-foreground">50.000+ pelajar</span> di seluruh Indonesia
-            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
