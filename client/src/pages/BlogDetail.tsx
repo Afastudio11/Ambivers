@@ -252,7 +252,7 @@ export default function BlogDetail() {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         <Navbar />
         <div className="pt-32 pb-20 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Blog tidak ditemukan</h1>
@@ -270,7 +270,7 @@ export default function BlogDetail() {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       <article className="pt-28 pb-16">
@@ -306,7 +306,7 @@ export default function BlogDetail() {
             </div>
           </div>
 
-          <div className="w-full rounded-xl overflow-hidden mb-8 bg-gray-200">
+          <div className="w-full rounded-xl overflow-hidden mb-8 bg-white">
             <AspectRatio ratio={16 / 9}>
               <img 
                 src={post.image} 
@@ -346,7 +346,7 @@ export default function BlogDetail() {
               {relatedPosts.map((relatedPost) => (
                 <Link key={relatedPost.id} href={`/blog/${relatedPost.id}`} data-testid={`link-related-${relatedPost.id}`}>
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200 group cursor-pointer" data-testid={`card-related-${relatedPost.id}`}>
-                    <div className="bg-gray-200">
+                    <div className="bg-white">
                       <AspectRatio ratio={16 / 9}>
                         <img 
                           src={relatedPost.image} 

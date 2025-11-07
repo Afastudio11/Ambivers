@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
               <div className="font-bold text-lg text-gray-900">
                 {testimonial.company}
               </div>
-              <div className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded-lg">
+              <div className="flex items-center gap-1 bg-white border border-gray-200 px-2 py-1 rounded-lg">
                 <span className="font-semibold text-sm">{testimonial.rating}</span>
                 <Star className="w-4 h-4 fill-green-500 text-green-500" />
               </div>
@@ -137,7 +137,7 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <section id="testimoni" className="py-20 lg:py-32 bg-gray-50">
+    <section id="testimoni" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
           Apa Kata Mereka Tentang Belajar bersama Ambivers?
@@ -145,8 +145,8 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         
         <div className="overflow-hidden">
           {renderRow(row1, 0, false)}
@@ -161,7 +161,7 @@ export default function TestimonialsSection() {
               <DialogHeader>
                 <DialogTitle className="flex items-start justify-between gap-4">
                   <span className="text-xl font-bold">{selectedTestimonial.company}</span>
-                  <div className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded-lg">
+                  <div className="flex items-center gap-1 bg-white border border-gray-200 px-2 py-1 rounded-lg">
                     <span className="font-semibold text-sm">{selectedTestimonial.rating}</span>
                     <Star className="w-4 h-4 fill-green-500 text-green-500" />
                   </div>

@@ -107,7 +107,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-4">
             <Link href="/coming-soon">
-              <Button variant="ghost" className={`${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk">
+              <Button variant="ghost" className={`${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-white/50"} hover:text-[#FFC700]`} data-testid="button-masuk">
                 Masuk
               </Button>
             </Link>
@@ -162,7 +162,7 @@ export default function Navbar() {
             </Link>
             <div className="flex flex-col gap-2 pt-4">
               <Link href="/coming-soon" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-gray-100"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
+                <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-white/50"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
                   Masuk
                 </Button>
               </Link>

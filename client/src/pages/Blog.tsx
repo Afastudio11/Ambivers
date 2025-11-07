@@ -143,7 +143,7 @@ export default function Blog() {
   const topReads = blogPosts.slice(1, 4);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       <div className="pt-28 pb-16">
@@ -266,7 +266,7 @@ export default function Blog() {
                   className={`px-5 py-2.5 rounded-full font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? "bg-gray-900 text-white shadow-md"
-                      : "bg-white text-gray-700 border border-gray-300 hover:border-gray-900 hover:bg-gray-50"
+                      : "bg-white text-gray-700 border border-gray-300 hover:border-gray-900 hover:bg-white/50"
                   }`}
                   data-testid={`button-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
                 >
