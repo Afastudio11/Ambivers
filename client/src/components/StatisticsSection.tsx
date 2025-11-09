@@ -65,7 +65,7 @@ export default function StatisticsSection() {
 
   return (
     <section className="py-20 bg-black">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div className="w-full mx-auto px-8 lg:px-20 xl:px-32">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16 text-white" data-testid="text-stats-title">
           Ambivers In Number
         </h2>
