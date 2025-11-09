@@ -164,10 +164,29 @@ export default function HeroSection() {
         <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
           <button 
             onClick={scrollToProgram}
-            className="group relative flex items-center justify-center gap-3 bg-gray-900 text-white font-semibold rounded-full border-none cursor-pointer transition-all duration-500 shadow-lg hover:bg-gray-800 active:scale-95 px-4 py-3 sm:px-6 sm:py-4"
+            className="group relative flex items-center justify-center gap-3 rounded-full font-semibold cursor-pointer transition-all duration-300 px-6 py-4 sm:px-8 sm:py-4 border-2"
             style={{
-              minWidth: '200px',
-              boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)',
+              minWidth: '240px',
+              backgroundColor: 'rgba(26, 26, 26, 0.85)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              boxShadow: 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)',
+              color: '#ffffff',
+              borderColor: 'rgba(255, 255, 255, 0.2)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = 'inset 2px 2px 6px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(255, 255, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.3)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+            onFocus={(e) => {
+              e.currentTarget.style.boxShadow = 'inset 2px 2px 6px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(255, 255, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.3)';
+            }}
+            onBlur={(e) => {
+              e.currentTarget.style.boxShadow = 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)';
             }}
             data-testid="button-jelajahi"
           >
