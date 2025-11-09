@@ -75,9 +75,11 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 lg:pt-40 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
-            <span className="text-gray-900 md:whitespace-nowrap">Tempat Untuk Menampilkan.</span>
+            <span className="text-gray-900 block md:inline md:whitespace-nowrap">Tempat Untuk</span>
+            <br className="md:hidden" />
+            <span className="text-gray-900 block md:inline md:whitespace-nowrap">Menampilkan.</span>
             <br />
-            <span className="italic font-serif text-gray-900 md:whitespace-nowrap">Karya Terbaikmu.</span>
+            <span className="italic font-serif text-gray-900 block md:inline md:whitespace-nowrap">Karya Terbaikmu.</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="text-hero-description">
@@ -87,12 +89,49 @@ export default function HeroSection() {
         </div>
 
         <div className="relative">
-          <div className="relative h-[280px] sm:h-[300px] md:h-[400px] mb-12 flex items-center justify-center">
-            <div className="flex items-center justify-center -space-x-8 sm:-space-x-12 md:-space-x-24">
+          {/* Mobile: Grid 2 baris, Desktop: Horizontal overlap */}
+          <div className="md:hidden grid grid-cols-3 gap-4 mb-12 px-4">
+            {activityCards.slice(0, 3).map((card) => (
+              <div
+                key={card.id}
+                className="relative w-full aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden"
+              >
+                <img 
+                  src={card.image} 
+                  alt={`Ambivers ${card.tag}`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
+                <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
+                  <span className="text-white text-[10px] font-medium">{card.tag}</span>
+                </div>
+              </div>
+            ))}
+            {activityCards.slice(3, 5).map((card) => (
+              <div
+                key={card.id}
+                className="relative w-full aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden"
+              >
+                <img 
+                  src={card.image} 
+                  alt={`Ambivers ${card.tag}`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
+                <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
+                  <span className="text-white text-[10px] font-medium">{card.tag}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Horizontal overlap */}
+          <div className="hidden md:block relative h-[400px] mb-12">
+            <div className="flex items-center justify-center -space-x-24">
               {activityCards.map((card) => (
                 <div
                   key={card.id}
-                  className={`relative w-36 h-48 sm:w-44 sm:h-56 md:w-64 md:h-80 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer overflow-hidden ${card.rotation} ${card.zIndex}`}
+                  className={`relative w-64 h-80 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer overflow-hidden ${card.rotation} ${card.zIndex}`}
                   style={{
                     transformStyle: 'preserve-3d',
                   }}
