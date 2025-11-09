@@ -3,7 +3,7 @@ import indonesiaMapImage from "@assets/Document@3x_1762520850335.png";
 export default function ImpactSection() {
   return (
     <section className="py-20 lg:py-32 bg-white dark:bg-gray-900">
-      <div className="w-full mx-auto px-8 lg:px-20 xl:px-32">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-testid="text-impact-title">
             Ambivers telah memberikan dampak kepada{" "}

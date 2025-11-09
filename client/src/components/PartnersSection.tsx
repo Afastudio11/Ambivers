@@ -93,7 +93,7 @@ export default function PartnersSection() {
 
   return (
     <section className="py-20 overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
-      <div className="w-full mx-auto px-8 lg:px-20 xl:px-32 mb-12">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-12">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-partners-title">
           Our Partners
         </h2>
@@ -102,7 +102,7 @@ export default function PartnersSection() {
         </p>
       </div>
 
-      <div className="relative w-full mx-auto">
+      <div className="relative max-w-7xl mx-auto">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         

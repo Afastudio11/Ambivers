@@ -49,7 +49,7 @@ export default function ProgramsSection() {
 
   return (
     <section id="program" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
-      <div className="w-full mx-auto px-8 lg:px-20 xl:px-32">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16" data-testid="text-programs-title">
           Program Kami
         </h2>
