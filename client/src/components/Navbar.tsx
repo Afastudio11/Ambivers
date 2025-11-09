@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import logoImage from "@assets/logo-ambivers.png";
 
@@ -107,14 +106,56 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-4">
             <Link href="/coming-soon">
-              <Button variant="ghost" className={`${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-white/50"} hover:text-[#FFC700]`} data-testid="button-masuk">
+              <button 
+                className="rounded-full px-8 py-3 text-base font-medium cursor-pointer transition-all duration-200 border-2"
+                style={{
+                  backgroundColor: '#e8e8e8',
+                  boxShadow: 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff',
+                  color: '#4d4d4d',
+                  borderColor: 'rgb(206, 206, 206)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff';
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff';
+                }}
+                data-testid="button-masuk"
+              >
                 Masuk
-              </Button>
+              </button>
             </Link>
             <Link href="/coming-soon">
-              <Button className="bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar">
+              <button 
+                className="rounded-full px-8 py-3 text-base font-medium cursor-pointer transition-all duration-200 border-2"
+                style={{
+                  backgroundColor: '#FFC700',
+                  boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                  color: '#1a1a1a',
+                  borderColor: '#FFD700',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                }}
+                data-testid="button-daftar"
+              >
                 Daftar
-              </Button>
+              </button>
             </Link>
           </div>
 
@@ -162,14 +203,44 @@ export default function Navbar() {
             </Link>
             <div className="flex flex-col gap-2 pt-4">
               <Link href="/coming-soon" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className={`w-full ${scrolled ? "text-white hover:bg-white/10" : "text-gray-900 hover:bg-white/50"} hover:text-[#FFC700]`} data-testid="button-masuk-mobile">
+                <button 
+                  className="w-full rounded-full px-8 py-3 text-base font-medium cursor-pointer transition-all duration-200 border-2"
+                  style={{
+                    backgroundColor: '#e8e8e8',
+                    boxShadow: 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff',
+                    color: '#4d4d4d',
+                    borderColor: 'rgb(206, 206, 206)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff';
+                  }}
+                  data-testid="button-masuk-mobile"
+                >
                   Masuk
-                </Button>
+                </button>
               </Link>
               <Link href="/coming-soon" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-[#FFC700] text-black hover:bg-[#FFD700]" data-testid="button-daftar-mobile">
+                <button 
+                  className="w-full rounded-full px-8 py-3 text-base font-medium cursor-pointer transition-all duration-200 border-2"
+                  style={{
+                    backgroundColor: '#FFC700',
+                    boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                    color: '#1a1a1a',
+                    borderColor: '#FFD700',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                  }}
+                  data-testid="button-daftar-mobile"
+                >
                   Daftar
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
