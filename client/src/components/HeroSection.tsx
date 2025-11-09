@@ -80,9 +80,9 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 pt-32 lg:pt-40 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
-            <span className="text-gray-900">Tempat untuk menampilkan.</span>
+            <span className="text-gray-900 whitespace-nowrap">Tempat untuk menampilkan.</span>
             <br />
-            <span className="italic font-serif text-gray-900">karya terbaikmu.</span>
+            <span className="italic font-serif text-gray-900 whitespace-nowrap">karya terbaikmu.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="text-hero-description">
