@@ -72,29 +72,31 @@ export default function HeroSection() {
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 lg:pt-40 pb-20">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
-            <span className="text-gray-900 block md:inline md:whitespace-nowrap">Tempat Untuk</span>
-            <br className="md:hidden" />
-            <span className="text-gray-900 block md:inline md:whitespace-nowrap">Menampilkan.</span>
-            <br />
-            <span className="italic font-serif text-gray-900 block md:inline md:whitespace-nowrap">Karya Terbaikmu.</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
+            <span className="text-gray-900 block">Tempat Untuk</span>
+            <span className="text-gray-900 block">Menampilkan.</span>
+            <span className="italic font-serif text-gray-900 block">Karya Terbaikmu.</span>
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="text-hero-description">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 leading-relaxed" data-testid="text-hero-description">
             Ambivers Memberikan Ruang Bagi Pelajar Untuk Menampilkan Karya Dan Pencapaian Mereka,
             Serta Membuka Kesempatan Lebih Luas Untuk Berkembang.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Mobile: Grid 2 baris, Desktop: Horizontal overlap */}
-          <div className="md:hidden grid grid-cols-3 gap-4 mb-12 px-4">
-            {activityCards.slice(0, 3).map((card) => (
+        <div className="relative mb-8 sm:mb-12">
+          {/* Mobile: Single row with 3 overlapping cards */}
+          <div className="md:hidden flex justify-center items-center relative h-48 sm:h-56 mb-8">
+            {activityCards.slice(0, 3).map((card, index) => (
               <div
                 key={card.id}
-                className="relative w-full aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden"
+                className="absolute w-32 sm:w-40 h-44 sm:h-52 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden"
+                style={{
+                  transform: `translateX(${(index - 1) * 50}px) rotate(${(index - 1) * 8}deg)`,
+                  zIndex: index === 1 ? 30 : index === 2 ? 20 : 10,
+                }}
               >
                 <img 
                   src={card.image} 
@@ -103,23 +105,7 @@ export default function HeroSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
                 <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
-                  <span className="text-white text-[10px] font-medium">{card.tag}</span>
-                </div>
-              </div>
-            ))}
-            {activityCards.slice(3, 5).map((card) => (
-              <div
-                key={card.id}
-                className="relative w-full aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden"
-              >
-                <img 
-                  src={card.image} 
-                  alt={`Ambivers ${card.tag}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
-                <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
-                  <span className="text-white text-[10px] font-medium">{card.tag}</span>
+                  <span className="text-white text-[9px] sm:text-[10px] font-medium whitespace-nowrap">{card.tag}</span>
                 </div>
               </div>
             ))}
