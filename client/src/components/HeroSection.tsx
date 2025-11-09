@@ -72,11 +72,6 @@ export default function HeroSection() {
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
 
-      <div className="absolute top-20 left-10 w-32 h-32 border-2 border-black/20 rounded-2xl" />
-      <div className="absolute bottom-20 left-32 w-24 h-24 border-2 border-black/20 rounded-2xl" />
-      <div className="absolute bottom-40 right-20 w-40 h-40 border-2 border-black/20 rounded-2xl" />
-      <div className="absolute top-32 right-32 w-28 h-28 border-2 border-black/20 rounded-2xl" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 pt-32 lg:pt-40 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
@@ -92,12 +87,6 @@ export default function HeroSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-0 md:left-10 top-1/2 -translate-y-1/2 bg-yellow-600/80 backdrop-blur-sm p-6 rounded-2xl max-w-[200px] shadow-lg">
-            <div className="text-xs text-gray-900 mb-2 uppercase tracking-wide font-semibold">Tahun</div>
-            <div className="text-4xl font-bold text-gray-900 mb-2">2020</div>
-            <div className="text-sm text-gray-900">Berdiri Sejak</div>
-          </div>
-
           <div className="relative h-[300px] md:h-[400px] mb-12 flex items-center justify-center">
             <div className="flex items-center justify-center -space-x-12 md:-space-x-16">
               {activityCards.map((card) => (
@@ -120,15 +109,6 @@ export default function HeroSection() {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="absolute right-0 md:right-10 top-1/2 -translate-y-1/2 bg-yellow-600/80 backdrop-blur-sm p-6 rounded-2xl max-w-[220px] shadow-lg">
-            <div className="flex items-center justify-center w-12 h-12 bg-gray-900 rounded-full mb-4">
-              <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <div className="text-sm text-gray-900 font-semibold">Pengembangan Pelajar Indonesia</div>
           </div>
         </div>
 
