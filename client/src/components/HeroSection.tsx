@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import photo1 from "@assets/ambivers-photo-1.jpg";
 import photo2 from "@assets/ambivers-photo-2.jpg";
 import photo3 from "@assets/ambivers-photo-3.jpg";
@@ -162,14 +162,18 @@ export default function HeroSection() {
         </div>
 
         <div className="text-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-          <Button 
-            size="lg" 
+          <button 
             onClick={scrollToProgram}
-            className="text-lg font-bold px-8 py-6 bg-gray-900 text-white hover:bg-gray-800"
+            className="group relative flex items-center justify-center gap-3 bg-gray-900 text-white font-semibold rounded-full border-none cursor-pointer transition-all duration-500 shadow-lg hover:bg-gray-800 active:scale-95 px-4 py-3 sm:px-6 sm:py-4"
+            style={{
+              minWidth: '200px',
+              boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)',
+            }}
             data-testid="button-jelajahi"
           >
-            Jelajahi Program Kami
-          </Button>
+            <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-1000 group-hover:rotate-[360deg]" />
+            <span className="text-base sm:text-lg">Jelajahi Program Kami</span>
+          </button>
         </div>
       </div>
     </section>
