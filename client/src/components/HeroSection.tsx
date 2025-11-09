@@ -161,7 +161,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="text-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+        <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
           <button 
             onClick={scrollToProgram}
             className="group relative flex items-center justify-center gap-3 bg-gray-900 text-white font-semibold rounded-full border-none cursor-pointer transition-all duration-500 shadow-lg hover:bg-gray-800 active:scale-95 px-4 py-3 sm:px-6 sm:py-4"
