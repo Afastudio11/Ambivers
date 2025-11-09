@@ -77,15 +77,15 @@ export default function HeroSection() {
       <div className="absolute bottom-40 right-20 w-40 h-40 border-2 border-black/20 rounded-2xl" />
       <div className="absolute top-32 right-32 w-28 h-28 border-2 border-black/20 rounded-2xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-32">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 py-20 lg:py-24">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
             <span className="text-gray-900">Tempat untuk menampilkan</span>
             <br />
             <span className="italic font-serif text-gray-900">karya terbaikmu.</span>
           </h1>
           
-          <p className="text-base md:text-lg text-gray-800 max-w-2xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="text-hero-description">
+          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150" data-testid="text-hero-description">
             Ambivers memberikan ruang bagi pelajar untuk menampilkan karya dan pencapaian mereka,
             serta membuka kesempatan lebih luas untuk berkembang.
           </p>
