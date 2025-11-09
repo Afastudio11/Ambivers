@@ -137,7 +137,7 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <section id="testimoni" className="py-20 lg:py-32 bg-white">
+    <section id="testimoni" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
           Apa Kata Mereka Tentang Belajar bersama Ambivers?
@@ -145,8 +145,8 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
         
         <div className="overflow-hidden">
           {renderRow(row1, 0, false)}
