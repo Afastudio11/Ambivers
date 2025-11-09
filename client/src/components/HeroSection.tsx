@@ -1,9 +1,20 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import photo1 from "@assets/ambivers-photo-1.jpg";
 import photo2 from "@assets/ambivers-photo-2.jpg";
 import photo3 from "@assets/ambivers-photo-3.jpg";
 
 export default function HeroSection() {
+  const [activeCard, setActiveCard] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCard((prev) => (prev % 5) + 1);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToProgram = () => {
     const element = document.getElementById("program");
     if (element) {
@@ -87,39 +98,19 @@ export default function HeroSection() {
         </div>
 
         <div className="relative mb-8 sm:mb-12">
-          {/* Mobile: Single row with 3 overlapping cards */}
+          {/* Mobile: Single row with 3 overlapping cards with animation */}
           <div className="md:hidden flex justify-center items-center relative h-48 sm:h-56 mb-8">
-            {activityCards.slice(0, 3).map((card, index) => (
-              <div
-                key={card.id}
-                className="absolute w-32 sm:w-40 h-44 sm:h-52 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden"
-                style={{
-                  transform: `translateX(${(index - 1) * 50}px) rotate(${(index - 1) * 8}deg)`,
-                  zIndex: index === 1 ? 30 : index === 2 ? 20 : 10,
-                }}
-              >
-                <img 
-                  src={card.image} 
-                  alt={`Ambivers ${card.tag}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
-                <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
-                  <span className="text-white text-[9px] sm:text-[10px] font-medium whitespace-nowrap">{card.tag}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop: Horizontal overlap */}
-          <div className="hidden md:block relative h-[400px] mb-12">
-            <div className="flex items-center justify-center -space-x-24">
-              {activityCards.map((card) => (
+            {activityCards.slice(0, 3).map((card, index) => {
+              const isActive = card.id === activeCard;
+              const baseRotation = (index - 1) * 8;
+              
+              return (
                 <div
                   key={card.id}
-                  className={`relative w-64 h-80 rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer overflow-hidden ${card.rotation} ${card.zIndex}`}
+                  className="absolute w-32 sm:w-40 h-44 sm:h-52 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden transition-all duration-700 ease-in-out"
                   style={{
-                    transformStyle: 'preserve-3d',
+                    transform: `translateX(${(index - 1) * 50}px) rotate(${baseRotation}deg) scale(${isActive ? 1.05 : 1})`,
+                    zIndex: isActive ? 40 : index === 1 ? 30 : index === 2 ? 20 : 10,
                   }}
                 >
                   <img 
@@ -127,12 +118,45 @@ export default function HeroSection() {
                     alt={`Ambivers ${card.tag}`}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
-                  <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full z-10">
-                    <span className="text-white text-xs font-medium">{card.tag}</span>
+                  <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent transition-all duration-700 ${isActive ? 'to-black/20' : 'to-black/40'}`} />
+                  <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
+                    <span className="text-white text-[9px] sm:text-[10px] font-medium whitespace-nowrap">{card.tag}</span>
                   </div>
                 </div>
-              ))}
+              );
+            })}
+          </div>
+
+          {/* Desktop: Horizontal overlap with animation */}
+          <div className="hidden md:block relative h-[400px] mb-12">
+            <div className="flex items-center justify-center -space-x-24">
+              {activityCards.map((card) => {
+                const isActive = card.id === activeCard;
+                
+                return (
+                  <div
+                    key={card.id}
+                    className={`relative w-64 h-80 rounded-2xl shadow-2xl transform transition-all duration-700 ease-in-out hover:scale-110 hover:-translate-y-4 hover:z-50 cursor-pointer overflow-hidden ${card.rotation}`}
+                    style={{
+                      transformStyle: 'preserve-3d',
+                      transform: isActive 
+                        ? `${card.rotation.includes('-') ? 'rotate(-' : 'rotate('}${Math.abs(parseInt(card.rotation.match(/-?\d+/)?.[0] || '0'))}deg) scale(1.08) translateY(-8px)`
+                        : undefined,
+                      zIndex: isActive ? 50 : card.zIndex === 'z-30' ? 30 : card.zIndex === 'z-20' ? 20 : 10,
+                    }}
+                  >
+                    <img 
+                      src={card.image} 
+                      alt={`Ambivers ${card.tag}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent transition-all duration-700 ${isActive ? 'to-black/20' : 'to-black/40'}`} />
+                    <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full z-10">
+                      <span className="text-white text-xs font-medium">{card.tag}</span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
