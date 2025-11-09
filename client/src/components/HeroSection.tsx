@@ -82,7 +82,6 @@ export default function HeroSection() {
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-20">
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
@@ -93,7 +92,7 @@ export default function HeroSection() {
             <span className="italic font-serif text-gray-900 block mt-2">Karya Terbaikmu.</span>
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 leading-relaxed" data-testid="text-hero-description">
+          <p className="sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 text-[23px]" data-testid="text-hero-description">
             Ambivers Memberikan Ruang Bagi Pelajar Untuk Menampilkan Karya Dan Pencapaian Mereka,
             Serta Membuka Kesempatan Lebih Luas Untuk Berkembang.
           </p>
