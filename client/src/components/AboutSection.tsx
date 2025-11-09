@@ -10,7 +10,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-testid="text-about-title">
-              Ambivers didirikan pada tahun <span className="text-primary">2020</span> dengan fokus pada bidang pendidikan dan pengembangan sumber daya manusia
+              Ambivers Didirikan Pada Tahun <span className="text-primary">2020</span> Dengan Fokus Pada Bidang Pendidikan Dan Pengembangan Sumber Daya Manusia
             </h2>
           </div>
 

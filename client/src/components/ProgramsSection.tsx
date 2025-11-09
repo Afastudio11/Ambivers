@@ -9,38 +9,38 @@ export default function ProgramsSection() {
   const programs = [
     {
       title: "Ambivers Foundation",
-      description: "Non-Governmental Organization (NGO) bagian dari Ambivers.id, berdiri sejak Juni 2023 dan berfokus pada pengembangan mahasiswa lewat kegiatan sosial dan pendidikan, dengan lebih dari 100 relawan yang telah berkontribusi.",
+      description: "Non-Governmental Organization (NGO) Bagian Dari Ambivers.id, Berdiri Sejak Juni 2023 Dan Berfokus Pada Pengembangan Mahasiswa Lewat Kegiatan Sosial Dan Pendidikan, Dengan Lebih Dari 100 Relawan Yang Telah Berkontribusi.",
       image: foundationImg,
       testId: "card-foundation"
     },
     {
       title: "ASYP",
-      description: "Program pelatihan dengan hands-on project bersama mentor berpengalaman untuk mengembangkan soft skill dan hard skill siswa SMA di seluruh Indonesia.",
+      description: "Program Pelatihan Dengan Hands-On Project Bersama Mentor Berpengalaman Untuk Mengembangkan Soft Skill Dan Hard Skill Siswa SMA Di Seluruh Indonesia.",
       image: asypImg,
       testId: "card-asyp"
     },
     {
       title: "Student Ambassador",
-      description: "Program bagi pelajar untuk membuat dan membagikan konten edukatif, sekaligus memperkenalkan serta menyebarkan berbagai program dan pembelajaran yang dimiliki oleh Ambivers.",
+      description: "Program Bagi Pelajar Untuk Membuat Dan Membagikan Konten Edukatif, Sekaligus Memperkenalkan Serta Menyebarkan Berbagai Program Dan Pembelajaran Yang Dimiliki Oleh Ambivers.",
       image: ambassadorImg,
       testId: "card-ambassador"
     },
     {
       title: "Bimbel UTBK",
-      description: "Program persiapan UTBK untuk siswa kelas 12 yang mencakup try out, diskusi, latihan soal, e-book, video materi, dan konsultasi gratis dengan mentor.",
+      description: "Program Persiapan UTBK Untuk Siswa Kelas 12 Yang Mencakup Try Out, Diskusi, Latihan Soal, E-Book, Video Materi, Dan Konsultasi Gratis Dengan Mentor.",
       image: utbkImg,
       testId: "card-utbk"
     },
     {
       title: "Study Abroad",
-      description: "Program bantuan dan bimbingan untuk pelajar yang ingin melanjutkan pendidikan ke luar negeri.",
+      description: "Program Bantuan Dan Bimbingan Untuk Pelajar Yang Ingin Melanjutkan Pendidikan Ke Luar Negeri.",
       image: studyAbroadImg,
       comingSoon: true,
       testId: "card-study-abroad"
     },
     {
       title: "Workshop",
-      description: "Berbagai workshop dan pelatihan untuk mengembangkan keterampilan pelajar Indonesia.",
+      description: "Berbagai Workshop Dan Pelatihan Untuk Mengembangkan Keterampilan Pelajar Indonesia.",
       image: foundationImg,
       comingSoon: true,
       testId: "card-workshop"

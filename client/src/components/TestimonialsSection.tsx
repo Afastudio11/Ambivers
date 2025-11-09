@@ -140,7 +140,7 @@ export default function TestimonialsSection() {
     <section id="testimoni" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
-          Apa Kata Mereka Tentang Belajar bersama Ambivers?
+          Apa Kata Mereka Tentang Belajar Bersama Ambivers?
         </h2>
       </div>
 
