@@ -77,7 +77,7 @@ export default function HeroSection() {
       <div className="absolute bottom-40 right-20 w-40 h-40 border-2 border-black/20 rounded-2xl" />
       <div className="absolute top-32 right-32 w-28 h-28 border-2 border-black/20 rounded-2xl" />
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-8 lg:px-16 pt-32 lg:pt-40 pb-20">
+      <div className="relative z-10 w-full mx-auto px-8 lg:px-20 xl:px-32 pt-32 lg:pt-40 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
             <span className="text-gray-900">Tempat untuk menampilkan</span>
