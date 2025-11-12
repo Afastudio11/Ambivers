@@ -84,17 +84,13 @@ export default function HeroSection() {
       </svg>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-20">
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
-            <div className="flex flex-col md:flex-row md:justify-center md:items-center md:gap-x-6">
-              <span className="text-gray-900 whitespace-nowrap">Tempat Untuk</span>
-              <span className="text-gray-900 whitespace-nowrap">Menampilkan.</span>
-            </div>
-            <span className="italic font-serif text-gray-900 block mt-2">Karya Terbaikmu.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
+            <span className="text-gray-900 block">Bantu raih impianmu</span>
+            <span className="italic font-serif text-gray-900 block mt-2">jadi nyata!</span>
           </h1>
           
-          <p className="sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-5xl mx-auto mb-8 sm:mb-12 md:mb-16 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 leading-relaxed" data-testid="text-hero-description">
-            Ambivers Memberikan Ruang Bagi Pelajar Untuk Menampilkan Karya Dan Pencapaian Mereka,
-            Serta Membuka Kesempatan Lebih Luas Untuk Berkembang.
+          <p className="sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 leading-relaxed" data-testid="text-hero-description">
+            Ambivers telah memberikan dampak positif bagi <strong>50.000+ pelajar</strong> di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
           </p>
         </div>
 
@@ -177,11 +173,11 @@ export default function HeroSection() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = 'inset 2px 2px 6px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(255, 255, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.3)';
-              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)';
-              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.transform = 'translateY(0) scale(1)';
             }}
             onFocus={(e) => {
               e.currentTarget.style.boxShadow = 'inset 2px 2px 6px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(255, 255, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.3)';
@@ -192,7 +188,7 @@ export default function HeroSection() {
             data-testid="button-jelajahi"
           >
             <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-1000 group-hover:rotate-[360deg]" />
-            <span className="text-base sm:text-lg">Jelajahi Program Kami</span>
+            <span className="text-base sm:text-lg">Jelajahi program kami</span>
           </button>
         </div>
       </div>

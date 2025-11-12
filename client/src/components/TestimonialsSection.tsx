@@ -1,11 +1,14 @@
-import { Star } from "lucide-react";
-import { useState } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -92,66 +95,108 @@ export default function TestimonialsSection() {
   ];
 
   const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null);
-
-  const row1 = testimonials.slice(0, 5);
-  const row2 = testimonials.slice(5);
-
-  const renderRow = (testimonials: typeof row1, index: number, reverse: boolean = false) => (
-    <div key={index} className="relative overflow-hidden mb-8">
-      <div className={`flex gap-6 ${reverse ? 'animate-scroll-reverse' : 'animate-scroll'}`}>
-        {[...testimonials, ...testimonials, ...testimonials].map((testimonial, idx) => (
-          <div
-            key={idx}
-            onClick={() => setSelectedTestimonial(testimonial)}
-            className="flex-shrink-0 w-[400px] bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-            data-testid={`testimonial-card-row${index}-${idx}`}
-          >
-            <div className="flex items-start justify-between mb-4">
-              <div className="font-bold text-lg text-gray-900">
-                {testimonial.company}
-              </div>
-              <div className="flex items-center gap-1 bg-white border border-gray-200 px-2 py-1 rounded-lg">
-                <span className="font-semibold text-sm">{testimonial.rating}</span>
-                <Star className="w-4 h-4 fill-green-500 text-green-500" />
-              </div>
-            </div>
-            
-            <p className="text-gray-700 text-sm mb-6 line-clamp-4">
-              {testimonial.text}
-            </p>
-            
-            <div>
-              <div className="font-bold text-gray-900 mb-1">
-                {testimonial.name}
-              </div>
-              {testimonial.major && (
-                <div className="text-sm text-gray-600">
-                  {testimonial.major}
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: "start",
+      slidesToScroll: 1
+    },
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
   );
+
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
     <section id="testimoni" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
-          Apa Kata Mereka Tentang Belajar Bersama Ambivers?
+          Apa kata mereka tentang belajar bersama Ambivers?
         </h2>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
-        
-        <div className="overflow-hidden">
-          {renderRow(row1, 0, false)}
-          {renderRow(row2, 1, true)}
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6">
+            {testimonials.map((testimonial, idx) => (
+              <div
+                key={idx}
+                onClick={() => setSelectedTestimonial(testimonial)}
+                className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                data-testid={`testimonial-card-${idx}`}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="font-bold text-lg text-gray-900 dark:text-gray-100">
+                    {testimonial.company}
+                  </div>
+                  <div className="flex items-center gap-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 px-2 py-1 rounded-lg">
+                    <span className="font-semibold text-sm">{testimonial.rating}</span>
+                    <Star className="w-4 h-4 fill-green-500 text-green-500" />
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-6 line-clamp-4">
+                  {testimonial.text}
+                </p>
+                
+                <div>
+                  <div className="font-bold text-gray-900 dark:text-gray-100 mb-1">
+                    {testimonial.name}
+                  </div>
+                  {testimonial.major && (
+                    <div className="text-sm text-primary">
+                      {testimonial.major}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Navigation Arrows */}
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={scrollPrev}
+          disabled={!canScrollPrev}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          data-testid="button-testimonials-prev"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={scrollNext}
+          disabled={!canScrollNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          data-testid="button-testimonials-next"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </Button>
       </div>
 
       <Dialog open={!!selectedTestimonial} onOpenChange={() => setSelectedTestimonial(null)}>
@@ -176,7 +221,7 @@ export default function TestimonialsSection() {
                     {selectedTestimonial.name}
                   </div>
                   {selectedTestimonial.major && (
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-primary">
                       {selectedTestimonial.major}
                     </div>
                   )}
@@ -186,39 +231,6 @@ export default function TestimonialsSection() {
           )}
         </DialogContent>
       </Dialog>
-
-      <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-100% / 3));
-          }
-        }
-        @keyframes scroll-reverse {
-          0% {
-            transform: translateX(calc(-100% / 3));
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-        .animate-scroll {
-          animation: scroll 90s linear infinite;
-          display: inline-flex;
-          width: max-content;
-        }
-        .animate-scroll-reverse {
-          animation: scroll-reverse 90s linear infinite;
-          display: inline-flex;
-          width: max-content;
-        }
-        .animate-scroll:hover,
-        .animate-scroll-reverse:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }
