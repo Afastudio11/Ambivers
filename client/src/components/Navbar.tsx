@@ -1,12 +1,23 @@
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import logoImage from "@assets/logo-ambivers.png";
+
+interface DropdownItem {
+  label: string;
+  href?: string;
+  onClick?: () => void;
+}
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [programDropdownOpen, setProgramDropdownOpen] = useState(false);
+  const [tentangDropdownOpen, setTentangDropdownOpen] = useState(false);
   const [location, navigate] = useLocation();
+  
+  const programTimeoutRef = useRef<NodeJS.Timeout>();
+  const tentangTimeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +66,48 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const handleProgramMouseEnter = () => {
+    if (programTimeoutRef.current) {
+      clearTimeout(programTimeoutRef.current);
+    }
+    setProgramDropdownOpen(true);
+  };
+
+  const handleProgramMouseLeave = () => {
+    programTimeoutRef.current = setTimeout(() => {
+      setProgramDropdownOpen(false);
+    }, 150);
+  };
+
+  const handleTentangMouseEnter = () => {
+    if (tentangTimeoutRef.current) {
+      clearTimeout(tentangTimeoutRef.current);
+    }
+    setTentangDropdownOpen(true);
+  };
+
+  const handleTentangMouseLeave = () => {
+    tentangTimeoutRef.current = setTimeout(() => {
+      setTentangDropdownOpen(false);
+    }, 150);
+  };
+
+  const programItems: DropdownItem[] = [
+    { label: "Ambivers Foundation", href: "/ambivers-foundation" },
+    { label: "Ambivers Summer Youth Program", href: "/asyp" },
+    { label: "Student Ambassador", href: "/student-ambassador" },
+    { label: "Bimbel UTBK", href: "/bimbel-utbk" },
+    { label: "Study Abroad", href: "/coming-soon" },
+    { label: "Workshop", href: "/coming-soon" },
+  ];
+
+  const tentangItems: DropdownItem[] = [
+    { label: "Tentang Kami", href: "/tentang-kami" },
+    { label: "Ambivers in number", onClick: () => scrollToSection("statistics") },
+    { label: "What we do?", href: "/what-we-do" },
+    { label: "Testimoni", onClick: () => scrollToSection("testimoni") },
+  ];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-black/30 backdrop-blur-md border-b border-white/10 shadow-sm" : "bg-white border-b border-gray-200"
@@ -74,30 +127,91 @@ export default function Navbar() {
           </button>
 
           <div className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={() => scrollToSection("program")}
-              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium`}
-              data-testid="link-program"
+            {/* Program Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleProgramMouseEnter}
+              onMouseLeave={handleProgramMouseLeave}
             >
-              Program
-            </button>
-            <button 
-              onClick={() => scrollToSection("tentang-kami")}
-              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium`}
-              data-testid="link-tentang"
+              <button 
+                className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium flex items-center gap-1 nav-link`}
+                data-testid="link-program"
+              >
+                Program
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${programDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-200 origin-top ${
+                programDropdownOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
+              }`}>
+                {programItems.map((item, index) => (
+                  item.href ? (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#FFC700]/10 hover:text-[#FFC700] transition-colors text-sm"
+                      data-testid={`dropdown-program-${index}`}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : item.onClick ? (
+                    <button
+                      key={index}
+                      onClick={item.onClick}
+                      className="w-full text-left px-4 py-3 text-gray-900 hover:bg-[#FFC700]/10 hover:text-[#FFC700] transition-colors text-sm"
+                      data-testid={`dropdown-program-${index}`}
+                    >
+                      {item.label}
+                    </button>
+                  ) : null
+                ))}
+              </div>
+            </div>
+
+            {/* Tentang Kami Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleTentangMouseEnter}
+              onMouseLeave={handleTentangMouseLeave}
             >
-              Tentang Kami
-            </button>
-            <button 
-              onClick={() => scrollToSection("testimoni")}
-              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium`}
-              data-testid="link-testimoni"
-            >
-              Testimoni
-            </button>
+              <button 
+                className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium flex items-center gap-1 nav-link`}
+                data-testid="link-tentang"
+              >
+                Tentang Kami
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${tentangDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <div className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-200 origin-top ${
+                tentangDropdownOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'
+              }`}>
+                {tentangItems.map((item, index) => (
+                  item.href ? (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#FFC700]/10 hover:text-[#FFC700] transition-colors text-sm"
+                      data-testid={`dropdown-tentang-${index}`}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : item.onClick ? (
+                    <button
+                      key={index}
+                      onClick={item.onClick}
+                      className="w-full text-left px-4 py-3 text-gray-900 hover:bg-[#FFC700]/10 hover:text-[#FFC700] transition-colors text-sm"
+                      data-testid={`dropdown-tentang-${index}`}
+                    >
+                      {item.label}
+                    </button>
+                  ) : null
+                ))}
+              </div>
+            </div>
+
             <Link 
               href="/blog"
-              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium`}
+              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium nav-link`}
               data-testid="link-blog"
             >
               Insight & Blog
@@ -107,7 +221,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link href="/coming-soon">
               <button 
-                className="rounded-full px-8 py-3 text-base font-medium cursor-pointer transition-all duration-200 border-2"
+                className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
                 style={{
                   backgroundColor: 'rgba(232, 232, 232, 0.9)',
                   backdropFilter: 'blur(12px)',
@@ -137,7 +251,7 @@ export default function Navbar() {
             </Link>
             <Link href="/coming-soon">
               <button 
-                className="rounded-full px-8 py-3 text-base font-medium cursor-pointer transition-all duration-200 border-2"
+                className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
                 style={{
                   backgroundColor: 'rgba(255, 199, 0, 0.9)',
                   backdropFilter: 'blur(12px)',
@@ -180,27 +294,88 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className={`md:hidden border-t ${scrolled ? "border-white/10 bg-black/90" : "border-gray-200 bg-white"} backdrop-blur-md`} data-testid="mobile-menu">
           <div className="px-4 py-6 space-y-4">
-            <button
-              onClick={() => scrollToSection("program")}
-              className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
-              data-testid="link-program-mobile"
-            >
-              Program
-            </button>
-            <button
-              onClick={() => scrollToSection("tentang-kami")}
-              className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
-              data-testid="link-tentang-mobile"
-            >
-              Tentang Kami
-            </button>
-            <button
-              onClick={() => scrollToSection("testimoni")}
-              className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
-              data-testid="link-testimoni-mobile"
-            >
-              Testimoni
-            </button>
+            {/* Mobile Program Dropdown */}
+            <div>
+              <button
+                onClick={() => setProgramDropdownOpen(!programDropdownOpen)}
+                className={`flex items-center justify-between w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
+                data-testid="link-program-mobile"
+              >
+                Program
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${programDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {programDropdownOpen && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {programItems.map((item, index) => (
+                    item.href ? (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className={`block ${scrolled ? "text-white/80" : "text-gray-700"} hover:text-[#FFC700] transition-colors py-1.5 text-sm`}
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`dropdown-program-mobile-${index}`}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : item.onClick ? (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          item.onClick?.();
+                          setMobileMenuOpen(false);
+                        }}
+                        className={`block w-full text-left ${scrolled ? "text-white/80" : "text-gray-700"} hover:text-[#FFC700] transition-colors py-1.5 text-sm`}
+                        data-testid={`dropdown-program-mobile-${index}`}
+                      >
+                        {item.label}
+                      </button>
+                    ) : null
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Tentang Kami Dropdown */}
+            <div>
+              <button
+                onClick={() => setTentangDropdownOpen(!tentangDropdownOpen)}
+                className={`flex items-center justify-between w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
+                data-testid="link-tentang-mobile"
+              >
+                Tentang Kami
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${tentangDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {tentangDropdownOpen && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {tentangItems.map((item, index) => (
+                    item.href ? (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className={`block ${scrolled ? "text-white/80" : "text-gray-700"} hover:text-[#FFC700] transition-colors py-1.5 text-sm`}
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`dropdown-tentang-mobile-${index}`}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : item.onClick ? (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          item.onClick?.();
+                          setMobileMenuOpen(false);
+                        }}
+                        className={`block w-full text-left ${scrolled ? "text-white/80" : "text-gray-700"} hover:text-[#FFC700] transition-colors py-1.5 text-sm`}
+                        data-testid={`dropdown-tentang-mobile-${index}`}
+                      >
+                        {item.label}
+                      </button>
+                    ) : null
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/blog"
               className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
@@ -209,6 +384,7 @@ export default function Navbar() {
             >
               Insight & Blog
             </Link>
+            
             <div className="flex flex-col gap-2 pt-4">
               <Link href="/coming-soon" className="w-full" onClick={() => setMobileMenuOpen(false)}>
                 <button 
