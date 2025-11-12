@@ -1,0 +1,429 @@
+Notes:
+⁠Setiap copywriting cukup huruf di awal kalimat aja yg kapital
+Jika tidak ada foto bisa ambil dari internet
+
+Navigasi
+(Header)
+Referensi:
+
+
+Isi:
+Logo Ambivers
+Program
+Tentang Kami
+Insight & Blog
+Daftar 
+Masuk
+Notes:
+Saat kursor diarahkan ke menu → muncul garis bawah (underline) bergerak dari tengah ke kiri-kanan
+Kasih kotak untuk “Daftar” dan “Masuk” agar beda dengan menu yang lain
+Menu “Program” → Saat klik “Program”, dropdown muncul dengan animasi slide-down.
+Menu “Tentang Kami” → Saat klik “Tentang Kami”, dropdown muncul dengan animasi slide-down.
+Menu “Insight & Blog” → arahkan ke halaman Insight & Blog
+Tombol “Daftar” → arahkan ke bagian daftar
+Tombol “Masuk” → menuju login page
+Asset Logo Ambivers: https://drive.google.com/file/d/1RpO4pXrGDnoc9lWNM-xWVO8tEcfdkiF2/view?usp=drive_link 
+Section Menu “Tentang Kami” (Dropdown)
+Referensi:
+
+Isi: 
+Tentang Kami
+Ambivers in number
+What we do?
+Testimoni
+Notes:
+Dropdown aktif saat hover/klik
+Tambahkan icon kecil (misal panah bawah) di “Program” agar tahu ada dropdown
+Menu “Tentang Kami” → arahkan ke halaman Tentang Kami
+Menu “Ambivers in number” → arahkan ke halaman ……
+Menu “What we do?” → arahkan ke halaman What we do
+Menu “Testimoni” → arahkan ke halaman Testimoni
+Section Menu “Program” (Dropdown)
+Referensi: 
+
+Isi: 
+Ambivers Foundation
+A
+Student Ambassador
+Bimbel UTBK
+Study Abroad
+Workshop
+Notes:
+Dropdown aktif saat hover/klik
+Tambahkan icon kecil (misal panah bawah) di “Program” agar tahu ada dropdown
+Menu “Ambivers Foundation” → arahkan ke halaman Tentang Kami
+Menu “Ambivers Summer Youth Program” → arahkan ke halaman Ambivers Summer Youth Program
+Menu “Student Ambassador” → arahkan ke halaman Student Ambassador
+Menu “Study Abroad” → arahkan ke halaman Study Abroad
+Menu “Workshop” → arahkan ke halaman Workshop
+Homepage (Halaman Utama)
+Referensi:
+
+
+Isi:
+Bantu Raih Impianmu Jadi Nyata!
+Ambivers telah memberikan dampak positif bagi 50.000+ pelajar di seluruh Indonesia.
+ Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
+CTA: Jelajahi Program Kami 
+Notes:
+Saat CTA diklik → langsung scroll ke bagian “Program Kami”
+Tombol CTA sedikit membesar saat kursor diarahkan (hover)
+Untuk foto yang ini diganti jadi foto orang sedang belajar
+
+Homepage (Halaman Utama)
+Referensi:
+
+
+
+
+
+
+
+Isi:
+
+Ambivers didirikan pada tahun 2020 dengan fokus pada bidang pendidikan dan pengembangan sumber daya manusia
+Notes:
+Asset Background Tulisan:
+Homepage (Halaman Utama)
+Referensi:
+
+
+Isi:
+
+Ambivers telah memberikan dampak kepada 50.000+ pelajar di seluruh Indonesia
+Notes:
+Nanti ada peta Indonesia, bisa berwarna biru atau kuning sesuai dengan warna ambivers
+Untuk tulisan bold bisa disamakan warnanya dengan warna peta
+Homepage (Halaman Utama)
+Ambivers In Number
+Referensi:
+
+Isi:
+
+100+ Corporate Partners
+40+ School Partners
+50.000+ Beneficiaries
+34 Covered Regions
+90% Satisfaction of Users
+Notes:
+Tampilkan angka dengan counter animation (dari 0 ke nilai akhir)
+Gunakan ikon kecil di atas tiap angka (user, building, school)
+Homepage (Halaman Utama)
+Referensi:
+
+
+Isi:
+
+Program Kami
+Ambivers Foundation
+https://drive.google.com/file/d/14eSVEirLR_xPPzhfKrxoCEJvxV9jG81o/view?usp=sharing 
+Non-Governmental Organization (NGO) bagian dari Ambivers.id, berdiri sejak Juni 2023 dan berfokus pada pengembangan mahasiswa lewat kegiatan sosial dan pendidikan, dengan lebih dari 100 relawan yang telah berkontribusi.
+Ambivers Summer Youth Program
+https://drive.google.com/file/d/1isHod9m8I4-ZRAR3_PMaCIAydW7-qEAP/view?usp=sharing 
+Program pelatihan dengan hands-on project bersama mentor berpengalaman untuk mengembangkan soft skill dan hard skill siswa SMA di seluruh Indonesia.
+Student Ambassador
+https://drive.google.com/file/d/1pozH108U6RYeTCAtFCXWDxiW9fXXmbqE/view?usp=sharing 
+Program bagi pelajar untuk membuat dan membagikan konten edukatif, sekaligus memperkenalkan serta menyebarkan berbagai program dan pembelajaran yang dimiliki oleh Ambivers.
+Bimbel UTBK
+https://drive.google.com/file/d/1xSKLzpiq7Mefm0pjFLZjtUfMhkYkiJZx/view?usp=drive_link 
+Program persiapan UTBK untuk siswa kelas 12 yang mencakup try out, diskusi, latihan soal, e-book, video materi, dan konsultasi gratis dengan mentor.
+Study Abroad
+Coming Soon…
+Workshop
+Coming Soon…
+Notes:
+Gunakan card layout per program (jadi ada 2 baris terdiri dari 3 kotak)  dan ada fotonya jadi. 
+Untuk nama program bisa dibesarkan ukurannya, jangan sama seperti deskripsi singkatnya
+Jika program kena kursor itu akan berubah warna atau ukurannya lebih besar
+Jika tiap program di klik akan di arahkan ke halaman masing masing program
+Homepage (Halaman Utama)
+Referensi:
+
+Isi: 
+
+Our Partners
+
+Logo klien & 40 School Partners
+Notes:
+Logo partner bergerak pelan
+⁠Logo partner gausa di hitam putih jadi langsung warna asli nya aja
+Asset Logo: https://drive.google.com/drive/folders/12khp86Ae1BQjTBk5_lxSoVIpGjz32_-s 
+Homepage (Halaman Utama
+Testimoni
+Referensi:
+
+Isi:
+Apa Kata Mereka Tentang Belajar bersama Ambivers?
+
+Ridha Alfinanianty - Ilmu Gizi Universitas Indonesia
+Foto: https://drive.google.com/file/d/11eqqn3z9j5rejH4UjlLQRmKBUKB49BmW/view?usp=share_link
+Memasuki kelas 12 itu erat banget kaitannya dengan dunia yang kanan kiri nya itu ngebahas tentang sbmptn dan lain-lain. Mulai dari ketatnya saingan, materi yang segunung, dan intinya gimana caranya biar kita bisa menjawab banyak soal secara tepat dengan waktu yang disediakan (mepet) hehe. Alhamdulillah wa syukurillah, ketika lg scroll ig aku ketemu platform yang beneran bikin “love at the first sight”. Soal-soal yang dibahas beneran sesuai dengan standar ujian masuk PTN dan pembahasannya bukan cuman asal pembahasan, tetapi juga secara konsep. Terima kasih banyak sudah menjadi bagian dari perjuangan aku, so worth it!
+
+Margareth Angelin Chatarina - Kedokteran Universitas Diponegoro
+Foto: https://drive.google.com/file/d/12NJULT9urF8QP0qUchfq5TQJyI7Ws8ID/view?usp=share_link
+Menurut aku, ambivers sangat membantu dalam persiapan sbmptn waktu itu. Tahun 2020, covid sedang sangat tinggi penyebarannya sehingga aku tidak bisa keluar untuk bimbel offline. Selain itu, tipe soal utbk yang baru dan hanya tps membuat aku panik. Untungnya, ambivers membantuku dengan menyediakan latihan soal yang sangat variatif dan disertai pembahasan yang mudah dipahami. Di grup, teman-teman lain juga saling berbagi soal dan membantu untuk pembahasan. Aku merasa sangat terbantu dan merekomendasi ambivers untuk teman-teman yang sedang persiapan untuk masuk PTN impian.
+
+Abdan Syakuro - Sastra Daerah Universitas Sebelas Maret
+Foto: https://drive.google.com/file/d/1iu0tnPLDBsaeZhViagFLM5UDMw4GHVn4/view?usp=share_link 
+Testimoni untuk bimbelnya bagus, kak, cukup untuk menambah latihan-latihan soal buat saya yang pada saat itu memang masih kurang sekali kemampuannya, terutama dalam kuantitatif. Jadi menurut saya bimbel yang saya ikuti sangat bermanfaat, juga dengan latihan-latihan soal beserta penjelasannya yang mudah dipahami. Begitu kak untuk testimoni dari saya, terima kasih sudah menjadi salah satu bagian dari kesuksesan saya di UNS.
+
+Intan Putri Syamtomi - Pendidikan Dokter Universitas Andalas
+Foto: https://drive.google.com/file/d/18j5Md9L9ex6J0h2jSoaSXZShDcMzun2U/view?usp=share_link
+Aku bener-bener beruntung bisa ketemu ambivers ini. Seperti namanya, orang orang di dalamnya bener-bener ambis ditambah saling berbagi. Materi yang di ajarin pun yang bener-bener aku butuhin, kalo ga tau aku bisa nanya secara personal ke kakaknya atau ke temen-temen di grup dan mereka bener-bener bantuin, walaupun kita dari berbagai provinsi. Ambivers bener-bener worth it sebagai tempat untuk persiapan untuk ujian masuk PTN dan dipastikan tidak akan menyesal untuk ikut les ini apalagi sudah ada seperti buku” yang sangat membantu kalian dalam menghadapi ujian kedepan.
+
+Della Nurbait  - Universitas Sriwijaya
+Foto: https://drive.google.com/open?id=1z10hSpG-dti8y0fZKeyf9r2TD1VLtK-B
+Aku merasa Student Ambassador ini meningkatkan personal branding apalagi disertai dengan upgrading class. Pesannya semoga bisa tetap berkontribusi banyak bersama nanti dan semoga bisa meet up sama Student Ambassador 2022. KERENNN POLL
+
+Nabila Putri Herdianti - Universitas Negeri Jakarta
+Foto: https://drive.google.com/open?id=19rYYQ6eIpB_C8W_6_xYubkYANg102zd2 
+Aku seneng banget bisa menjadi bagian dari Student Ambassador kali ini, bisa mendapatkan banyak pengalaman, relasi, menambah wawasan dan juga pengalaman. Semoga kedepannya banyak program-program yang semakin baik dan keren tentunya. Terima kasih Ambivers <3
+Notes:
+Buat testimonial slider (auto slide dan manual arrows)
+Tulisan nama dibold dan universitas/sekolah dibedain warnanya 
+Footer
+Referensi:
+
+
+Isi:
+
+Logo Ambivers
+
+PT Ambivers Indonesia Group
+Jl. Raya Pajajaran No.39, RT.04/RW.06, Babakan, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16128 
+
+Partnership with us https://docs.google.com/forms/d/1hXOxbFtEDLw2B9FnsXQB-3h_QVnmWWtRC-p30t-RV-I/edit?hl=id 
+
+Instagram: https://www.instagram.com/ambivers.id/
+X: https://x.com/ambiversID 
+Tiktok : https://www.tiktok.com/@ambivers.id 
+LinkedIn: www.linkedin.com/company/ambivers-id
+Email : people@ambivers.site
+Notes:
+Gunakan dark background 
+Icon media sosial interaktif, jadi jika di klik logo instagram akan direct ke link/IG Ambivers
+Asset Logo Ambivers: https://drive.google.com/file/d/1RpO4pXrGDnoc9lWNM-xWVO8tEcfdkiF2/view?usp=drive_link 
+Page dari dropdown Navigasi Program dan halaman program kami
+Ambivers Foundation
+Referensi:
+
+Isi:
+
+Ambivers Foundation
+Ambivers Foundation merupakan NGO yang didirikan sejak Juni 2023, salah satu bagian dari Ambivers.id yang berfokus pada pengembangan mahasiswa melalui berbagai kegiatan sosial dan pendidikan serta sudah 100+ volunteer berpartisipasi untuk memberikan dampak bersama.
+
+Ikut Program (tidak direct kemana mana karena belum mulai lagi programnya)
+Lebih Lanjut https://www.instagram.com/ambivers.foundation/ 
+Notes
+Tombol “Ikut Program” akan diarahkan ke gform saat oprec atau event regist
+Untuk “lebih lanjut” akan direct ke link instagram
+Asset foto: https://drive.google.com/file/d/1B6LZHNBJOgw_GA913GzQauNlsmNitNXl/view?usp=sharing 
+
+
+Referensi:
+  
+Isi:
+
+Visi
+Mendorong anak muda Indonesia berkembang jadi generasi yang cerdas, peduli, dan bermanfaat bagi orang lain.
+
+Misi
+Memberikan tempat bagi anak muda untuk belajar dan mengembangkan diri.
+Membantu mereka mengasah kemampuan dan pengalaman lewat berbagai kegiatan.
+Mengajak anak muda untuk ikut berbuat baik dan membawa perubahan positif di sekitar mereka.
+Notes: 
+Untuk tulisan visi misi bisa dihighlight
+Referensi
+
+Isi:
+
+Program Ambivers Foundation
+
+AFYI
+https://drive.google.com/file/d/1hqEzYCjC4aM2ZjFEZcTyu0vBwjCH2ntG/view?usp=sharing 
+Program unggulan Ambivers Foundation yang dilaksanakan secara online dan offline yang dirancang khusus untuk memberikan dampak nyata bagi masyarakat dengan melibatkan pemuda Indonesia dalam berbagai inisiatif sosial dan pemberdayaan
+
+JUMPIVERS
+https://drive.google.com/file/d/1_1ts7n25hs0bGGh4d366sdGdGnZuBJd2/view?usp=drive_link 
+JUMPIVERS (Journey to Unlock my Potential with Ambivers) merupakan sebuah program pengembangan diri yang bertujuan untuk memfasilitasi pengembangan keterampilan, memperluas wawasan, dan mempercepat proses pembelajaran bagi individu yang ingin terus tumbuh, mengeksplorasi potensi diri, dan siap menghadapi tantangan zaman.
+Notes:
+Gunakan card layout per program dan ada fotonya jadi. 
+Untuk nama program bisa dibesarkan ukurannya, jangan sama seperti deskripsinya
+Referensi
+
+Isi:
+
+Faiza Yasmin Butsaina - Universitas Negeri Surabaya
+Foto: https://drive.google.com/file/d/1yypxwxRQqVQpaRF9hzsPTAuuz29VL3rQ/view?usp=sharing 
+Jadi untuk kegiatan AFYI kemarin sangat sangat berkesan, menambah pengalaman dan pengetahuan bagi saya (apalagi dengan saya yang bukan termasuk orang kreatif) selain itu juga menambah banyak teman baru.Saya juga merasa kegiatan kemarin sangat menyenangkan karena juga dari kakak-kakak tentornya sangat baik, lalu untuk kegiatan yang diselenggarakan tidak membosankan.Selanjutnya yang sempet saya ANGAN ANGAN TERUS, kok bisa workshop dengan harga segitu tpi suangattt worth it ,sampai rasanya kalau ada  workshop ini lagi wajib ikut Ratenya 1000000000/10
+
+Kethy Malika Cahya - SMKN 4 Surabaya
+Foto: https://drive.google.com/file/d/1ANsvbBbwTvK9qXtsboZn-r4o3qwo4Slc/view?usp=sharing 
+Jadi acara kemarin seruu bangettt kakak kakaknya pada humble, welcome dan ceriaa bangett, acaranya juga seruu ga ngebosenin, dan dari acara ini aku jadi tau gimana cara buat ganci dari tutup botol plastik, dan juga menghias tempat skincarenya juga seruu bangetttt
+terimakasih yaa kakak kakak yang udah ngadain acara ini 
+
+Aisyah Alfina Putri - Telkom University Surabaya
+Foto:
+https://drive.google.com/file/d/1Ol6J3cxjOPTmO5onf3IXhuytQaVbHVDU/view?usp=sharing 
+Setelah ikut kegiatan AFYI kemarin tu bener” nambah pengetahuanku dan juga bermanfaat banget buat aku kedepannya. Contohnya kemarin kan sempet bikin gantungan dari tutup botol nah itu sekarang kalau ada tutup botol yang biasanya kubuang sekarang kusimpen kak buat dibikin kerajinan hehe. Makasii ya AFYI, next time adain lagii ya yang kayak kegiatan kemarin, seruu dan bermanfaat soalnya 
+
+
+
+Notes:
+Buat testimonial slider (auto-scroll setiap 5 detik, manual arrows)
+Tambahkan profile photo + nama + universitas/sekolah (kalau ada)
+Tulisan nama dibold dan universitas/sekolah dibedain warnanya
+Ambivers Summer Youth Program
+Referensi:
+
+Isi:
+
+Ambivers Summer Youth Program
+
+Ambivers Summer Youth Program (ASYP) merupakan program yang berisi seminar dan pelatihan dengan hands-on project bersama mentor berpengalaman di bidangnya, yang ditujukan untuk siswa SMA di seluruh Indonesia.
+
+Ikut Program (tidak direct kemana mana karena belum mulai lagi programnya)
+Notes:
+Asset foto: https://drive.google.com/file/d/1OYetWadlUDnYk40Bw90YGL1_TnyB74gs/view?usp=sharing 
+Referensi:
+
+Isi:
+
+Outcome of the programs 
+Peserta mampu mengasah keterampilan komunikasi, kepemimpinan, dan kreativitas melalui pengalaman belajar interaktif dan praktik langsung bersama mentor profesional. Mereka juga lebih memahami potensi diri serta arah pengembangan karier di masa depan.
+
+Impact
+Program ini berdampak positif dalam meningkatkan kepercayaan diri, kemampuan berpikir kritis, serta kesiapan peserta untuk menghadapi berbagai tantangan di dunia akademik maupun profesional. ASYP juga menumbuhkan semangat kolaborasi dan eksplorasi diri di kalangan generasi muda Indonesia.
+Referensi: 
+
+Isi:
+
+Dokumentasi ASYP:
+https://drive.google.com/drive/u/2/folders/10URDk3YkUGzA8vVPfQF12bO1e7QZw-np 
+Referensi
+
+Isi:
+I Gusti Agung Ardhanareswari
+Foto: https://drive.google.com/file/d/16mUngvmkENPAfuHu-mlZ1cgD8q24VWi1/view?usp=share_link
+Aku I Gusti Agung Ardhanareswari dari Bali, lulusan SMA Negeri 1 Kuta. Awalnya aku iseng daftar Ambivers Summer Youth Program (ASYP) dan ternyata kepilih! Selama 4 hari program, aku banyak belajar hal bermanfaat: personal branding dari Kak Asya, public speaking dari Kak Andika, serta leadership dan project management dari Kak Zeta. Selain materi, aku juga bisa praktik langsung lewat tugas-tugas kreatif dan project plan. Yang paling seru, aku ketemu banyak teman baru dari berbagai daerah dan bisa networking tiap akhir acara. Pengalaman pertamaku ikut ASYP ini benar-benar menyenangkan dan berkesan!
+
+Niputu Sterefi Soyasa 
+Foto: https://drive.google.com/file/d/1x6gnEyfDD-ACWT0eEPSu3GWfsSKKOo-J/view?usp=sharing 
+Kita belajar mengenai personal branding, public speaking, leadership, dan juga project management
+
+Marsya Olivia Irawan
+Foto: https://drive.google.com/file/d/1W8-cFzglxfC2afXJ4lms3SNq-TDe4xTZ/view?usp=drive_link 
+Aku Marsha Olivia Irawan dari KIR MAN 2 Kota Bogor. Selama Ambivers Summer Youth Program 2023, aku belajar banyak hal baru, mulai dari personal branding, public speaking, leadership, hingga project management, yang langsung bisa aku praktikkan. Selain materi, aku dibimbing oleh kakak-kakak berpengalaman dan bertemu teman-teman hebat dari seluruh Indonesia. Pengalaman 4 hari ini benar-benar berkesan dan sangat membantu!
+
+Karisma Alif Nuziaki 
+Foto: https://drive.google.com/file/d/13JXS7c7XMFVBqBwBX_U_b3TUWLTVig1C/view?usp=share_link
+Project-project yang diberikan oleh kakak-kakak Ambivers itu sangat mengasah kemampuan kita, sehingga saya rasa ASYP tahun-tahun berikutnya dapat kalian ikuti juga, karena yang pasti ASYP 2023 ini sudah sangat mengajarkan saya banyak hal
+Bimbel UTBK
+Referensi:
+
+Isi: 
+
+Bimbel UTBK
+
+Bimbel UTBK merupakan program persiapan UTBK untuk siswa kelas 12
+
+Ikut Program (tidak direct kemana mana karena belum mulai lagi programnya)
+Notes:
+Asset foto:
+Referensi:
+
+Isi:
+
+Bimbel UTBK merupakan program persiapan UTBK untuk siswa kelas 12 yang mencakup
+Try out 
+Ikutin sistem terbaru CBT dengan analisis skor sistem IRT
+⁠Latihan soal
+Ribuan soal latihan terstruktur lengkap dengan pembahasan
+E-book
+Berisikan rangkuman materi dan rumus cepat
+Video materi
+Akses video pembelajaran dan pembahasan soal UTBK
+Konsultasi 24/7 dengan mentor
+Pendampingan penuh dan bimbingan personal kapan saja dari mentor berpengalaman
+Grup diskusi 
+Tempat untuk berdiskusi, bertukar tips, dan membahas soal bersama peserta lain
+Notes:
+Gunakan card layout per program tapi ngga perlu ada fotonya
+Bisa digeser secara otomatis dan manual
+Student Ambassador
+Referensi: 
+
+
+
+Isi:
+
+Student Ambassador 
+
+Program bagi pelajar untuk membuat dan membagikan konten edukatif, sekaligus memperkenalkan serta menyebarkan berbagai program dan pembelajaran yang dimiliki oleh Ambivers.
+
+Ikut Program (tidak direct kemana mana karena belum mulai lagi programnya)
+Notes
+Asset: https://drive.google.com/file/d/1pozH108U6RYeTCAtFCXWDxiW9fXXmbqE/view?usp=sharing 
+Referensi: 
+
+Isi:
+
+Outcome of the programs 
+Peningkatan Brand Awareness 
+Ambivers menjadi lebih dikenal di kalangan pelajar melalui konten dan aktivitas yang dibagikan oleh Student Ambassador.
+Penyebaran Nilai Edukatif 
+Materi pembelajaran dan program Ambivers dapat menjangkau lebih banyak pelajar secara luas.
+Pengembangan Diri Pelajar 
+Student Ambassador memperoleh pengalaman dalam komunikasi, pembuatan konten, dan personal branding.
+Peningkatan Keikutsertaan Program Ambivers
+Lebih banyak pelajar yang tertarik dan bergabung dalam program-program Ambivers.
+Notes:
+Buat 1 baris aja langsung 4 kotak
+Referensi:
+
+Isi:
+
+Impact
+Tumbuhnya generasi pelajar yang kreatif dan komunikatif, karena terbiasa membuat serta menyebarkan konten edukatif
+Meluasnya jangkauan dan pengaruh Ambivers di kalangan pelajar, sehingga Ambivers dikenal sebagai platform edukatif yang relevan dan berdampak.
+Page dari dropdown Halaman Tentang Kami
+Tentang Kami
+Referensi:
+
+Isi:
+
+Tentang Kami 
+
+Ambivers.id merupakan platform edukasi digital yang menyediakan beragam media pembelajaran untuk mendukung pelajar dalam proses belajar dan pengembangan diri.
+Notes:
+Asset Background Tulisan: 
+https://drive.google.com/drive/folders/1bO7gntZGsjY5v6qR6JLTj0Nru8g4n1ot 
+What we do?
+Referensi:
+ 
+Isi: 
+
+What we do?
+
+Kami percaya setiap individu punya potensi besar untuk bertumbuh.
+
+Ambivers hadir sebagai ruang belajar dan pengembangan diri yang berfokus pada pendidikan dan peningkatan keterampilan.
+
+Melalui program, pelatihan, dan pengalaman belajar yang relevan, kami membantu generasi muda menemukan arah, membangun kompetensi, dan melangkah lebih percaya diri menuju masa depan.
+Highlight Program atau Insight & Blog
+Referensi:
+
+
+Isi:
+
+Artikel (total baru ada 3 artikel)
+https://docs.google.com/document/d/1MykwRS3ZtCDeWBwvXhMFv7dElpNMyzPrw1c1kh3ZaOg/edit?usp=sharing 
+Insight (Coming soon)
+Referensi:
+
+
+Isi
+Notes
+
+
+
