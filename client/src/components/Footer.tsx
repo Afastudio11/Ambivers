@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/blog" className="text-sm text-gray-400 hover:text-[#FFC700] transition-colors" data-testid="link-footer-blog">
-                  Insight & Blog
+                  Insight & blog
                 </Link>
               </li>
             </ul>
