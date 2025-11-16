@@ -9,13 +9,13 @@ export default function AmbiversFoundation() {
       title: "AFYI",
       description: "Program unggulan Ambivers Foundation yang dilaksanakan secara online dan offline yang dirancang khusus untuk memberikan dampak nyata bagi masyarakat dengan melibatkan pemuda Indonesia dalam berbagai inisiatif sosial dan pemberdayaan",
       imageUrl: "https://drive.google.com/uc?export=view&id=1hqEzYCjC4aM2ZjFEZcTyu0vBwjCH2ntG",
-      link: "#afyi"
+      link: "/afyi"
     },
     {
       title: "JUMPIVERS",
       description: "JUMPIVERS (Journey to Unlock my Potential with Ambivers) merupakan sebuah program pengembangan diri yang bertujuan untuk memfasilitasi pengembangan keterampilan, memperluas wawasan, dan mempercepat proses pembelajaran bagi individu yang ingin terus tumbuh, mengeksplorasi potensi diri, dan siap menghadapi tantangan zaman.",
       imageUrl: "https://drive.google.com/uc?export=view&id=1_1ts7n25hs0bGGh4d366sdGdGnZuBJd2",
-      link: "#jumpivers"
+      link: "/jumpivers"
     }
   ];
 

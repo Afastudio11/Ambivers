@@ -11,6 +11,8 @@ import BlogDetail from "@/pages/BlogDetail";
 import ComingSoon from "@/pages/ComingSoon";
 import AmbiversFoundation from "@/pages/AmbiversFoundation";
 import ASYP from "@/pages/ASYP";
+import AFYI from "@/pages/AFYI";
+import JUMPIVERS from "@/pages/JUMPIVERS";
 import StudentAmbassador from "@/pages/StudentAmbassador";
 import BimbelUTBK from "@/pages/BimbelUTBK";
 import TentangKami from "@/pages/TentangKami";
@@ -25,6 +27,8 @@ function Router() {
       <Route path="/blog/:id" component={BlogDetail} />
       <Route path="/ambivers-foundation" component={AmbiversFoundation} />
       <Route path="/asyp" component={ASYP} />
+      <Route path="/afyi" component={AFYI} />
+      <Route path="/jumpivers" component={JUMPIVERS} />
       <Route path="/student-ambassador" component={StudentAmbassador} />
       <Route path="/bimbel-utbk" component={BimbelUTBK} />
       <Route path="/tentang-kami" component={TentangKami} />
