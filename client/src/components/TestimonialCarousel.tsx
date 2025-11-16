@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
   name: string;
@@ -31,14 +29,6 @@ export default function TestimonialCarousel({
 
     return () => clearInterval(interval);
   }, [testimonials.length, autoplayInterval]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -77,39 +67,19 @@ export default function TestimonialCarousel({
               </p>
 
               <div className="flex gap-2 items-center pt-4">
-                <Button
-                  size="icon"
-                  variant="outline"
-                  onClick={goToPrevious}
-                  data-testid="button-testimonial-prev"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </Button>
-
-                <div className="flex gap-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentIndex
-                          ? 'bg-[#FFC700] w-8'
-                          : 'bg-muted-foreground/30'
-                      }`}
-                      data-testid={`button-testimonial-dot-${index}`}
-                      aria-label={`Go to testimonial ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <Button
-                  size="icon"
-                  variant="outline"
-                  onClick={goToNext}
-                  data-testid="button-testimonial-next"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </Button>
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentIndex
+                        ? 'bg-[#FFC700] w-8'
+                        : 'bg-muted-foreground/30'
+                    }`}
+                    data-testid={`button-testimonial-dot-${index}`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </CardContent>
