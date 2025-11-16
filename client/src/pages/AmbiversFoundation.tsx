@@ -2,6 +2,8 @@ import ProgramHero from "@/components/ProgramHero";
 import VisionMission from "@/components/VisionMission";
 import ProgramsGrid from "@/components/ProgramsGrid";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
 
 export default function AmbiversFoundation() {
   const programs = [
@@ -40,6 +42,13 @@ export default function AmbiversFoundation() {
     }
   ];
 
+  const scrollToPrograms = () => {
+    const programsSection = document.getElementById('programs');
+    if (programsSection) {
+      programsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <ProgramHero
@@ -47,9 +56,36 @@ export default function AmbiversFoundation() {
         description="Ambivers Foundation merupakan NGO yang didirikan sejak Juni 2023, salah satu bagian dari Ambivers.id yang berfokus pada pengembangan mahasiswa melalui berbagai kegiatan sosial dan pendidikan serta sudah 100+ volunteer berpartisipasi untuk memberikan dampak bersama."
         imageUrl="https://drive.google.com/uc?export=view&id=1B6LZHNBJOgw_GA913GzQauNlsmNitNXl"
         primaryButtonText="Ikut program"
+        onPrimaryClick={scrollToPrograms}
         secondaryButtonText="Lebih lanjut"
         secondaryButtonLink="https://www.instagram.com/ambivers.foundation/"
       />
+
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12" data-testid="text-who-can-join-title">
+            Who Can Join?
+          </h2>
+          <Card className="bg-background" data-testid="card-eligibility">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4" data-testid="eligibility-age">
+                  <CheckCircle className="w-6 h-6 text-[#C00000] flex-shrink-0 mt-1" />
+                  <p className="text-lg leading-relaxed">
+                    All youth around Indonesia with ages 18-21
+                  </p>
+                </div>
+                <div className="flex items-start gap-4" data-testid="eligibility-education">
+                  <CheckCircle className="w-6 h-6 text-[#C00000] flex-shrink-0 mt-1" />
+                  <p className="text-lg leading-relaxed">
+                    Final year of high school, first-year, and second-year students in university
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
 
       <VisionMission
         vision="Mendorong anak muda Indonesia berkembang jadi generasi yang cerdas, peduli, dan bermanfaat bagi orang lain."
@@ -60,10 +96,12 @@ export default function AmbiversFoundation() {
         ]}
       />
 
-      <ProgramsGrid
-        title="Program Ambivers Foundation"
-        programs={programs}
-      />
+      <div id="programs">
+        <ProgramsGrid
+          title="Program Ambivers Foundation"
+          programs={programs}
+        />
+      </div>
 
       <TestimonialCarousel testimonials={testimonials} />
     </div>
