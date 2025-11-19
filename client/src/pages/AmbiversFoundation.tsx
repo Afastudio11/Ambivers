@@ -4,6 +4,7 @@ import ProgramsGrid from "@/components/ProgramsGrid";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
+import ambiversFoundationIllustration from "@assets/generated_images/Ambivers_Foundation_NGO_illustration_abe7c4c2.png";
 
 export default function AmbiversFoundation() {
   const programs = [
@@ -54,7 +55,7 @@ export default function AmbiversFoundation() {
       <ProgramHero
         title="Ambivers Foundation"
         description="Ambivers Foundation merupakan NGO yang didirikan sejak Juni 2023, salah satu bagian dari Ambivers.id yang berfokus pada pengembangan mahasiswa melalui berbagai kegiatan sosial dan pendidikan serta sudah 100+ volunteer berpartisipasi untuk memberikan dampak bersama."
-        imageUrl="https://drive.google.com/uc?export=view&id=1B6LZHNBJOgw_GA913GzQauNlsmNitNXl"
+        imageUrl={ambiversFoundationIllustration}
         primaryButtonText="Ikut program"
         onPrimaryClick={scrollToPrograms}
         secondaryButtonText="Lebih lanjut"

@@ -45,45 +45,105 @@ export default function ProgramHero({
               {primaryButtonText && (
                 primaryButtonLink ? (
                   <a href={primaryButtonLink} target="_blank" rel="noopener noreferrer">
-                    <Button
-                      size="lg"
-                      variant="default"
+                    <button 
+                      className="rounded-full px-8 py-3 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                      style={{
+                        backgroundColor: 'rgba(255, 199, 0, 0.9)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                        color: '#1a1a1a',
+                        borderColor: '#FFD700',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
                       data-testid="button-program-hero-primary"
                     >
                       {primaryButtonText}
-                    </Button>
+                    </button>
                   </a>
                 ) : (
-                  <Button
-                    size="lg"
-                    variant="default"
+                  <button 
+                    className="rounded-full px-8 py-3 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                    style={{
+                      backgroundColor: 'rgba(255, 199, 0, 0.9)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)',
+                      boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                      color: '#1a1a1a',
+                      borderColor: '#FFD700',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }}
                     onClick={onPrimaryClick}
                     data-testid="button-program-hero-primary"
                   >
                     {primaryButtonText}
-                  </Button>
+                  </button>
                 )
               )}
               {secondaryButtonText && (
                 secondaryButtonLink ? (
                   <a href={secondaryButtonLink} target="_blank" rel="noopener noreferrer">
-                    <Button
-                      size="lg"
-                      variant="outline"
+                    <button 
+                      className="rounded-full px-8 py-3 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                      style={{
+                        backgroundColor: 'rgba(232, 232, 232, 0.9)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        boxShadow: 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff',
+                        color: '#4d4d4d',
+                        borderColor: 'rgb(206, 206, 206)',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
                       data-testid="button-program-hero-secondary"
                     >
                       {secondaryButtonText}
-                    </Button>
+                    </button>
                   </a>
                 ) : (
-                  <Button
-                    size="lg"
-                    variant="outline"
+                  <button 
+                    className="rounded-full px-8 py-3 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                    style={{
+                      backgroundColor: 'rgba(232, 232, 232, 0.9)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)',
+                      boxShadow: 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff',
+                      color: '#4d4d4d',
+                      borderColor: 'rgb(206, 206, 206)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }}
                     onClick={onSecondaryClick}
                     data-testid="button-program-hero-secondary"
                   >
                     {secondaryButtonText}
-                  </Button>
+                  </button>
                 )
               )}
             </div>
