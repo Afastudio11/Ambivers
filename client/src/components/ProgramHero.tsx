@@ -24,7 +24,7 @@ export default function ProgramHero({
   onSecondaryClick,
 }: ProgramHeroProps) {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-white dark:bg-gray-950">
+    <section className="relative py-20 lg:py-32 bg-white dark:bg-gray-950">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 51px),
@@ -148,12 +148,11 @@ export default function ProgramHero({
             </div>
           </div>
 
-          <div className="relative z-10 flex items-center justify-center" style={{ backgroundColor: 'transparent' }}>
+          <div className="relative z-10 flex items-center justify-center overflow-visible">
             <img
               src={imageUrl}
               alt={title}
-              className="w-full h-auto object-contain scale-110"
-              style={{ backgroundColor: 'transparent', mixBlendMode: 'normal' }}
+              className="w-full h-auto object-contain"
               data-testid="img-program-hero"
             />
           </div>

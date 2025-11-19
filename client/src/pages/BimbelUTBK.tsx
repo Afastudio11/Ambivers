@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, FileText, BookOpen, Video, MessageCircle, Users, Target } from "lucide-react";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import utbkImg from "@assets/generated_images/Bimbel_UTBK_program_card_c5c70a1b.png";
+import utbkImg from "@assets/generated_images/Happy_UTBK_students_studying_f04a86cd.png";
 
 export default function BimbelUTBK() {
   const features = [
