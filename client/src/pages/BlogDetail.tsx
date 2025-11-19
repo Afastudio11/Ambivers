@@ -9,7 +9,7 @@ import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import utbkImg from "@assets/generated_images/UTBK_exam_preparation_illustration_b7ac0acd.png";
 import majorSelectionImg from "@assets/generated_images/College_major_selection_illustration_67050b7e.png";
 import studyAbroadImg from "@assets/generated_images/Study_abroad_scholarship_illustration_65c7b73b.png";
-import mentoringImg from "@assets/generated_images/Mentoring_program_illustration_c7797291.png";
+import upcycleImg from "@assets/generated_images/Upcycle_workshop_blue_yellow_illustration_554e1da2.png";
 import studyStrategyImg from "@assets/generated_images/Effective_study_strategies_illustration_84643aa3.png";
 import portfolioImg from "@assets/generated_images/University_portfolio_building_illustration_bec1a407.png";
 import softSkillsImg from "@assets/generated_images/Digital_soft_skills_development_7fe69c97.png";
@@ -166,26 +166,31 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: "Manfaat Mengikuti Program Mentoring",
-    excerpt: "Temukan bagaimana program mentoring dapat membantumu mengembangkan potensi.",
+    title: "AFYI : Workshop Upcycle Magic",
+    excerpt: "Workshop Upcycle Magic mengajak generasi muda mengubah sampah menjadi karya bernilai guna melalui pendekatan fun learning yang menyenangkan dan bermakna.",
     content: `
-      <h2>Bimbingan Personal</h2>
-      <p>Mentoring memberikan kesempatan untuk mendapatkan bimbingan personal dari seseorang yang lebih berpengalaman di bidangmu.</p>
+      <h2>Tentang AFYI Workshop Upcycle Magic</h2>
+      <p>Surabaya, 05 Oktober 2025 - Ambivers Foundation kembali mengadakan acara Ambivers Foundation Youth Impact atau AFYI. Kegiatan kali ini berlangsung pada tanggal 5 Oktober 2025 secara offline di Surabaya, tepatnya di Kedai Ori Manyar. Dengan mengangkat tema Upcycle Magic, kegiatan AFYI kali ini mengangkat isu terkait daur ulang sampah.</p>
       
-      <h2>Networking</h2>
-      <p>Melalui program mentoring, kamu dapat memperluas jaringan profesional yang akan sangat berguna untuk karirmu di masa depan.</p>
+      <h2>Latar Belakang Program</h2>
+      <p>Isu lingkungan, terutama persoalan sampah, kini menjadi tantangan besar yang membutuhkan langkah nyata dari berbagai pihak, termasuk generasi muda. Melihat pentingnya edukasi lingkungan yang aplikatif dan menyenangkan, Ambivers Foundation melalui program Ambivers Foundation Youth Impact (AFYI) menghadirkan kegiatan Workshop "Upcycle Magic", sebuah inisiatif kreatif yang mengajak peserta untuk mengubah sampah menjadi karya bernilai guna.</p>
       
-      <h2>Pengembangan Skill</h2>
-      <p>Mentor dapat membantu mengidentifikasi skill apa yang perlu kamu kembangkan dan memberikan guidance untuk meningkatkannya.</p>
+      <h2>Rangkaian Kegiatan</h2>
+      <p>Kegiatan yang diikuti oleh 12 peserta ini dimulai dengan sesi mini talk mengenai konsep upcycle dan pentingnya pengelolaan sampah berkelanjutan. Selanjutnya, peserta diajak untuk praktik langsung membuat kerajinan dari bahan daur ulang, dilanjutkan dengan sesi sharing dan refleksi untuk saling bertukar ide serta memperkuat semangat kreatif dan peduli lingkungan.</p>
       
-      <h2>Dukungan Motivasi</h2>
-      <p>Mentor memberikan dukungan moral dan motivasi saat kamu menghadapi tantangan dalam perjalanan akademis atau karirmu.</p>
+      <h2>Pendekatan Fun Learning</h2>
+      <p>Upcycle Magic menggabungkan pendekatan fun learning dengan praktik langsung, sehingga pembelajaran terasa menyenangkan dan bermakna. Peserta tidak hanya mendapatkan pengetahuan baru, tetapi juga menghasilkan karya unik dari bahan daur ulang.</p>
+      
+      <h2>Dampak dan Harapan</h2>
+      <p>Workshop Upcycle Magic bukan sekadar kegiatan daur ulang, melainkan langkah kecil yang membawa dampak besar. Melalui kegiatan ini, Ambivers Foundation berharap semakin banyak anak muda yang sadar bahwa menjaga bumi dapat dimulai dari kreativitas — dari sampah yang diubah menjadi karya.</p>
+      
+      <p>Karena perubahan besar selalu dimulai dari tangan-tangan kecil yang peduli.</p>
     `,
-    category: "Pengembangan Diri",
-    date: "5 Januari 2024",
-    readTime: "4 menit",
-    image: mentoringImg,
-    author: "Tim Ambivers"
+    category: "Workshop",
+    date: "5 Oktober 2025",
+    readTime: "5 menit",
+    image: upcycleImg,
+    author: "Friska Setya"
   },
   {
     id: 5,

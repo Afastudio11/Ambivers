@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import softSkillsImg from "@assets/generated_images/Digital_soft_skills_development_7fe69c97.png";
-import upcycleImg from "@assets/image_1763534634658.png";
+import upcycleImg from "@assets/generated_images/Upcycle_workshop_blue_yellow_illustration_554e1da2.png";
 import techCareerImg from "@assets/generated_images/Technology_career_opportunities_illustration_46d098fa.png";
 import studyStrategyImg from "@assets/generated_images/Effective_study_strategies_illustration_84643aa3.png";
 
