@@ -2,14 +2,16 @@ import teamImage from "@assets/Ahmad Fathanah Porto(1)_1763532577249.png";
 
 export default function TentangKami() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background team image - full screen */}
-        <img 
-          src={teamImage} 
-          alt="Team Ambivers" 
-          className="w-full h-full object-contain"
-        />
+        <div className="w-full h-full flex items-center justify-center p-4">
+          <img 
+            src={teamImage} 
+            alt="Team Ambivers" 
+            className="w-full h-auto max-h-full object-contain"
+          />
+        </div>
         
         {/* Text overlay in center */}
         <div className="absolute inset-0 flex items-center justify-center">
