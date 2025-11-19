@@ -4,6 +4,7 @@ import photo1 from "@assets/hero-program.png";
 import photo2 from "@assets/hero-workshop.jpg";
 import photo3 from "@assets/hero-community.jpg";
 import photo4 from "@assets/hero-online-session.jpg";
+import photo5 from "@assets/hero-fifth-photo.jpg";
 
 export default function HeroSection() {
   const [activeCard, setActiveCard] = useState(1);
@@ -69,7 +70,7 @@ export default function HeroSection() {
       bgColor: "bg-green-600",
       rotation: "rotate-6",
       zIndex: "z-10",
-      image: photo2
+      image: photo5
     }
   ];
 
