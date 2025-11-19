@@ -137,26 +137,28 @@ export default function BimbelUTBK() {
                 {features.map((feature, index) => {
                   const Icon = feature.icon;
                   return (
-                    <Card 
-                      key={index} 
-                      className="hover-elevate flex-shrink-0"
+                    <div
+                      key={index}
+                      className="flex-shrink-0 bg-white dark:bg-gray-800 rounded-2xl p-2 shadow-sm hover:shadow-md transition-shadow"
                       style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
                       data-testid={`card-feature-${index}`}
                     >
-                      <CardHeader>
-                        <div className="p-3 w-fit rounded-md bg-[#FFC700] dark:bg-[#FFC700] mb-4">
-                          <Icon className="w-6 h-6 text-gray-900 dark:text-gray-900" />
+                      <div className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-xl p-6">
+                        <div className="flex items-center justify-center mb-6">
+                          <div className="w-20 h-20 rounded-full bg-[#FFC700] flex items-center justify-center">
+                            <Icon className="w-10 h-10 text-black" />
+                          </div>
                         </div>
-                        <CardTitle className="text-xl" data-testid={`text-feature-title-${index}`}>
+                        <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-900 mb-4" data-testid={`text-feature-title-${index}`}>
                           {feature.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-base" data-testid={`text-feature-description-${index}`}>
+                        </h3>
+                      </div>
+                      <div className="p-4">
+                        <p className="text-sm font-bold text-gray-900 dark:text-gray-100" data-testid={`text-feature-description-${index}`}>
                           {feature.description}
-                        </CardDescription>
-                      </CardContent>
-                    </Card>
+                        </p>
+                      </div>
+                    </div>
                   );
                 })}
               </div>
@@ -167,6 +169,7 @@ export default function BimbelUTBK() {
                 size="icon"
                 variant="outline"
                 onClick={goToPrevious}
+                className="bg-black text-white hover:bg-gray-800 border-black"
                 data-testid="button-features-prev"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -176,6 +179,7 @@ export default function BimbelUTBK() {
                 size="icon"
                 variant="outline"
                 onClick={goToNext}
+                className="bg-black text-white hover:bg-gray-800 border-black"
                 data-testid="button-features-next"
               >
                 <ChevronRight className="w-5 h-5" />
