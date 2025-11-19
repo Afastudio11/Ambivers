@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-import photo1 from "@assets/ambivers-photo-1.jpg";
-import photo2 from "@assets/ambivers-photo-2.jpg";
-import photo3 from "@assets/ambivers-photo-3.jpg";
+import photo1 from "@assets/hero-program.png";
+import photo2 from "@assets/hero-workshop.jpg";
+import photo3 from "@assets/hero-community.jpg";
+import photo4 from "@assets/hero-online-session.jpg";
 
 export default function HeroSection() {
   const [activeCard, setActiveCard] = useState(1);
@@ -32,43 +33,43 @@ export default function HeroSection() {
   const activityCards = [
     {
       id: 1,
-      tag: "@ambivers.foundation",
+      tag: "Ambivers Program",
       bgColor: "bg-purple-600",
       rotation: "-rotate-6",
       zIndex: "z-10",
-      image: photo3
+      image: photo1
     },
     {
       id: 2,
-      tag: "@studyabroad",
+      tag: "Workshop",
       bgColor: "bg-yellow-500",
       rotation: "-rotate-3",
       zIndex: "z-20",
-      image: photo1
-    },
-    {
-      id: 3,
-      tag: "@asyp",
-      bgColor: "bg-red-600",
-      rotation: "rotate-2",
-      zIndex: "z-30",
       image: photo2
     },
     {
-      id: 4,
-      tag: "@bimbel.utbk",
-      bgColor: "bg-blue-600",
-      rotation: "-rotate-2",
-      zIndex: "z-20",
+      id: 3,
+      tag: "Community",
+      bgColor: "bg-red-600",
+      rotation: "rotate-2",
+      zIndex: "z-30",
       image: photo3
     },
     {
+      id: 4,
+      tag: "Online Session",
+      bgColor: "bg-blue-600",
+      rotation: "-rotate-2",
+      zIndex: "z-20",
+      image: photo4
+    },
+    {
       id: 5,
-      tag: "@ambassador",
+      tag: "Activities",
       bgColor: "bg-green-600",
       rotation: "rotate-6",
       zIndex: "z-10",
-      image: photo1
+      image: photo2
     }
   ];
 
