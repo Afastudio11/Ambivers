@@ -3,22 +3,20 @@ import VisionMission from "@/components/VisionMission";
 import ProgramsGrid from "@/components/ProgramsGrid";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import foundationImg from "@assets/generated_images/Ambivers_Foundation_program_card_7872171c.png";
-import afyiImg from "@assets/generated_images/AFYI_social_impact_vignettes_6cffeeca.png";
-import jumpiversImg from "@assets/generated_images/JUMPIVERS_development_vignettes_3aa0d849.png";
+import afyiImg from "@assets/IMG_1980_1763541610118.jpg";
+import jumpiversImg from "@assets/WhatsApp Image 2025-08-10 at 15.18.11_1763541578346.jpeg";
 
 export default function AmbiversFoundation() {
   const programs = [
     {
       title: "AFYI",
       description: "Program unggulan Ambivers Foundation yang dilaksanakan secara online dan offline yang dirancang khusus untuk memberikan dampak nyata bagi masyarakat dengan melibatkan pemuda Indonesia dalam berbagai inisiatif sosial dan pemberdayaan",
-      imageUrl: afyiImg,
-      link: "/afyi"
+      imageUrl: afyiImg
     },
     {
       title: "JUMPIVERS",
       description: "JUMPIVERS (Journey to Unlock my Potential with Ambivers) merupakan sebuah program pengembangan diri yang bertujuan untuk memfasilitasi pengembangan keterampilan, memperluas wawasan, dan mempercepat proses pembelajaran bagi individu yang ingin terus tumbuh, mengeksplorasi potensi diri, dan siap menghadapi tantangan zaman.",
-      imageUrl: jumpiversImg,
-      link: "/jumpivers"
+      imageUrl: jumpiversImg
     }
   ];
 

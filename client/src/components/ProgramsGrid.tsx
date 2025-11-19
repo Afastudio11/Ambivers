@@ -5,7 +5,7 @@ interface Program {
   title: string;
   description: string;
   imageUrl: string;
-  link: string;
+  link?: string;
 }
 
 interface ProgramsGridProps {
@@ -21,8 +21,8 @@ export default function ProgramsGrid({ title, programs }: ProgramsGridProps) {
           {title}
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
-          {programs.map((program, index) => (
-            <Link key={index} href={program.link} data-testid={`link-program-${index}`}>
+          {programs.map((program, index) => {
+            const cardContent = (
               <Card className="overflow-hidden hover-elevate cursor-pointer transition-all h-full" data-testid={`card-program-${index}`}>
                 <div className="aspect-video overflow-hidden">
                   <img
@@ -43,8 +43,18 @@ export default function ProgramsGrid({ title, programs }: ProgramsGridProps) {
                   </CardDescription>
                 </CardContent>
               </Card>
-            </Link>
-          ))}
+            );
+
+            return program.link ? (
+              <Link key={index} href={program.link} data-testid={`link-program-${index}`}>
+                {cardContent}
+              </Link>
+            ) : (
+              <div key={index} data-testid={`program-${index}`}>
+                {cardContent}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
