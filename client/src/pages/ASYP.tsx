@@ -31,6 +31,21 @@ export default function ASYP() {
     }
   ];
 
+  const referensi = [
+    {
+      title: "Personal Development",
+      description: "In AsSEC, members can develop self-management and interpersonal skills through having practical learning experiences that complement their university environment to emerge as well-rounded individuals."
+    },
+    {
+      title: "Get Leadership Experience",
+      description: "An empowered & challenging environment where you can develop your competencies and master of leadership. Our Leadership Development Model offers a clear support system for the learning goals of each of our members."
+    },
+    {
+      title: "Build Your Network",
+      description: "In AsSEC, members have the chance to connect with people from all over the world during and after their experience, which allows them to build their own local and international network of like minded youth."
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <ProgramHero
@@ -38,6 +53,12 @@ export default function ASYP() {
         description="Ambivers Summer Youth Program (ASYP) merupakan program yang berisi seminar dan pelatihan dengan hands-on project bersama mentor berpengalaman di bidangnya, yang ditujukan untuk siswa SMA di seluruh Indonesia."
         imageUrl={asypImg}
         primaryButtonText="Ikut program"
+      />
+
+      <OutcomeSection
+        title="Referensi:"
+        outcomes={referensi}
+        singleColumn={true}
       />
 
       <OutcomeSection
