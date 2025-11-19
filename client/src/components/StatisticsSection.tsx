@@ -88,16 +88,16 @@ export default function StatisticsSection() {
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div key={index} className="text-center" data-testid={`stat-card-${index}`}>
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 rounded-full bg-[#FFC700]/10 flex items-center justify-center">
-                    <Icon className="w-8 h-8 text-[#FFC700]" />
+              <div key={index} className="flex flex-col items-center" data-testid={`stat-card-${index}`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-full bg-[#FFC700]/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-6 h-6 text-[#FFC700]" />
+                  </div>
+                  <div className="text-4xl lg:text-5xl font-bold text-[#FFC700]" data-testid={`stat-number-${index}`}>
+                    <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                   </div>
                 </div>
-                <div className="text-4xl lg:text-6xl font-bold text-[#FFC700] mb-2" data-testid={`stat-number-${index}`}>
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                </div>
-                <div className="text-sm lg:text-base text-gray-300" data-testid={`stat-label-${index}`}>
+                <div className="text-sm lg:text-base text-gray-300 text-center" data-testid={`stat-label-${index}`}>
                   {stat.label}
                 </div>
               </div>
