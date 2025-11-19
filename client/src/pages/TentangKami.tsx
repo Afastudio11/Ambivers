@@ -1,4 +1,4 @@
-import teamImage from "@assets/Ahmad Fathanah Porto(1)_1763532577249.png";
+import teamImage from "@assets/Desain tanpa judul_1763533204443.png";
 
 export default function TentangKami() {
   return (
