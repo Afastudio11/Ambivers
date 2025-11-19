@@ -1,11 +1,11 @@
 import ProgramHero from "@/components/ProgramHero";
 import utbkImg from "@assets/generated_images/Happy_UTBK_students_studying_f04a86cd.png";
-import tryoutIllustration from "@assets/generated_images/Try_out_CBT_interface_659c1ab2.png";
-import latihanSoalIllustration from "@assets/generated_images/Practice_problems_with_pencil_82403b87.png";
-import ebookIllustration from "@assets/generated_images/Open_e-book_illustration_f75808b6.png";
-import videoMateriIllustration from "@assets/generated_images/Video_player_interface_e8947f5f.png";
-import konsultasiIllustration from "@assets/generated_images/Mentoring_consultation_scene_f6f9295e.png";
-import grupDiskusiIllustration from "@assets/generated_images/Group_discussion_illustration_78d40152.png";
+import tryoutIllustration from "@assets/generated_images/CBT_test_interface_illustration_45709f14.png";
+import latihanSoalIllustration from "@assets/generated_images/Practice_problems_worksheets_illustration_dc558f9e.png";
+import ebookIllustration from "@assets/generated_images/Open_e-book_illustration_47677dd1.png";
+import videoMateriIllustration from "@assets/generated_images/Video_player_interface_illustration_9006dcc3.png";
+import konsultasiIllustration from "@assets/generated_images/Mentor_consultation_illustration_people_6079bc21.png";
+import grupDiskusiIllustration from "@assets/generated_images/Group_discussion_students_illustration_e0166e83.png";
 
 export default function BimbelUTBK() {
   const features = [
