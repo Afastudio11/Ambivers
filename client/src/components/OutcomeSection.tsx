@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { LucideIcon } from "lucide-react";
 
 interface OutcomeSectionProps {
   title?: string;
@@ -6,6 +7,7 @@ interface OutcomeSectionProps {
   outcomes?: Array<{
     title: string;
     description: string;
+    icon?: LucideIcon;
   }>;
   singleColumn?: boolean;
 }
@@ -39,20 +41,28 @@ export default function OutcomeSection({
             {title}
           </h2>
           <div className={`grid ${singleColumn ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2'} gap-6`}>
-            {outcomes.map((outcome, index) => (
-              <Card key={index} className="hover-elevate" data-testid={`card-outcome-${index}`}>
-                <CardHeader>
-                  <CardTitle className="text-xl" data-testid={`text-outcome-title-${index}`}>
-                    {outcome.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed" data-testid={`text-outcome-description-${index}`}>
-                    {outcome.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {outcomes.map((outcome, index) => {
+              const Icon = outcome.icon;
+              return (
+                <Card key={index} className="hover-elevate" data-testid={`card-outcome-${index}`}>
+                  <CardHeader>
+                    {Icon && (
+                      <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-primary/10">
+                        <Icon className="w-6 h-6 text-primary" data-testid={`icon-outcome-${index}`} />
+                      </div>
+                    )}
+                    <CardTitle className="text-xl" data-testid={`text-outcome-title-${index}`}>
+                      {outcome.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed" data-testid={`text-outcome-description-${index}`}>
+                      {outcome.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
