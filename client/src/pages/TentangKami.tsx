@@ -13,8 +13,8 @@ export default function TentangKami() {
           />
         </div>
         
-        {/* Dark overlay 20% */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* Dark overlay 45% */}
+        <div className="absolute inset-0 bg-black/45" />
         
         {/* Text overlay in center */}
         <div className="absolute inset-0 flex items-center justify-center">
