@@ -2,7 +2,7 @@ import ProgramHero from "@/components/ProgramHero";
 import OutcomeSection from "@/components/OutcomeSection";
 import ProgramImpact from "@/components/ProgramImpact";
 import { Card } from "@/components/ui/card";
-import foundationImg from "@assets/generated_images/Ambivers_Foundation_program_card_7872171c.png";
+import jumpiversImg from "@assets/WhatsApp Image 2025-08-10 at 15.18.11_1763541578346.jpeg";
 
 export default function JUMPIVERS() {
   const outcomes = [
@@ -29,7 +29,7 @@ export default function JUMPIVERS() {
       <ProgramHero
         title="JUMPIVERS"
         description="Journey to Unlock my Potential with Ambivers merupakan sebuah program pengembangan diri yang bertujuan untuk memfasilitasi pengembangan keterampilan, memperluas wawasan, dan mempercepat proses pembelajaran bagi individu yang ingin terus tumbuh, mengeksplorasi potensi diri, dan siap menghadapi tantangan zaman."
-        imageUrl={foundationImg}
+        imageUrl={jumpiversImg}
         primaryButtonText="Ikut program"
         secondaryButtonText="Lebih lanjut"
         secondaryButtonLink="https://www.instagram.com/ambivers.foundation/"

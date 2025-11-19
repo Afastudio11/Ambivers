@@ -3,7 +3,7 @@ import OutcomeSection from "@/components/OutcomeSection";
 import ProgramImpact from "@/components/ProgramImpact";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Card } from "@/components/ui/card";
-import foundationImg from "@assets/generated_images/Ambivers_Foundation_program_card_7872171c.png";
+import afyiImg from "@assets/IMG_1980_1763541610118.jpg";
 
 export default function AFYI() {
   const testimonials = [
@@ -51,7 +51,7 @@ export default function AFYI() {
       <ProgramHero
         title="AFYI"
         description="Program unggulan Ambivers Foundation yang dilaksanakan secara online dan offline yang dirancang khusus untuk memberikan dampak nyata bagi masyarakat dengan melibatkan pemuda Indonesia dalam berbagai inisiatif sosial dan pemberdayaan."
-        imageUrl={foundationImg}
+        imageUrl={afyiImg}
         primaryButtonText="Ikut program"
         secondaryButtonText="Lebih lanjut"
         secondaryButtonLink="https://www.instagram.com/ambivers.foundation/"
