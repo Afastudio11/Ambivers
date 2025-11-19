@@ -42,32 +42,25 @@ export default function ASYP() {
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8" data-testid="text-outcome-title">
-            Outcome of the programs
-          </h2>
-          <Card className="p-8">
-            <p className="text-lg text-muted-foreground leading-relaxed text-center" data-testid="text-outcome-description">
-              Peserta mampu mengasah keterampilan komunikasi, kepemimpinan, dan kreativitas melalui pengalaman belajar interaktif dan praktik langsung bersama mentor profesional. Mereka juga lebih memahami potensi diri serta arah pengembangan karier di masa depan.
-            </p>
-          </Card>
-        </div>
-      </section>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-8 hover-elevate">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-6" data-testid="text-outcome-title">
+                Outcome of the programs
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-outcome-description">
+                Peserta mampu mengasah keterampilan komunikasi, kepemimpinan, dan kreativitas melalui pengalaman belajar interaktif dan praktik langsung bersama mentor profesional. Mereka juga lebih memahami potensi diri serta arah pengembangan karier di masa depan.
+              </p>
+            </Card>
 
-      <section className="py-20 bg-gray-50 dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8" data-testid="text-impact-title">
-            ✨ Impact ✨
-          </h2>
-          <Card className="p-8">
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="text-[#FFC700] text-xl mt-1">●</span>
-                <p className="text-lg text-muted-foreground leading-relaxed flex-1" data-testid="text-impact-0">
-                  Program ini berdampak positif dalam meningkatkan kepercayaan diri, kemampuan berpikir kritis, serta kesiapan peserta untuk menghadapi berbagai tantangan di dunia akademik maupun profesional. ASYP juga menumbuhkan semangat kolaborasi dan eksplorasi diri di kalangan generasi muda Indonesia.
-                </p>
-              </li>
-            </ul>
-          </Card>
+            <Card className="p-8 hover-elevate">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-6" data-testid="text-impact-title">
+                Impact
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-impact-0">
+                Program ini berdampak positif dalam meningkatkan kepercayaan diri, kemampuan berpikir kritis, serta kesiapan peserta untuk menghadapi berbagai tantangan di dunia akademik maupun profesional. ASYP juga menumbuhkan semangat kolaborasi dan eksplorasi diri di kalangan generasi muda Indonesia.
+              </p>
+            </Card>
+          </div>
         </div>
       </section>
 
