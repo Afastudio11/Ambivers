@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import softSkillsImg from "@assets/generated_images/Digital_soft_skills_development_7fe69c97.png";
-import mentoringImg from "@assets/generated_images/Mentoring_program_illustration_c7797291.png";
+import upcycleImg from "@assets/image_1763534634658.png";
 import techCareerImg from "@assets/generated_images/Technology_career_opportunities_illustration_46d098fa.png";
 import studyStrategyImg from "@assets/generated_images/Effective_study_strategies_illustration_84643aa3.png";
 
@@ -40,12 +40,12 @@ export default function TentangKami() {
     },
     {
       id: 4,
-      title: "Manfaat Mengikuti Program Mentoring",
-      description: "Temukan bagaimana program mentoring dapat membantumu mengembangkan potensi dan mencapai tujuan akademis serta karir dengan bimbingan mentor berpengalaman.",
-      excerpt: "Mentoring memberikan kesempatan untuk mendapatkan bimbingan personal dari seseorang yang lebih berpengalaman.",
-      date: "5 Januari 2024",
-      category: "Pengembangan Diri",
-      image: mentoringImg
+      title: "AFYI : Workshop Upcycle Magic",
+      description: "Surabaya, 05 Oktober 2025 - Ambivers Foundation kembali mengadakan acara Ambivers Foundation Youth Impact atau AFYI. Kegiatan kali ini berlangsung pada tanggal 5 Oktober 2025 secara offline di Surabaya, tepatnya di Kedai Ori Manyar. Dengan mengangkat tema Upcycle Magic, kegiatan AFYI kali ini mengangkat isu terkait daur ulang sampah. Isu lingkungan, terutama persoalan sampah, kini menjadi tantangan besar yang membutuhkan langkah nyata dari berbagai pihak, termasuk generasi muda. Melihat pentingnya edukasi lingkungan yang aplikatif dan menyenangkan, Ambivers Foundation melalui program Ambivers Foundation Youth Impact (AFYI) menghadirkan kegiatan Workshop \"Upcycle Magic\", sebuah inisiatif kreatif yang mengajak peserta untuk mengubah sampah menjadi karya bernilai guna. Kegiatan yang diikuti oleh 12 peserta ini dimulai dengan sesi mini talk mengenai konsep upcycle dan pentingnya pengelolaan sampah berkelanjutan. Selanjutnya, peserta diajak untuk praktik langsung membuat kerajinan dari bahan daur ulang, dilanjutkan dengan sesi sharing dan refleksi untuk saling bertukar ide serta memperkuat semangat kreatif dan peduli lingkungan. Upcycle Magic menggabungkan pendekatan fun learning dengan praktik langsung, sehingga pembelajaran terasa menyenangkan dan bermakna. Peserta tidak hanya mendapatkan pengetahuan baru, tetapi juga menghasilkan karya unik dari bahan daur ulang. Workshop Upcycle Magic bukan sekadar kegiatan daur ulang, melainkan langkah kecil yang membawa dampak besar. Melalui kegiatan ini, Ambivers Foundation berharap semakin banyak anak muda yang sadar bahwa menjaga bumi dapat dimulai dari kreativitas — dari sampah yang diubah menjadi karya. Karena perubahan besar selalu dimulai dari tangan-tangan kecil yang peduli.",
+      excerpt: "Workshop Upcycle Magic mengajak generasi muda mengubah sampah menjadi karya bernilai guna melalui pendekatan fun learning yang menyenangkan dan bermakna.",
+      date: "5 Oktober 2025",
+      category: "Workshop",
+      image: upcycleImg
     }
   ];
 
