@@ -85,10 +85,12 @@ export default function TestimonialCarousel({
                 data-testid={`testimonial-card-${idx}`}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="font-bold text-lg text-gray-900 dark:text-gray-100">
-                    {testimonial.institution || "Universitas"}
-                  </div>
-                  <div className="flex items-center gap-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 px-2 py-1 rounded-lg">
+                  {testimonial.institution && (
+                    <div className="font-bold text-lg text-gray-900 dark:text-gray-100">
+                      {testimonial.institution}
+                    </div>
+                  )}
+                  <div className={`flex items-center gap-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 px-2 py-1 rounded-lg ${!testimonial.institution ? 'ml-auto' : ''}`}>
                     <span className="font-semibold text-sm">{testimonial.rating || 4.9}</span>
                     <Star className="w-4 h-4 fill-green-500 text-green-500" />
                   </div>
@@ -144,7 +146,11 @@ export default function TestimonialCarousel({
             <>
               <DialogHeader>
                 <DialogTitle className="flex items-start justify-between gap-4">
-                  <span className="text-xl font-bold">{selectedTestimonial.institution || "Universitas"}</span>
+                  {selectedTestimonial.institution ? (
+                    <span className="text-xl font-bold">{selectedTestimonial.institution}</span>
+                  ) : (
+                    <span className="text-xl font-bold">{selectedTestimonial.name}</span>
+                  )}
                   <div className="flex items-center gap-1 bg-white border border-gray-200 px-2 py-1 rounded-lg">
                     <span className="font-semibold text-sm">{selectedTestimonial.rating || 4.9}</span>
                     <Star className="w-4 h-4 fill-green-500 text-green-500" />

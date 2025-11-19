@@ -14,7 +14,6 @@ export default function ASYP() {
   const testimonials = [
     {
       name: "I Gusti Agung Ardhanareswari",
-      institution: "Bali, lulusan SMA Negeri 1 Kuta",
       photo: "https://drive.google.com/uc?export=view&id=16mUngvmkENPAfuHu-mlZ1cgD8q24VWi1",
       text: "Awalnya aku iseng daftar Ambivers Summer Youth Program (ASYP) dan ternyata kepilih! Selama 4 hari program, aku banyak belajar hal bermanfaat: personal branding dari Kak Asya, public speaking dari Kak Andika, serta leadership dan project management dari Kak Zeta. Selain materi, aku juga bisa praktik langsung lewat tugas-tugas kreatif dan project plan. Yang paling seru, aku ketemu banyak teman baru dari berbagai daerah dan bisa networking tiap akhir acara. Pengalaman pertamaku ikut ASYP ini benar-benar menyenangkan dan berkesan!"
     },
@@ -25,7 +24,6 @@ export default function ASYP() {
     },
     {
       name: "Marsya Olivia Irawan",
-      institution: "KIR MAN 2 Kota Bogor",
       photo: "https://drive.google.com/uc?export=view&id=1W8-cFzglxfC2afXJ4lms3SNq-TDe4xTZ",
       text: "Selama Ambivers Summer Youth Program 2023, aku belajar banyak hal baru, mulai dari personal branding, public speaking, leadership, hingga project management, yang langsung bisa aku praktikkan. Selain materi, aku dibimbing oleh kakak-kakak berpengalaman dan bertemu teman-teman hebat dari seluruh Indonesia. Pengalaman 4 hari ini benar-benar berkesan dan sangat membantu!"
     },
