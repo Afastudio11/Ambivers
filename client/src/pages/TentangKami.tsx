@@ -5,11 +5,11 @@ export default function TentangKami() {
     <div className="min-h-screen pt-20">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background team image - full screen */}
-        <div className="w-full h-full flex items-center justify-center p-4">
+        <div className="w-full h-full flex items-center justify-center">
           <img 
             src={teamImage} 
             alt="Team Ambivers" 
-            className="w-full h-auto max-h-full object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
         
