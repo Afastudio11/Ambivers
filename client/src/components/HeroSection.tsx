@@ -83,13 +83,13 @@ export default function HeroSection() {
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-20">
-        <div className="mb-8 sm:mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h1 className="font-bold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700" data-testid="text-hero-headline">
             <span className="text-gray-900 block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Bantu Raih Impianmu</span>
             <span className="text-gray-900 block mt-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Jadi Nyata!</span>
           </h1>
           
-          <p className="sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-4xl mb-8 sm:mb-12 md:mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 leading-relaxed" data-testid="text-hero-description">
+          <p className="sm:text-base md:text-lg lg:text-xl text-gray-800 max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 px-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 leading-relaxed" data-testid="text-hero-description">
             Ambivers telah memberikan dampak positif bagi <strong>50.000+ pelajar</strong> di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
           </p>
         </div>
