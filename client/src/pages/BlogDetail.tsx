@@ -17,6 +17,9 @@ import techCareerImg from "@assets/generated_images/Technology_career_opportunit
 import domesticScholarshipImg from "@assets/generated_images/Domestic_scholarship_success_illustration_84323294.png";
 import jumpiversDoc1 from "@assets/WhatsApp Image 2025-08-10 at 15.18.11_1763534976418.jpeg";
 import jumpiversDoc2 from "@assets/IMG-20250809-WA0000_1763534976419.jpg";
+import afyiDoc1 from "@assets/DSCF0450_1763535140988.jpg";
+import afyiDoc2 from "@assets/DSCF0352_1763535140989.jpg";
+import afyiDoc3 from "@assets/DSCF0358_1763535140989.jpg";
 
 interface BlogPost {
   id: number;
@@ -94,7 +97,8 @@ const blogPosts: BlogPost[] = [
     date: "21 Desember 2024",
     readTime: "7 menit",
     image: studyStrategyImg,
-    author: "Friska Setya"
+    author: "Friska Setya",
+    documentationImages: [afyiDoc1, afyiDoc2, afyiDoc3]
   },
   {
     id: 1,
@@ -399,14 +403,14 @@ export default function BlogDetail() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Dokumentasi Kegiatan</h2>
               <p className="text-gray-600 mb-6">
-                Berikut adalah dokumentasi kegiatan yang berlangsung secara daring melalui Zoom Meeting:
+                Berikut adalah dokumentasi kegiatan {post.title}:
               </p>
               <div className="grid grid-cols-1 gap-6">
                 {post.documentationImages.map((img, index) => (
                   <div key={index} className="rounded-lg overflow-hidden">
                     <img 
                       src={img} 
-                      alt={`Dokumentasi ${post.title} - Sesi ${index + 1}`}
+                      alt={`Dokumentasi ${post.title} - ${index + 1}`}
                       className="w-full h-auto"
                       data-testid={`img-documentation-${index}`}
                     />
