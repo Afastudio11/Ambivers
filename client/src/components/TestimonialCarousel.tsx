@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
   name: string;
@@ -39,6 +40,14 @@ export default function TestimonialCarousel({
     setCurrentIndex(Math.min(index, maxIndex));
   };
 
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  };
+
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -74,7 +83,7 @@ export default function TestimonialCarousel({
                       </div>
                     </div>
                     
-                    <p className="text-gray-700 dark:text-gray-700 leading-relaxed mb-6 flex-grow line-clamp-4" data-testid={`text-testimonial-content-${index}`}>
+                    <p className="text-gray-700 dark:text-gray-700 leading-relaxed mb-6 flex-grow" data-testid={`text-testimonial-content-${index}`}>
                       {testimonial.text}
                     </p>
 
@@ -92,20 +101,27 @@ export default function TestimonialCarousel({
             </div>
           </div>
 
-          <div className="flex gap-2 justify-center items-center pt-8">
-            {Array.from({ length: Math.ceil(testimonials.length / itemsPerView) }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  Math.floor(currentIndex / itemsPerView) === index
-                    ? 'bg-blue-500 w-8'
-                    : 'bg-gray-600'
-                }`}
-                data-testid={`button-testimonial-dot-${index}`}
-                aria-label={`Go to testimonial group ${index + 1}`}
-              />
-            ))}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={goToPrevious}
+              disabled={currentIndex === 0}
+              className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+              data-testid="button-testimonials-prev"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={goToNext}
+              disabled={currentIndex >= maxIndex}
+              className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+              data-testid="button-testimonials-next"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </Button>
           </div>
         </div>
       </div>

@@ -59,38 +59,6 @@ export default function TestimonialsSection() {
       name: "Nabila Putri Herdianti",
       username: "nabila_putri_h",
       major: ""
-    },
-    {
-      company: "Ambivers Summer Youth Program",
-      rating: 5.0,
-      text: "Aku I Gusti Agung Ardhanareswari dari Bali, lulusan SMA Negeri 1 Kuta. Awalnya aku iseng daftar Ambivers Summer Youth Program (ASYP) dan ternyata kepilih! Selama 4 hari program, aku banyak belajar hal bermanfaat: personal branding dari Kak Asya, public speaking dari Kak Andika, serta leadership dan project management dari Kak Zeta. Selain materi, aku juga bisa praktik langsung lewat tugas-tugas kreatif dan project plan. Yang paling seru, aku ketemu banyak teman baru dari berbagai daerah di Indonesia. Pengalaman ini bener-bener berkesan dan sangat membantu untuk pengembangan diri!",
-      name: "I Gusti Agung Ardhanareswari",
-      username: "ardhanareswari",
-      major: "SMA Negeri 1 Kuta, Bali"
-    },
-    {
-      company: "Ambivers Summer Youth Program",
-      rating: 5.0,
-      text: "Kita belajar mengenai personal branding, public speaking, leadership, dan juga project management. Program ini sangat membantu saya dalam mengembangkan soft skills yang penting untuk masa depan.",
-      name: "Niputu Sterefi Soyasa",
-      username: "niputu_soyasa",
-      major: ""
-    },
-    {
-      company: "Ambivers Summer Youth Program",
-      rating: 5.0,
-      text: "Aku Marsha Olivia Irawan dari KIR MAN 2 Kota Bogor. Selama Ambivers Summer Youth Program 2023, aku belajar banyak hal baru, mulai dari personal branding, public speaking, leadership, hingga project management, yang langsung bisa aku praktikkan. Selain materi, aku dibimbing oleh kakak-kakak berpengalaman dan bertemu teman-teman hebat dari seluruh Indonesia. Pengalaman 4 hari ini benar-benar berkesan dan sangat membantu!",
-      name: "Marsya Olivia Irawan",
-      username: "marsya_olivia",
-      major: "KIR MAN 2 Kota Bogor"
-    },
-    {
-      company: "Ambivers Summer Youth Program",
-      rating: 5.0,
-      text: "Project-project yang diberikan oleh kakak-kakak Ambivers itu sangat mengasah kemampuan kita, sehingga saya rasa ASYP tahun-tahun berikutnya dapat kalian ikuti juga, karena yang pasti ASYP 2023 ini sudah sangat mengajarkan saya banyak hal tentang kepemimpinan, public speaking, dan bagaimana cara mengelola sebuah project dengan baik.",
-      name: "Karisma Alif Nuziaki",
-      username: "karisma_alif",
-      major: ""
     }
   ];
 
