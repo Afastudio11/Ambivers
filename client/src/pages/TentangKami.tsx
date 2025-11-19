@@ -1,21 +1,51 @@
 import teamImage from "@assets/Desain tanpa judul_1763533204443.png";
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import softSkillsImg from "@assets/generated_images/Digital_soft_skills_development_7fe69c97.png";
+import mentoringImg from "@assets/generated_images/Mentoring_program_illustration_c7797291.png";
+import techCareerImg from "@assets/generated_images/Technology_career_opportunities_illustration_46d098fa.png";
+import studyStrategyImg from "@assets/generated_images/Effective_study_strategies_illustration_84643aa3.png";
 
 export default function TentangKami() {
   const highlights = [
     {
-      id: 1,
+      id: 10,
       title: "Bootcamp JUMPIVERS 1.0 Social Media Mastery : Mengasah Keterampilan Digital di Era Media Sosial",
       description: "Jakarta, Agustus 2025 - Ambivers Foundation berkesempatan mengadakan Bootcamp JUMPIVERS 1.0 Social Media Mastery, sebuah ruang belajar interaktif yang dirancang untuk membantu peserta memahami strategi dasar dalam pengelolaan media sosial secara komprehensif dan aplikatif.",
+      excerpt: "Bootcamp JUMPIVERS 1.0 menjadi langkah nyata Ambivers Foundation dalam memberdayakan generasi muda agar mampu memanfaatkan media sosial secara lebih cerdas dan strategis.",
       date: "Agustus 2025",
-      category: "Bootcamp"
+      category: "Bootcamp",
+      image: techCareerImg
     },
     {
-      id: 2,
+      id: 11,
       title: "AFYI: Beyond The Frame — Merayakan Kreativitas dan Pemikiran Inovatif Generasi Muda",
       description: "Jakarta, 21 Desember 2024 - Ambivers Foundation berkesempatan mengadakan acara Ambivers Foundation Youth Impact (AFYI) Beyond the frame: Celebrating Ideas and Insight yang bertempat di Nutrihub Menteng Jakarta.",
+      excerpt: "AFYI menjadi salah satu inisiator kegiatan offline yang bukan hanya tentang penghargaan, tetapi tentang perjalanan untuk menumbuhkan keberanian berpikir di luar batas.",
       date: "21 Desember 2024",
-      category: "Seminar"
+      category: "Seminar",
+      image: studyStrategyImg
+    },
+    {
+      id: 7,
+      title: "Mengembangkan Soft Skills di Era Digital",
+      description: "Di era digital, soft skills seperti komunikasi dan kolaborasi menjadi semakin penting. Pelajari cara mengembangkan kemampuan ini untuk kesuksesan karirmu.",
+      excerpt: "Soft skills seperti komunikasi dan kolaborasi menjadi semakin penting di dunia kerja modern.",
+      date: "27 Desember 2023",
+      category: "Pengembangan Diri",
+      image: softSkillsImg
+    },
+    {
+      id: 4,
+      title: "Manfaat Mengikuti Program Mentoring",
+      description: "Temukan bagaimana program mentoring dapat membantumu mengembangkan potensi dan mencapai tujuan akademis serta karir dengan bimbingan mentor berpengalaman.",
+      excerpt: "Mentoring memberikan kesempatan untuk mendapatkan bimbingan personal dari seseorang yang lebih berpengalaman.",
+      date: "5 Januari 2024",
+      category: "Pengembangan Diri",
+      image: mentoringImg
     }
   ];
 
@@ -46,30 +76,28 @@ export default function TentangKami() {
           </div>
         </div>
       </section>
-
       {/* What we do Section */}
-      <section className="py-16 px-6 lg:px-12 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center" data-testid="text-what-we-do-title">
-            What we do?
+      <section className="py-20 px-6 lg:px-12 bg-primary">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-6">
+            <span className="inline-block text-primary text-sm font-semibold px-4 py-2 rounded-full bg-black" data-testid="badge-what-we-do">What we do?</span>
+          </div>
+          
+          <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-foreground" data-testid="text-what-we-do-title">
+            Kami percaya setiap individu punya potensi besar untuk bertumbuh.
           </h2>
           
-          <div className="space-y-6 text-lg leading-relaxed">
+          <div className="space-y-6 text-lg lg:text-xl leading-relaxed text-foreground">
             <p data-testid="text-what-we-do-paragraph-1">
-              Kami percaya setiap individu punya potensi besar untuk bertumbuh.
-            </p>
-            
-            <p data-testid="text-what-we-do-paragraph-2">
               Ambivers hadir sebagai ruang belajar dan pengembangan diri yang berfokus pada pendidikan dan peningkatan keterampilan.
             </p>
             
-            <p data-testid="text-what-we-do-paragraph-3">
+            <p data-testid="text-what-we-do-paragraph-2">
               Melalui program, pelatihan, dan pengalaman belajar yang relevan, kami membantu generasi muda menemukan arah, membangun kompetensi, dan melangkah lebih percaya diri menuju masa depan.
             </p>
           </div>
         </div>
       </section>
-
       {/* Highlight Program Section */}
       <section className="py-16 px-6 lg:px-12 bg-muted/30">
         <div className="max-w-6xl mx-auto">
@@ -77,29 +105,61 @@ export default function TentangKami() {
             Highlight Program atau Insight & Blog
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {highlights.map((item) => (
-              <Card key={item.id} className="hover-elevate" data-testid={`card-highlight-${item.id}`}>
-                <CardContent className="p-6">
-                  <div className="mb-3 flex flex-wrap gap-2">
-                    <span className="text-sm text-muted-foreground" data-testid={`text-highlight-date-${item.id}`}>
-                      {item.date}
-                    </span>
-                    <span className="text-sm font-medium text-primary" data-testid={`text-highlight-category-${item.id}`}>
-                      {item.category}
-                    </span>
+              <Link key={item.id} href={`/blog/${item.id}`} data-testid={`link-highlight-${item.id}`}>
+                <Card className="hover-elevate cursor-pointer group overflow-hidden h-full flex flex-col" data-testid={`card-highlight-${item.id}`}>
+                  <div className="relative bg-muted">
+                    <AspectRatio ratio={16 / 9}>
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-testid={`img-highlight-${item.id}`}
+                      />
+                    </AspectRatio>
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md shadow-md" data-testid={`text-highlight-category-${item.id}`}>
+                        {item.category}
+                      </span>
+                    </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold mb-4 leading-snug" data-testid={`text-highlight-title-${item.id}`}>
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground leading-relaxed" data-testid={`text-highlight-description-${item.id}`}>
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="mb-3">
+                      <span className="text-sm text-muted-foreground" data-testid={`text-highlight-date-${item.id}`}>
+                        {item.date}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold mb-3 leading-snug group-hover:text-primary transition-colors line-clamp-2" data-testid={`text-highlight-title-${item.id}`}>
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-1" data-testid={`text-highlight-description-${item.id}`}>
+                      {item.excerpt}
+                    </p>
+                    
+                    <Button 
+                      variant="ghost" 
+                      className="p-0 h-auto hover:bg-transparent font-semibold text-sm self-start group-hover:text-primary"
+                      data-testid={`button-read-${item.id}`}
+                    >
+                      Baca Selengkapnya <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
+          </div>
+          
+          <div className="text-center">
+            <Link href="/blog" data-testid="link-view-all-blog">
+              <Button size="lg" data-testid="button-view-all-blog">
+                Lihat Semua Artikel
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

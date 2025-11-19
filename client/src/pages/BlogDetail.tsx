@@ -30,6 +30,69 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 10,
+    title: "Bootcamp JUMPIVERS 1.0 Social Media Mastery : Mengasah Keterampilan Digital di Era Media Sosial",
+    excerpt: "Bootcamp JUMPIVERS 1.0 menjadi langkah nyata Ambivers Foundation dalam memberdayakan generasi muda agar mampu memanfaatkan media sosial secara lebih cerdas dan strategis.",
+    content: `
+      <h2>Tentang Bootcamp JUMPIVERS 1.0</h2>
+      <p>Jakarta, Agustus 2025 - Ambivers Foundation berkesempatan mengadakan Bootcamp JUMPIVERS 1.0 Social Media Mastery, sebuah ruang belajar interaktif yang dirancang untuk membantu peserta memahami strategi dasar dalam pengelolaan media sosial secara komprehensif dan aplikatif.</p>
+      
+      <h2>Tujuan Program</h2>
+      <p>Bootcamp JUMPIVERS 1.0 Social Media Mastery menjadi langkah nyata Ambivers Foundation dalam memberdayakan generasi muda agar mampu memanfaatkan media sosial secara lebih cerdas dan strategis. Dengan berfokus pada penambahan wawasan terkait kemampuan dasar dalam dunia digital, para peserta diajak untuk mengikuti empat sesi pembelajaran yang dikemas intensif dan menyenangkan.</p>
+      
+      <h2>Materi Pembelajaran</h2>
+      <p>Peserta diajak untuk mengenal dasar dari social media management, membuat konten, mempelajari cara menganalisis performa media sosial, dan memahami strategi engagement yang efektif. Seluruh sesi dilaksanakan secara daring pada 2, 3, 9, dan 10 Agustus 2025 melalui Zoom Meeting.</p>
+      
+      <h2>Narasumber Berpengalaman</h2>
+      <p>Kegiatan ini menghadirkan tiga narasumber berpengalaman di bidang media digital, yaitu Zahirah Oktrabiul, Nadia Lumongga Nasution, dan Akbar Pangestu. Mereka berbagi pengalaman dan insights berharga tentang dunia social media management.</p>
+      
+      <h2>Metode Pembelajaran Interaktif</h2>
+      <p>Tak sekadar mendengarkan, peserta juga diajak untuk belajar sambil praktik melalui tugas-tugas kreatif, diskusi terbuka, dan sesi final project. Interaksi hangat antara peserta dan narasumber menjadi salah satu kekuatan utama bootcamp ini, membuat suasana belajar terasa hidup dan inspiratif.</p>
+      
+      <h2>Komitmen Ambivers Foundation</h2>
+      <p>Bootcamp JUMPIVERS 1.0: Social Media Mastery menjadi bukti komitmen Ambivers Foundation dalam menghadirkan pembelajaran digital yang tidak hanya informatif, tetapi juga transformatif. Melalui ruang belajar ini, peserta diajak untuk berani berkreasi, mengasah potensi, dan tumbuh menjadi individu yang siap bersaing di dunia digital.</p>
+      
+      <p>Karena bagi Ambivers Foundation, setiap langkah kecil dalam proses belajar adalah bagian penting dari perjalanan menuju perubahan besar.</p>
+    `,
+    category: "Bootcamp",
+    date: "Agustus 2025",
+    readTime: "8 menit",
+    image: techCareerImg,
+    author: "Friska Setya"
+  },
+  {
+    id: 11,
+    title: "AFYI: Beyond The Frame — Merayakan Kreativitas dan Pemikiran Inovatif Generasi Muda",
+    excerpt: "AFYI menjadi salah satu inisiator kegiatan offline yang bukan hanya tentang penghargaan, tetapi tentang perjalanan untuk menumbuhkan keberanian berpikir di luar batas.",
+    content: `
+      <h2>Tentang AFYI: Beyond The Frame</h2>
+      <p>Jakarta, 21 Desember 2024 - Ambivers Foundation berkesempatan mengadakan acara Ambivers Foundation Youth Impact (AFYI) Beyond the frame: Celebrating Ideas and Insight yang bertempat di Nutrihub Menteng Jakarta. Kegiatan tersebut merupakan seminar yang diselenggarakan dengan kolaborasi antara Ambivers Foundation dan Nutrifood Jakarta.</p>
+      
+      <h2>Tujuan Program</h2>
+      <p>Ambivers Foundation Youth Impact (AFYI) Beyond the frame: Celebrating Ideas and Insight merupakan sebuah rangkaian program yang diadakan untuk membekali generasi muda dengan wawasan berpikir kritis dan kreatif. Kegiatan ini diawali dengan lomba menulis artikel dan membuat infografis pada tanggal 1-10 Desember 2024, yang kemudian seluruh karya dari peserta kompetisi diapresiasi secara offline pada tanggal 21 Desember 2024.</p>
+      
+      <h2>Rangkaian Acara</h2>
+      <p>Secara garis besar, kegiatan seminar ini dikemas dalam dua rangkaian utama:</p>
+      <ul>
+        <li><strong>Seminar Interaktif</strong> dengan topik Creativity & Critical Thinking, menghadirkan narasumber inspiratif yang memberikan insight mendalam seputar pengembangan pola pikir kreatif.</li>
+        <li><strong>Awarding Session</strong>, sebagai bentuk apresiasi terhadap para pemenang lomba yang diadakan oleh Divisi Creative Writing (CW) Ambivers Foundation.</li>
+      </ul>
+      
+      <h2>Pentingnya Berpikir Kreatif dan Kritis</h2>
+      <p>Kegiatan ini diadakan untuk menumbuhkan kesadaran akan pentingnya berpikir kreatif dan kritis, serta mendorong generasi muda untuk terus menghadirkan solusi baru di berbagai bidang kehidupan.</p>
+      
+      <h2>Visi dan Misi</h2>
+      <p>AFYI: Beyond The Frame menjadi salah satu inisiator kegiatan offline yang bukan hanya tentang penghargaan, tetapi tentang perjalanan untuk menumbuhkan keberanian berpikir di luar batas, berbagi ide, dan membangun masa depan yang lebih inovatif.</p>
+      
+      <p>Melalui program ini, Ambivers Foundation menegaskan komitmennya untuk menjadi ruang tumbuh bagi generasi muda yang berani, kreatif, dan berdampak.</p>
+    `,
+    category: "Seminar",
+    date: "21 Desember 2024",
+    readTime: "7 menit",
+    image: studyStrategyImg,
+    author: "Friska Setya"
+  },
+  {
     id: 1,
     title: "Tips Sukses Menghadapi UTBK 2024",
     excerpt: "Panduan lengkap dan strategi efektif untuk menghadapi Ujian Tulis Berbasis Komputer dengan percaya diri dan hasil maksimal.",

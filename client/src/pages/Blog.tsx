@@ -28,9 +28,29 @@ interface BlogPost {
   author: string;
 }
 
-const categories = ["All", "Pendidikan", "Karir", "Beasiswa", "Pengembangan Diri", "Tips & Trik"];
+const categories = ["All", "Pendidikan", "Karir", "Beasiswa", "Pengembangan Diri", "Tips & Trik", "Bootcamp", "Seminar"];
 
 const blogPosts: BlogPost[] = [
+  {
+    id: 10,
+    title: "Bootcamp JUMPIVERS 1.0 Social Media Mastery : Mengasah Keterampilan Digital di Era Media Sosial",
+    excerpt: "Bootcamp JUMPIVERS 1.0 menjadi langkah nyata Ambivers Foundation dalam memberdayakan generasi muda agar mampu memanfaatkan media sosial secara lebih cerdas dan strategis.",
+    category: "Bootcamp",
+    date: "Agustus 2025",
+    readTime: "8 menit",
+    image: techCareerImg,
+    author: "Friska Setya"
+  },
+  {
+    id: 11,
+    title: "AFYI: Beyond The Frame — Merayakan Kreativitas dan Pemikiran Inovatif Generasi Muda",
+    excerpt: "AFYI menjadi salah satu inisiator kegiatan offline yang bukan hanya tentang penghargaan, tetapi tentang perjalanan untuk menumbuhkan keberanian berpikir di luar batas.",
+    category: "Seminar",
+    date: "21 Desember 2024",
+    readTime: "7 menit",
+    image: studyStrategyImg,
+    author: "Friska Setya"
+  },
   {
     id: 1,
     title: "Tips Sukses Menghadapi UTBK 2024",
