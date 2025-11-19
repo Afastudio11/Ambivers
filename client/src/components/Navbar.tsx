@@ -138,7 +138,6 @@ export default function Navbar() {
                 data-testid="link-program"
               >
                 Program
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${programDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               
               <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-200 origin-top ${
@@ -179,7 +178,6 @@ export default function Navbar() {
                 data-testid="link-tentang"
               >
                 Tentang Kami
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${tentangDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               
               <div className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-200 origin-top ${
