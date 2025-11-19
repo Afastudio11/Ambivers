@@ -15,6 +15,8 @@ import portfolioImg from "@assets/generated_images/University_portfolio_building
 import softSkillsImg from "@assets/generated_images/Digital_soft_skills_development_7fe69c97.png";
 import techCareerImg from "@assets/generated_images/Technology_career_opportunities_illustration_46d098fa.png";
 import domesticScholarshipImg from "@assets/generated_images/Domestic_scholarship_success_illustration_84323294.png";
+import jumpiversDoc1 from "@assets/WhatsApp Image 2025-08-10 at 15.18.11_1763534976418.jpeg";
+import jumpiversDoc2 from "@assets/IMG-20250809-WA0000_1763534976419.jpg";
 
 interface BlogPost {
   id: number;
@@ -26,6 +28,7 @@ interface BlogPost {
   readTime: string;
   image: string;
   author: string;
+  documentationImages?: string[];
 }
 
 const blogPosts: BlogPost[] = [
@@ -58,7 +61,8 @@ const blogPosts: BlogPost[] = [
     date: "Agustus 2025",
     readTime: "8 menit",
     image: techCareerImg,
-    author: "Friska Setya"
+    author: "Friska Setya",
+    documentationImages: [jumpiversDoc1, jumpiversDoc2]
   },
   {
     id: 11,
@@ -386,10 +390,31 @@ export default function BlogDetail() {
           </div>
 
           <div 
-            className="prose prose-lg max-w-none mb-12"
+            className="prose prose-lg max-w-none mb-8"
             dangerouslySetInnerHTML={{ __html: post.content }}
             data-testid="text-content"
           />
+
+          {post.documentationImages && post.documentationImages.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Dokumentasi Kegiatan</h2>
+              <p className="text-gray-600 mb-6">
+                Berikut adalah dokumentasi kegiatan yang berlangsung secara daring melalui Zoom Meeting:
+              </p>
+              <div className="grid grid-cols-1 gap-6">
+                {post.documentationImages.map((img, index) => (
+                  <div key={index} className="rounded-lg overflow-hidden">
+                    <img 
+                      src={img} 
+                      alt={`Dokumentasi ${post.title} - Sesi ${index + 1}`}
+                      className="w-full h-auto"
+                      data-testid={`img-documentation-${index}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="flex items-center justify-between py-6 border-t border-b border-gray-200">
             <div className="flex items-center gap-4">
