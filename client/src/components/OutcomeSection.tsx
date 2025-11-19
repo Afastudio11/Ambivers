@@ -47,8 +47,8 @@ export default function OutcomeSection({
                 <Card key={index} className="hover-elevate" data-testid={`card-outcome-${index}`}>
                   <CardHeader>
                     {Icon && (
-                      <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-primary/10">
-                        <Icon className="w-6 h-6 text-primary" data-testid={`icon-outcome-${index}`} />
+                      <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-md bg-[#FFC700]">
+                        <Icon className="w-6 h-6 text-black" data-testid={`icon-outcome-${index}`} />
                       </div>
                     )}
                     <CardTitle className="text-xl" data-testid={`text-outcome-title-${index}`}>
