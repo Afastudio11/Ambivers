@@ -1,11 +1,11 @@
 import ProgramHero from "@/components/ProgramHero";
 import utbkImg from "@assets/generated_images/Happy_UTBK_students_studying_f04a86cd.png";
-import tryoutIllustration from "@assets/generated_images/Teen_student_CBT_exam_320fa7c6.png";
-import latihanSoalIllustration from "@assets/generated_images/Teen_studying_practice_problems_8705da66.png";
-import ebookIllustration from "@assets/generated_images/Teen_reading_digital_ebook_2dc335dd.png";
-import videoMateriIllustration from "@assets/generated_images/Teen_watching_video_lesson_e77caf6e.png";
-import konsultasiIllustration from "@assets/generated_images/Mentor_consulting_teen_student_355293f0.png";
-import grupDiskusiIllustration from "@assets/generated_images/Teen_group_study_discussion_214fd4a6.png";
+import tryoutIllustration from "@assets/generated_images/Student_taking_CBT_test_63441a36.png";
+import latihanSoalIllustration from "@assets/generated_images/Student_practicing_problems_203a161c.png";
+import ebookIllustration from "@assets/generated_images/Student_reading_ebook_33a9f472.png";
+import videoMateriIllustration from "@assets/generated_images/Student_watching_video_4a1e062b.png";
+import konsultasiIllustration from "@assets/generated_images/Mentor_student_consultation_2ab598ad.png";
+import grupDiskusiIllustration from "@assets/generated_images/Group_discussion_students_e652524b.png";
 
 export default function BimbelUTBK() {
   const features = [
