@@ -1,37 +1,42 @@
 import ProgramHero from "@/components/ProgramHero";
-import { FileText, BookOpen, Video, MessageCircle, Users, Target } from "lucide-react";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import utbkImg from "@assets/generated_images/Happy_UTBK_students_studying_f04a86cd.png";
+import tryoutIllustration from "@assets/generated_images/Try_out_test_illustration_e8d2bba5.png";
+import latihanSoalIllustration from "@assets/generated_images/Practice_questions_illustration_d73e361f.png";
+import ebookIllustration from "@assets/generated_images/E-book_illustration_ada72a40.png";
+import videoMateriIllustration from "@assets/generated_images/Video_learning_illustration_49c74464.png";
+import konsultasiIllustration from "@assets/generated_images/Mentoring_consultation_illustration_f6562270.png";
+import grupDiskusiIllustration from "@assets/generated_images/Group_discussion_illustration_fafe54ad.png";
 
 export default function BimbelUTBK() {
   const features = [
     {
-      icon: Target,
+      illustration: tryoutIllustration,
       title: "Try out",
       description: "Ikutin sistem terbaru CBT dengan analisis skor sistem IRT"
     },
     {
-      icon: FileText,
+      illustration: latihanSoalIllustration,
       title: "Latihan soal",
       description: "Ribuan soal latihan terstruktur lengkap dengan pembahasan"
     },
     {
-      icon: BookOpen,
+      illustration: ebookIllustration,
       title: "E-book",
       description: "Berisikan rangkuman materi dan rumus cepat"
     },
     {
-      icon: Video,
+      illustration: videoMateriIllustration,
       title: "Video materi",
       description: "Akses video pembelajaran dan pembahasan soal UTBK"
     },
     {
-      icon: MessageCircle,
+      illustration: konsultasiIllustration,
       title: "Konsultasi 24/7 dengan mentor",
       description: "Pendampingan penuh dan bimbingan personal kapan saja dari mentor berpengalaman"
     },
     {
-      icon: Users,
+      illustration: grupDiskusiIllustration,
       title: "Grup diskusi",
       description: "Tempat untuk berdiskusi, bertukar tips, dan membahas soal bersama peserta lain"
     }
@@ -83,30 +88,30 @@ export default function BimbelUTBK() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-md p-8 hover-elevate"
-                  data-testid={`card-feature-${index}`}
-                >
-                  <div className="flex flex-col items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-[#FFC700] flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-8 h-8 text-black" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-900 mb-2" data-testid={`text-feature-title-${index}`}>
-                        {feature.title}
-                      </h3>
-                      <p className="text-sm text-gray-700 dark:text-gray-700" data-testid={`text-feature-description-${index}`}>
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-md overflow-hidden hover-elevate"
+                data-testid={`card-feature-${index}`}
+              >
+                <div className="aspect-square w-full flex items-center justify-center p-8">
+                  <img 
+                    src={feature.illustration} 
+                    alt={feature.title}
+                    className="w-full h-full object-contain"
+                    data-testid={`img-feature-${index}`}
+                  />
                 </div>
-              );
-            })}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-900 mb-2" data-testid={`text-feature-title-${index}`}>
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-700" data-testid={`text-feature-description-${index}`}>
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
