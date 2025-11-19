@@ -137,7 +137,7 @@ export default function TestimonialsSection() {
         </h2>
       </div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-6">
             {testimonials.map((testimonial, idx) => (
@@ -176,27 +176,29 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Navigation Arrows */}
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={scrollPrev}
-          disabled={!canScrollPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg hover:bg-white dark:hover:bg-gray-700"
-          data-testid="button-testimonials-prev"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={scrollNext}
-          disabled={!canScrollNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg hover:bg-white dark:hover:bg-gray-700"
-          data-testid="button-testimonials-next"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </Button>
+        {/* Navigation Arrows - Centered */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+            className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+            data-testid="button-testimonials-prev"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+            className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+            data-testid="button-testimonials-next"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </Button>
+        </div>
       </div>
 
       <Dialog open={!!selectedTestimonial} onOpenChange={() => setSelectedTestimonial(null)}>
