@@ -116,9 +116,6 @@ export default function HeroSection() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent transition-all duration-700 ${isActive ? 'to-black/20' : 'to-black/40'}`} />
-                  <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full z-10">
-                    <span className="text-white text-[9px] sm:text-[10px] font-medium whitespace-nowrap">{card.tag}</span>
-                  </div>
                 </div>
               );
             })}
@@ -148,9 +145,6 @@ export default function HeroSection() {
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent transition-all duration-700 ${isActive ? 'to-black/20' : 'to-black/40'}`} />
-                    <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full z-10">
-                      <span className="text-white text-xs font-medium">{card.tag}</span>
-                    </div>
                   </div>
                 );
               })}
