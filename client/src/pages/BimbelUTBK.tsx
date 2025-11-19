@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, FileText, BookOpen, Video, MessageCircle, Users, Target } from "lucide-react";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import utbkImg from "@assets/generated_images/Bimbel_UTBK_program_card_c5c70a1b.png";
 
 export default function BimbelUTBK() {
   const features = [
@@ -112,7 +113,7 @@ export default function BimbelUTBK() {
       <ProgramHero
         title="Bimbel UTBK"
         description="Bimbel UTBK merupakan program persiapan UTBK untuk siswa kelas 12"
-        imageUrl="https://drive.google.com/uc?export=view&id=1xSKLzpiq7Mefm0pjFLZjtUfMhkYkiJZx"
+        imageUrl={utbkImg}
         primaryButtonText="Ikut program"
       />
 

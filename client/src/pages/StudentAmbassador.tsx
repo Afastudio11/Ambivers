@@ -1,6 +1,7 @@
 import ProgramHero from "@/components/ProgramHero";
 import OutcomeSection from "@/components/OutcomeSection";
 import ProgramImpact from "@/components/ProgramImpact";
+import ambassadorImg from "@assets/generated_images/Student_Ambassador_program_card_77726dae.png";
 
 export default function StudentAmbassador() {
   const outcomes = [
@@ -27,7 +28,7 @@ export default function StudentAmbassador() {
       <ProgramHero
         title="Student Ambassador"
         description="Program bagi pelajar untuk membuat dan membagikan konten edukatif, sekaligus memperkenalkan serta menyebarkan berbagai program dan pembelajaran yang dimiliki oleh Ambivers."
-        imageUrl="https://drive.google.com/uc?export=view&id=1pozH108U6RYeTCAtFCXWDxiW9fXXmbqE"
+        imageUrl={ambassadorImg}
         primaryButtonText="Ikut program"
       />
 

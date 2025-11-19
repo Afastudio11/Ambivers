@@ -24,7 +24,7 @@ export default function ProgramHero({
   onSecondaryClick,
 }: ProgramHeroProps) {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-[#FFC700] dark:bg-[#FFC700]">
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-white dark:bg-gray-950">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 51px),
@@ -34,10 +34,10 @@ export default function ProgramHero({
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 z-10">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground dark:text-gray-900" data-testid="text-program-hero-title">
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground" data-testid="text-program-hero-title">
               {title}
             </h1>
-            <p className="text-lg lg:text-xl text-foreground/80 dark:text-gray-800 leading-relaxed text-justify" data-testid="text-program-hero-description">
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed text-justify" data-testid="text-program-hero-description">
               {description}
             </p>
             <div className="flex flex-wrap gap-4">

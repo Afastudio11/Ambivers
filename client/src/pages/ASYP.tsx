@@ -3,6 +3,7 @@ import OutcomeSection from "@/components/OutcomeSection";
 import ProgramImpact from "@/components/ProgramImpact";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Card } from "@/components/ui/card";
+import asypImg from "@assets/generated_images/ASYP_program_card_05c8c781.png";
 
 export default function ASYP() {
   const testimonials = [
@@ -35,7 +36,7 @@ export default function ASYP() {
       <ProgramHero
         title="Ambivers Summer Youth Program"
         description="Ambivers Summer Youth Program (ASYP) merupakan program yang berisi seminar dan pelatihan dengan hands-on project bersama mentor berpengalaman di bidangnya, yang ditujukan untuk siswa SMA di seluruh Indonesia."
-        imageUrl="https://drive.google.com/uc?export=view&id=1OYetWadlUDnYk40Bw90YGL1_TnyB74gs"
+        imageUrl={asypImg}
         primaryButtonText="Ikut program"
       />
 
