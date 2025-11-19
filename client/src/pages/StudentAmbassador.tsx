@@ -1,8 +1,7 @@
 import ProgramHero from "@/components/ProgramHero";
 import OutcomeSection from "@/components/OutcomeSection";
-import ProgramImpact from "@/components/ProgramImpact";
 import ambassadorImg from "@assets/generated_images/Student_Ambassador_program_card_77726dae.png";
-import { Megaphone, GraduationCap, Sparkles, TrendingUp } from "lucide-react";
+import { Megaphone, GraduationCap, Sparkles, TrendingUp, CheckCircle2 } from "lucide-react";
 
 export default function StudentAmbassador() {
   const outcomes = [
@@ -43,12 +42,27 @@ export default function StudentAmbassador() {
         singleColumn={true}
       />
 
-      <ProgramImpact
-        impacts={[
-          "Tumbuhnya generasi pelajar yang kreatif dan komunikatif, karena terbiasa membuat serta menyebarkan konten edukatif",
-          "Meluasnya jangkauan dan pengaruh Ambivers di kalangan pelajar, sehingga Ambivers dikenal sebagai platform edukatif yang relevan dan berdampak."
-        ]}
-      />
+      <section className="py-20 bg-[#FFC700]">
+        <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-8" data-testid="text-impact-title">
+            Impact
+          </h2>
+          <div className="space-y-4">
+            <div className="flex gap-4 items-start" data-testid="card-impact-0">
+              <CheckCircle2 className="w-6 h-6 text-black mt-1 flex-shrink-0" />
+              <p className="text-lg leading-relaxed text-black" data-testid="text-impact-0">
+                Tumbuhnya generasi pelajar yang kreatif dan komunikatif, karena terbiasa membuat serta menyebarkan konten edukatif
+              </p>
+            </div>
+            <div className="flex gap-4 items-start" data-testid="card-impact-1">
+              <CheckCircle2 className="w-6 h-6 text-black mt-1 flex-shrink-0" />
+              <p className="text-lg leading-relaxed text-black" data-testid="text-impact-1">
+                Meluasnya jangkauan dan pengaruh Ambivers di kalangan pelajar, sehingga Ambivers dikenal sebagai platform edukatif yang relevan dan berdampak.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
