@@ -70,55 +70,59 @@ export default function ASYP() {
       </section>
 
       <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12" data-testid="text-documentation-title">
             Dokumentasi ASYP
           </h2>
           
-          <div className="relative h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
-            <div className="absolute left-[5%] top-1/2 -translate-y-1/2 rotate-[-8deg] w-[180px] md:w-[240px] hover:scale-105 hover:z-10 transition-all duration-300">
-              <img 
-                src={asypDoc1} 
-                alt="ASYP Documentation 1"
-                className="w-full h-auto rounded-md shadow-2xl"
-                data-testid="img-documentation-1"
-              />
+          <div className="space-y-8">
+            <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
+              <div className="rotate-[-6deg] w-[240px] md:w-[320px] hover:scale-105 hover:z-10 transition-all duration-300">
+                <img 
+                  src={asypDoc1} 
+                  alt="ASYP Documentation 1"
+                  className="w-full h-auto rounded-md shadow-2xl"
+                  data-testid="img-documentation-1"
+                />
+              </div>
+              
+              <div className="rotate-[3deg] w-[260px] md:w-[340px] hover:scale-105 hover:z-10 transition-all duration-300">
+                <img 
+                  src={asypDoc2} 
+                  alt="ASYP Documentation 2"
+                  className="w-full h-auto rounded-md shadow-2xl"
+                  data-testid="img-documentation-2"
+                />
+              </div>
+              
+              <div className="rotate-[-4deg] w-[240px] md:w-[320px] hover:scale-105 hover:z-10 transition-all duration-300">
+                <img 
+                  src={asypDoc3} 
+                  alt="ASYP Documentation 3"
+                  className="w-full h-auto rounded-md shadow-2xl"
+                  data-testid="img-documentation-3"
+                />
+              </div>
             </div>
             
-            <div className="absolute left-[18%] top-1/2 -translate-y-1/2 rotate-[-4deg] w-[180px] md:w-[240px] hover:scale-105 hover:z-10 transition-all duration-300">
-              <img 
-                src={asypDoc2} 
-                alt="ASYP Documentation 2"
-                className="w-full h-auto rounded-md shadow-2xl"
-                data-testid="img-documentation-2"
-              />
-            </div>
-            
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[2deg] w-[200px] md:w-[280px] z-10 hover:scale-105 hover:z-20 transition-all duration-300">
-              <img 
-                src={asypDoc3} 
-                alt="ASYP Documentation 3"
-                className="w-full h-auto rounded-md shadow-2xl"
-                data-testid="img-documentation-3"
-              />
-            </div>
-            
-            <div className="absolute right-[18%] top-1/2 -translate-y-1/2 rotate-[4deg] w-[180px] md:w-[240px] hover:scale-105 hover:z-10 transition-all duration-300">
-              <img 
-                src={asypDoc4} 
-                alt="ASYP Documentation 4"
-                className="w-full h-auto rounded-md shadow-2xl"
-                data-testid="img-documentation-4"
-              />
-            </div>
-            
-            <div className="absolute right-[5%] top-1/2 -translate-y-1/2 rotate-[8deg] w-[180px] md:w-[240px] hover:scale-105 hover:z-10 transition-all duration-300">
-              <img 
-                src={asypDoc5} 
-                alt="ASYP Documentation 5"
-                className="w-full h-auto rounded-md shadow-2xl"
-                data-testid="img-documentation-5"
-              />
+            <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
+              <div className="rotate-[5deg] w-[250px] md:w-[330px] hover:scale-105 hover:z-10 transition-all duration-300">
+                <img 
+                  src={asypDoc4} 
+                  alt="ASYP Documentation 4"
+                  className="w-full h-auto rounded-md shadow-2xl"
+                  data-testid="img-documentation-4"
+                />
+              </div>
+              
+              <div className="rotate-[-5deg] w-[250px] md:w-[330px] hover:scale-105 hover:z-10 transition-all duration-300">
+                <img 
+                  src={asypDoc5} 
+                  alt="ASYP Documentation 5"
+                  className="w-full h-auto rounded-md shadow-2xl"
+                  data-testid="img-documentation-5"
+                />
+              </div>
             </div>
           </div>
         </div>
