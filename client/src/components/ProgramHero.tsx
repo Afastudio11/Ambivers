@@ -148,15 +148,13 @@ export default function ProgramHero({
             </div>
           </div>
 
-          <div className="relative z-10">
-            <div className="relative rounded-md overflow-hidden shadow-2xl">
-              <img
-                src={imageUrl}
-                alt={title}
-                className="w-full h-auto object-cover"
-                data-testid="img-program-hero"
-              />
-            </div>
+          <div className="relative z-10 flex items-center justify-center">
+            <img
+              src={imageUrl}
+              alt={title}
+              className="w-full h-auto object-contain scale-110"
+              data-testid="img-program-hero"
+            />
           </div>
         </div>
       </div>
