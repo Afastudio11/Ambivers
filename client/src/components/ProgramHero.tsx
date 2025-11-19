@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
+import ornamentImg from "@assets/generated_images/Educational_ornaments_decoration_0a19884d.png";
 
 interface ProgramHeroProps {
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl?: string;
   primaryButtonText?: string;
   primaryButtonLink?: string;
   secondaryButtonText?: string;
@@ -24,23 +25,34 @@ export default function ProgramHero({
   onSecondaryClick,
 }: ProgramHeroProps) {
   return (
-    <section className="relative py-20 lg:py-32 bg-white dark:bg-gray-950">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 51px),
-                           repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 51px)`
-        }} />
+    <section className="relative py-20 lg:py-32 bg-[#FFC700] overflow-hidden">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <img 
+          src={ornamentImg} 
+          alt="Educational ornaments" 
+          className="absolute top-10 right-10 w-64 h-auto transform rotate-12"
+        />
+        <img 
+          src={ornamentImg} 
+          alt="Educational ornaments" 
+          className="absolute bottom-10 left-10 w-64 h-auto transform -rotate-12"
+        />
+        <img 
+          src={ornamentImg} 
+          alt="Educational ornaments" 
+          className="absolute top-1/2 left-1/2 w-96 h-auto transform -translate-x-1/2 -translate-y-1/2 opacity-30"
+        />
       </div>
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 z-10">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground" data-testid="text-program-hero-title">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="space-y-6 z-10 relative">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900" data-testid="text-program-hero-title">
               {title}
             </h1>
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed text-justify" data-testid="text-program-hero-description">
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed" data-testid="text-program-hero-description">
               {description}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               {primaryButtonText && (
                 primaryButtonLink ? (
                   <a href={primaryButtonLink} target="_blank" rel="noopener noreferrer">
@@ -146,15 +158,6 @@ export default function ProgramHero({
                 )
               )}
             </div>
-          </div>
-
-          <div className="relative z-10 flex items-center justify-center overflow-visible">
-            <img
-              src={imageUrl}
-              alt={title}
-              className="w-full h-auto object-contain"
-              data-testid="img-program-hero"
-            />
           </div>
         </div>
       </div>
