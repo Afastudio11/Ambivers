@@ -18,6 +18,7 @@ import StudentAmbassador from "@/pages/StudentAmbassador";
 import BimbelUTBK from "@/pages/BimbelUTBK";
 import TentangKami from "@/pages/TentangKami";
 import WhatWeDo from "@/pages/WhatWeDo";
+import TestimonialDemo from "@/pages/TestimonialDemo";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -47,6 +48,7 @@ function Router() {
         <Route path="/tentang-kami" component={TentangKami} />
         <Route path="/what-we-do" component={WhatWeDo} />
         <Route path="/coming-soon" component={ComingSoon} />
+        <Route path="/testimonial-demo" component={TestimonialDemo} />
         <Route component={NotFound} />
       </Switch>
     </>
