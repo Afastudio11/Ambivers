@@ -35,13 +35,12 @@ export default function TestimonialCarousel({
     { 
       loop: true,
       align: "start",
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: false
     },
-    [Autoplay({ delay: autoplayInterval, stopOnInteraction: false })]
+    [Autoplay({ delay: autoplayInterval, stopOnInteraction: false, stopOnMouseEnter: false })]
   );
-
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -50,19 +49,6 @@ export default function TestimonialCarousel({
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-  }, [emblaApi, onSelect]);
 
   return (
     <section className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
@@ -121,7 +107,6 @@ export default function TestimonialCarousel({
             variant="outline"
             size="icon"
             onClick={scrollPrev}
-            disabled={!canScrollPrev}
             className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
             data-testid="button-testimonials-prev"
           >
@@ -131,7 +116,6 @@ export default function TestimonialCarousel({
             variant="outline"
             size="icon"
             onClick={scrollNext}
-            disabled={!canScrollNext}
             className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
             data-testid="button-testimonials-next"
           >
