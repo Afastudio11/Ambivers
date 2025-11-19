@@ -143,10 +143,10 @@ export default function Navbar() {
               onMouseLeave={handleProgramMouseLeave}
             >
               <button 
-                className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium flex items-center gap-1 nav-link`}
+                className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium flex items-center gap-1`}
                 data-testid="link-program"
               >
-                Program
+                <span className="nav-link">Program</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
               
@@ -184,10 +184,10 @@ export default function Navbar() {
               onMouseLeave={handleTentangMouseLeave}
             >
               <button 
-                className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium flex items-center gap-1 nav-link`}
+                className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium flex items-center gap-1`}
                 data-testid="link-tentang"
               >
-                Tentang Kami
+                <span className="nav-link">Tentang Kami</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
               
