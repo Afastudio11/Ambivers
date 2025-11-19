@@ -1,5 +1,5 @@
-import { Target, Rocket } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 interface VisionMissionProps {
   vision: string;
@@ -8,37 +8,39 @@ interface VisionMissionProps {
 
 export default function VisionMission({ vision, missions }: VisionMissionProps) {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-[#FFC700]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-8 hover-elevate" data-testid="card-vision">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-md bg-[#FFC700] dark:bg-[#FFC700]">
-                <Target className="w-6 h-6 text-gray-900 dark:text-gray-900" />
-              </div>
-              <h3 className="text-2xl font-bold">Visi</h3>
-            </div>
-            <p className="text-muted-foreground leading-relaxed" data-testid="text-vision">
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Visi Section */}
+          <div data-testid="card-vision">
+            <Badge variant="secondary" className="mb-6 bg-white text-gray-900 hover:bg-white">
+              Visi
+            </Badge>
+            <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+              Our <span className="text-[#C00000]">Vision</span>
+            </h3>
+            <p className="text-gray-900 leading-relaxed text-lg" data-testid="text-vision">
               {vision}
             </p>
-          </Card>
+          </div>
 
-          <Card className="p-8 hover-elevate" data-testid="card-mission">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-md bg-[#FFC700] dark:bg-[#FFC700]">
-                <Rocket className="w-6 h-6 text-gray-900 dark:text-gray-900" />
-              </div>
-              <h3 className="text-2xl font-bold">Misi</h3>
-            </div>
-            <ul className="space-y-3">
+          {/* Misi Section */}
+          <div data-testid="card-mission">
+            <Badge variant="secondary" className="mb-6 bg-white text-gray-900 hover:bg-white">
+              Misi
+            </Badge>
+            <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+              Our <span className="text-[#C00000]">Mission</span>
+            </h3>
+            <ul className="space-y-4">
               {missions.map((mission, index) => (
-                <li key={index} className="flex gap-3" data-testid={`text-mission-${index}`}>
-                  <span className="text-[#FFC700] dark:text-[#FFC700] mt-1.5">•</span>
-                  <span className="text-muted-foreground leading-relaxed">{mission}</span>
+                <li key={index} className="flex items-start gap-3" data-testid={`text-mission-${index}`}>
+                  <CheckCircle className="w-6 h-6 text-[#C00000] flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-900 leading-relaxed text-lg">{mission}</span>
                 </li>
               ))}
             </ul>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
