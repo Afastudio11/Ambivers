@@ -1,12 +1,12 @@
 import ProgramHero from "@/components/ProgramHero";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import utbkImg from "@assets/generated_images/Happy_UTBK_students_studying_f04a86cd.png";
-import tryoutIllustration from "@assets/generated_images/Try_out_test_illustration_e8d2bba5.png";
-import latihanSoalIllustration from "@assets/generated_images/Practice_questions_illustration_d73e361f.png";
-import ebookIllustration from "@assets/generated_images/E-book_illustration_ada72a40.png";
-import videoMateriIllustration from "@assets/generated_images/Video_learning_illustration_49c74464.png";
-import konsultasiIllustration from "@assets/generated_images/Mentoring_consultation_illustration_f6562270.png";
-import grupDiskusiIllustration from "@assets/generated_images/Group_discussion_illustration_fafe54ad.png";
+import tryoutIllustration from "@assets/generated_images/Try_out_CBT_interface_659c1ab2.png";
+import latihanSoalIllustration from "@assets/generated_images/Practice_problems_with_pencil_82403b87.png";
+import ebookIllustration from "@assets/generated_images/Open_e-book_illustration_f75808b6.png";
+import videoMateriIllustration from "@assets/generated_images/Video_player_interface_e8947f5f.png";
+import konsultasiIllustration from "@assets/generated_images/Mentoring_consultation_scene_f6f9295e.png";
+import grupDiskusiIllustration from "@assets/generated_images/Group_discussion_illustration_78d40152.png";
 
 export default function BimbelUTBK() {
   const features = [
@@ -78,12 +78,12 @@ export default function BimbelUTBK() {
         primaryButtonText="Ikut program"
       />
 
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[#FFC700]">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4" data-testid="text-features-title">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900" data-testid="text-features-title">
             Fitur program Bimbel UTBK
           </h2>
-          <p className="text-center text-muted-foreground mb-12">
+          <p className="text-center text-gray-700 mb-12">
             Program persiapan UTBK untuk siswa kelas 12 yang mencakup
           </p>
 
@@ -91,22 +91,24 @@ export default function BimbelUTBK() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-md overflow-hidden hover-elevate"
+                className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-2xl p-2 hover-elevate"
                 data-testid={`card-feature-${index}`}
               >
-                <div className="aspect-square w-full flex items-center justify-center p-8">
-                  <img 
-                    src={feature.illustration} 
-                    alt={feature.title}
-                    className="w-full h-full object-contain"
-                    data-testid={`img-feature-${index}`}
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-900 mb-2" data-testid={`text-feature-title-${index}`}>
+                <div className="bg-white dark:bg-white rounded-t-xl p-6">
+                  <div className="aspect-square w-full flex items-center justify-center">
+                    <img 
+                      src={feature.illustration} 
+                      alt={feature.title}
+                      className="w-full h-full object-contain"
+                      data-testid={`img-feature-${index}`}
+                    />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-900 mt-8 mb-0" data-testid={`text-feature-title-${index}`}>
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-700" data-testid={`text-feature-description-${index}`}>
+                </div>
+                <div className="p-3">
+                  <p className="text-sm font-bold text-gray-900 dark:text-gray-900" data-testid={`text-feature-description-${index}`}>
                     {feature.description}
                   </p>
                 </div>
