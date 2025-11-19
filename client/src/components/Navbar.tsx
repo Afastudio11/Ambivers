@@ -127,6 +127,15 @@ export default function Navbar() {
           </button>
 
           <div className="hidden md:flex items-center gap-8">
+            {/* Beranda */}
+            <button
+              onClick={handleLogoClick}
+              className={`${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors font-medium nav-link`}
+              data-testid="link-beranda"
+            >
+              Beranda
+            </button>
+
             {/* Program Dropdown */}
             <div 
               className="relative"
@@ -138,6 +147,7 @@ export default function Navbar() {
                 data-testid="link-program"
               >
                 Program
+                <ChevronDown className="w-4 h-4" />
               </button>
               
               <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-200 origin-top ${
@@ -178,6 +188,7 @@ export default function Navbar() {
                 data-testid="link-tentang"
               >
                 Tentang Kami
+                <ChevronDown className="w-4 h-4" />
               </button>
               
               <div className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-200 origin-top ${
@@ -292,6 +303,18 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className={`md:hidden border-t ${scrolled ? "border-white/10 bg-black/90" : "border-gray-200 bg-white"} backdrop-blur-md`} data-testid="mobile-menu">
           <div className="px-4 py-6 space-y-4">
+            {/* Mobile Beranda */}
+            <button
+              onClick={() => {
+                handleLogoClick();
+                setMobileMenuOpen(false);
+              }}
+              className={`block w-full text-left ${scrolled ? "text-white" : "text-gray-900"} hover:text-[#FFC700] transition-colors py-2 font-medium`}
+              data-testid="link-beranda-mobile"
+            >
+              Beranda
+            </button>
+
             {/* Mobile Program Dropdown */}
             <div>
               <button
