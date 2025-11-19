@@ -31,21 +31,6 @@ export default function ASYP() {
     }
   ];
 
-  const referensi = [
-    {
-      title: "Personal Development",
-      description: "In AsSEC, members can develop self-management and interpersonal skills through having practical learning experiences that complement their university environment to emerge as well-rounded individuals."
-    },
-    {
-      title: "Get Leadership Experience",
-      description: "An empowered & challenging environment where you can develop your competencies and master of leadership. Our Leadership Development Model offers a clear support system for the learning goals of each of our members."
-    },
-    {
-      title: "Build Your Network",
-      description: "In AsSEC, members have the chance to connect with people from all over the world during and after their experience, which allows them to build their own local and international network of like minded youth."
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <ProgramHero
@@ -56,20 +41,13 @@ export default function ASYP() {
       />
 
       <OutcomeSection
-        title="Referensi:"
-        outcomes={referensi}
-        singleColumn={true}
-      />
-
-      <OutcomeSection
         title="Outcome of the programs"
         description="Peserta mampu mengasah keterampilan komunikasi, kepemimpinan, dan kreativitas melalui pengalaman belajar interaktif dan praktik langsung bersama mentor profesional. Mereka juga lebih memahami potensi diri serta arah pengembangan karier di masa depan."
       />
 
       <ProgramImpact
         impacts={[
-          "Program ini berdampak positif dalam meningkatkan kepercayaan diri, kemampuan berpikir kritis, serta kesiapan peserta untuk menghadapi berbagai tantangan di dunia akademik maupun profesional.",
-          "ASYP juga menumbuhkan semangat kolaborasi dan eksplorasi diri di kalangan generasi muda Indonesia."
+          "Program ini berdampak positif dalam meningkatkan kepercayaan diri, kemampuan berpikir kritis, serta kesiapan peserta untuk menghadapi berbagai tantangan di dunia akademik maupun profesional. ASYP juga menumbuhkan semangat kolaborasi dan eksplorasi diri di kalangan generasi muda Indonesia."
         ]}
       />
 
