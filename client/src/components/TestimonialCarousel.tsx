@@ -1,8 +1,14 @@
-import { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface Testimonial {
   name: string;
@@ -23,108 +29,147 @@ export default function TestimonialCarousel({
   testimonials,
   autoplayInterval = 5000,
 }: TestimonialCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: "start",
+      slidesToScroll: 1
+    },
+    [Autoplay({ delay: autoplayInterval, stopOnInteraction: false })]
+  );
+
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, autoplayInterval);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length, autoplayInterval]);
-
-  const itemsPerView = 3;
-  const maxIndex = Math.max(0, testimonials.length - itemsPerView);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(Math.min(index, maxIndex));
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 1));
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
-  };
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+    <section className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         {title && (
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-black" data-testid="text-testimonials-title">
+          <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4" data-testid="text-testimonials-title">
             {title}
           </h2>
         )}
+      </div>
 
-        <div className="relative">
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out gap-6"
-              style={{ 
-                transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` 
-              }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <Card 
-                  key={index}
-                  className="flex-shrink-0 bg-white dark:bg-white border-gray-200 dark:border-gray-200"
-                  style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
-                  data-testid={`card-testimonial-${index}`}
-                >
-                  <CardContent className="p-6 lg:p-8 h-full flex flex-col">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-base font-bold text-black" data-testid={`text-testimonial-institution-${index}`}>
-                        {testimonial.institution || "Universitas"}
-                      </h3>
-                      <div className="flex items-center gap-1">
-                        <span className="text-black font-bold">{testimonial.rating || 4.9}</span>
-                        <Star className="w-4 h-4 fill-green-500 text-green-500" />
-                      </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6">
+            {testimonials.map((testimonial, idx) => (
+              <div
+                key={idx}
+                onClick={() => setSelectedTestimonial(testimonial)}
+                className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                data-testid={`testimonial-card-${idx}`}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="font-bold text-lg text-gray-900 dark:text-gray-100">
+                    {testimonial.institution || "Universitas"}
+                  </div>
+                  <div className="flex items-center gap-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 px-2 py-1 rounded-lg">
+                    <span className="font-semibold text-sm">{testimonial.rating || 4.9}</span>
+                    <Star className="w-4 h-4 fill-green-500 text-green-500" />
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-6 line-clamp-4" data-testid={`text-testimonial-content-${idx}`}>
+                  {testimonial.text}
+                </p>
+                
+                <div>
+                  <div className="font-bold text-gray-900 dark:text-gray-100 mb-1" data-testid={`text-testimonial-name-${idx}`}>
+                    {testimonial.name}
+                  </div>
+                  {testimonial.institution && (
+                    <div className="text-sm text-primary" data-testid={`text-testimonial-institution-${idx}`}>
+                      {testimonial.institution}
                     </div>
-                    
-                    <p className="text-gray-700 dark:text-gray-700 leading-relaxed mb-6 flex-grow" data-testid={`text-testimonial-content-${index}`}>
-                      {testimonial.text}
-                    </p>
-
-                    <div className="mt-auto">
-                      <h4 className="text-base font-bold text-black" data-testid={`text-testimonial-name-${index}`}>
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-sm text-[#FFC700] font-medium" data-testid={`text-testimonial-major-${index}`}>
-                        {testimonial.institution || ""}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={goToPrevious}
-              disabled={currentIndex === 0}
-              className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
-              data-testid="button-testimonials-prev"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={goToNext}
-              disabled={currentIndex >= maxIndex}
-              className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
-              data-testid="button-testimonials-next"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </Button>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Navigation Arrows - Centered */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+            className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+            data-testid="button-testimonials-prev"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+            className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+            data-testid="button-testimonials-next"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </Button>
+        </div>
       </div>
+
+      <Dialog open={!!selectedTestimonial} onOpenChange={() => setSelectedTestimonial(null)}>
+        <DialogContent className="max-w-2xl" data-testid="dialog-testimonial">
+          {selectedTestimonial && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="flex items-start justify-between gap-4">
+                  <span className="text-xl font-bold">{selectedTestimonial.institution || "Universitas"}</span>
+                  <div className="flex items-center gap-1 bg-white border border-gray-200 px-2 py-1 rounded-lg">
+                    <span className="font-semibold text-sm">{selectedTestimonial.rating || 4.9}</span>
+                    <Star className="w-4 h-4 fill-green-500 text-green-500" />
+                  </div>
+                </DialogTitle>
+              </DialogHeader>
+              <div className="mt-4">
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  {selectedTestimonial.text}
+                </p>
+                <div className="border-t pt-4">
+                  <div className="font-bold text-gray-900 mb-1">
+                    {selectedTestimonial.name}
+                  </div>
+                  {selectedTestimonial.institution && (
+                    <div className="text-sm text-primary">
+                      {selectedTestimonial.institution}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
