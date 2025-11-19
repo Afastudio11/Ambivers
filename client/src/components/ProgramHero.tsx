@@ -148,11 +148,12 @@ export default function ProgramHero({
             </div>
           </div>
 
-          <div className="relative z-10 flex items-center justify-center">
+          <div className="relative z-10 flex items-center justify-center" style={{ backgroundColor: 'transparent' }}>
             <img
               src={imageUrl}
               alt={title}
               className="w-full h-auto object-contain scale-110"
+              style={{ backgroundColor: 'transparent', mixBlendMode: 'normal' }}
               data-testid="img-program-hero"
             />
           </div>

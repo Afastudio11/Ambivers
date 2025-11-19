@@ -4,7 +4,7 @@ import ProgramsGrid from "@/components/ProgramsGrid";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
-import ambiversFoundationIllustration from "@assets/generated_images/Ambivers_Foundation_volunteers_yellow_background_3188d5c6.png";
+import ambiversFoundationIllustration from "@assets/generated_images/Ambivers_volunteers_solid_yellow_FFC700_c4209719.png";
 
 export default function AmbiversFoundation() {
   const programs = [
