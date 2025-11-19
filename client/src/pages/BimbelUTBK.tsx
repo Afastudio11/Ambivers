@@ -63,11 +63,11 @@ export default function BimbelUTBK() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-2xl p-2 hover-elevate"
+                className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-2xl p-2 hover-elevate flex flex-col"
                 data-testid={`card-feature-${index}`}
               >
-                <div className="bg-white dark:bg-white rounded-t-xl p-6">
-                  <div className="aspect-square w-full flex items-center justify-center">
+                <div className="bg-white dark:bg-white rounded-t-xl p-6 flex flex-col">
+                  <div className="aspect-square w-full flex items-center justify-center mb-6">
                     <img 
                       src={feature.illustration} 
                       alt={feature.title}
@@ -75,7 +75,7 @@ export default function BimbelUTBK() {
                       data-testid={`img-feature-${index}`}
                     />
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-900 mt-8 mb-0" data-testid={`text-feature-title-${index}`}>
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-900 min-h-[4rem] flex items-start" data-testid={`text-feature-title-${index}`}>
                     {feature.title}
                   </h3>
                 </div>
