@@ -61,16 +61,15 @@ export default function TestimonialCarousel({
                   style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
                   data-testid={`card-testimonial-${index}`}
                 >
-                  <CardContent className="p-6 lg:p-8 h-full flex flex-row items-start gap-4">
-                    <Avatar className="w-12 h-12 flex-shrink-0" data-testid={`avatar-testimonial-${index}`}>
-                      <AvatarImage src={testimonial.photo} alt={testimonial.name} />
-                      <AvatarFallback className="bg-[#FFC700] text-gray-900 text-lg font-bold">
-                        {testimonial.name.charAt(0).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
-
-                    <div className="flex flex-col flex-1 min-w-0">
-                      <div className="mb-4">
+                  <CardContent className="p-6 lg:p-8 h-full flex flex-col">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Avatar className="w-12 h-12 flex-shrink-0" data-testid={`avatar-testimonial-${index}`}>
+                        <AvatarImage src={testimonial.photo} alt={testimonial.name} />
+                        <AvatarFallback className="bg-[#FFC700] text-gray-900 text-lg font-bold">
+                          {testimonial.name.charAt(0).toUpperCase()}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div>
                         <h3 className="text-base font-bold text-[#FFC700]" data-testid={`text-testimonial-name-${index}`}>
                           {testimonial.name}
                         </h3>
@@ -80,10 +79,10 @@ export default function TestimonialCarousel({
                           </p>
                         )}
                       </div>
-                      <p className="text-gray-300 dark:text-gray-300 leading-relaxed" data-testid={`text-testimonial-content-${index}`}>
-                        "{testimonial.text}"
-                      </p>
                     </div>
+                    <p className="text-gray-300 dark:text-gray-300 leading-relaxed" data-testid={`text-testimonial-content-${index}`}>
+                      "{testimonial.text}"
+                    </p>
                   </CardContent>
                 </Card>
               ))}
