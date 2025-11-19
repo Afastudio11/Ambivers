@@ -20,6 +20,9 @@ import jumpiversDoc2 from "@assets/IMG-20250809-WA0000_1763534976419.jpg";
 import afyiDoc1 from "@assets/DSCF0450_1763535140988.jpg";
 import afyiDoc2 from "@assets/DSCF0352_1763535140989.jpg";
 import afyiDoc3 from "@assets/DSCF0358_1763535140989.jpg";
+import upcycleDoc1 from "@assets/IMG_1916_1763535603520.jpg";
+import upcycleDoc2 from "@assets/IMG_1715_1763535603521.jpg";
+import upcycleDoc3 from "@assets/IMG_1980_1763535603522.jpg";
 
 interface BlogPost {
   id: number;
@@ -198,7 +201,8 @@ const blogPosts: BlogPost[] = [
     date: "5 Oktober 2025",
     readTime: "5 menit",
     image: upcycleImg,
-    author: "Friska Setya"
+    author: "Friska Setya",
+    documentationImages: [upcycleDoc1, upcycleDoc2, upcycleDoc3]
   },
   {
     id: 5,
