@@ -31,14 +31,13 @@ export default function ProgramHero({
                            repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 51px)`
         }} />
       </div>
-
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 z-10">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground dark:text-gray-900" data-testid="text-program-hero-title">
               {title}
             </h1>
-            <p className="text-lg lg:text-xl text-foreground/80 dark:text-gray-800 leading-relaxed" data-testid="text-program-hero-description">
+            <p className="text-lg lg:text-xl text-foreground/80 dark:text-gray-800 leading-relaxed text-justify" data-testid="text-program-hero-description">
               {description}
             </p>
             <div className="flex flex-wrap gap-4">
