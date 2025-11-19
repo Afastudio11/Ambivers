@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import visionIllustration from "@assets/generated_images/Students_collaboration_and_volunteering_c2aa21d4.png";
 
 interface VisionMissionProps {
   vision: string;
@@ -10,7 +11,7 @@ export default function VisionMission({ vision, missions }: VisionMissionProps) 
   return (
     <section className="py-20 bg-[#FFC700]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           {/* Visi Section */}
           <div data-testid="card-vision">
             <Badge variant="secondary" className="mb-6 bg-white text-gray-900 hover:bg-white">
@@ -41,6 +42,16 @@ export default function VisionMission({ vision, missions }: VisionMissionProps) 
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Illustration */}
+        <div className="flex justify-center">
+          <img 
+            src={visionIllustration} 
+            alt="Students collaboration and community development" 
+            className="max-w-3xl w-full rounded-md"
+            data-testid="img-vision-mission-illustration"
+          />
         </div>
       </div>
     </section>
