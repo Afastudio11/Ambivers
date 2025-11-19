@@ -38,7 +38,7 @@ export default function ProgramsGrid({ title, programs }: ProgramsGridProps) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base" data-testid={`text-program-description-${index}`}>
+                  <CardDescription className="text-base text-justify" data-testid={`text-program-description-${index}`}>
                     {program.description}
                   </CardDescription>
                 </CardContent>
