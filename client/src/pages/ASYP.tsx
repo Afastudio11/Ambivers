@@ -4,11 +4,11 @@ import ProgramImpact from "@/components/ProgramImpact";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Card } from "@/components/ui/card";
 import asypImg from "@assets/generated_images/ASYP_program_card_05c8c781.png";
-import asypDoc1 from "@assets/Screen Shot 2023-07-08 at 9.29.29 AM_1763543105376.png";
-import asypDoc2 from "@assets/Screen Shot 2023-07-08 at 11.15.38 AM_1763543105376.png";
-import asypDoc3 from "@assets/Screen Shot 2023-07-08 at 9.41.26 AM_1763543105377.png";
-import asypDoc4 from "@assets/Screen Shot 2023-07-08 at 12.04.00 PM_1763543105377.png";
-import asypDoc5 from "@assets/Screen Shot 2023-07-08 at 11.49.06 AM_1763543105377.png";
+import asypDoc1 from "@assets/Screen Shot 2023-07-08 at 9.29.29 AM_1763543105376.jpg";
+import asypDoc2 from "@assets/Screen Shot 2023-07-08 at 11.15.38 AM_1763543105376.jpg";
+import asypDoc3 from "@assets/Screen Shot 2023-07-08 at 9.41.26 AM_1763543105377.jpg";
+import asypDoc4 from "@assets/Screen Shot 2023-07-08 at 12.04.00 PM_1763543105377.jpg";
+import asypDoc5 from "@assets/Screen Shot 2023-07-08 at 11.49.06 AM_1763543105377.jpg";
 
 export default function ASYP() {
   const testimonials = [

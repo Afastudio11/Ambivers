@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-import photo1 from "@assets/hero-program.png";
+import photo1 from "@assets/hero-program.jpg";
 import photo2 from "@assets/hero-workshop.jpg";
 import photo3 from "@assets/hero-community.jpg";
 import photo4 from "@assets/hero-online-session.jpg";
