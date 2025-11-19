@@ -1,7 +1,7 @@
 import aboutPhoto1 from "@assets/selfie-time-26356foo.jpg_sharp.jpg_1762451240814.jpg";
 import aboutPhoto2 from "@assets/IMG20220806150217_Original_1762451240815.jpg";
 import aboutPhoto3 from "@assets/DSCF0449_1762451240816.jpg";
-import aboutPhoto4 from "@assets/selfie-time-26356foo.jpg_sharp.jpg_1762451240814.jpg";
+import aboutPhoto4 from "@assets/about-photo-4.jpg";
 
 export default function AboutSection() {
   return (

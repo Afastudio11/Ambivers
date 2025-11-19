@@ -104,7 +104,6 @@ export default function Navbar() {
   const tentangItems: DropdownItem[] = [
     { label: "Tentang Kami", href: "/tentang-kami" },
     { label: "Ambivers in number", onClick: () => scrollToSection("statistics") },
-    { label: "What we do?", href: "/what-we-do" },
     { label: "Testimoni", onClick: () => scrollToSection("testimoni") },
   ];
 
