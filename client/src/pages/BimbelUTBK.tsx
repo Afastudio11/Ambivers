@@ -1,8 +1,5 @@
-import { useState, useEffect } from "react";
 import ProgramHero from "@/components/ProgramHero";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, FileText, BookOpen, Video, MessageCircle, Users, Target } from "lucide-react";
+import { FileText, BookOpen, Video, MessageCircle, Users, Target } from "lucide-react";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import utbkImg from "@assets/generated_images/Happy_UTBK_students_studying_f04a86cd.png";
 
@@ -39,47 +36,6 @@ export default function BimbelUTBK() {
       description: "Tempat untuk berdiskusi, bertukar tips, dan membahas soal bersama peserta lain"
     }
   ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(3);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setItemsPerView(1);
-      } else if (window.innerWidth < 1024) {
-        setItemsPerView(2);
-      } else {
-        setItemsPerView(3);
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => 
-        prev + itemsPerView >= features.length ? 0 : prev + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [itemsPerView, features.length]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => 
-      prev === 0 ? Math.max(0, features.length - itemsPerView) : prev - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => 
-      prev + itemsPerView >= features.length ? 0 : prev + 1
-    );
-  };
 
   const bimbelTestimonials = [
     {
@@ -126,65 +82,31 @@ export default function BimbelUTBK() {
             Program persiapan UTBK untuk siswa kelas 12 yang mencakup
           </p>
 
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out gap-6"
-                style={{ 
-                  transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` 
-                }}
-              >
-                {features.map((feature, index) => {
-                  const Icon = feature.icon;
-                  return (
-                    <div
-                      key={index}
-                      className="flex-shrink-0 bg-white dark:bg-gray-800 rounded-2xl p-2 shadow-sm hover:shadow-md transition-shadow"
-                      style={{ width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 24 / itemsPerView}px)` }}
-                      data-testid={`card-feature-${index}`}
-                    >
-                      <div className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-xl p-6">
-                        <div className="flex items-center justify-center mb-6">
-                          <div className="w-20 h-20 rounded-full bg-[#FFC700] flex items-center justify-center">
-                            <Icon className="w-10 h-10 text-black" />
-                          </div>
-                        </div>
-                        <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-900 mb-4" data-testid={`text-feature-title-${index}`}>
-                          {feature.title}
-                        </h3>
-                      </div>
-                      <div className="p-4">
-                        <p className="text-sm font-bold text-gray-900 dark:text-gray-100" data-testid={`text-feature-description-${index}`}>
-                          {feature.description}
-                        </p>
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-[#fef4e2] dark:bg-[#fef4e2] rounded-md p-8 hover-elevate"
+                  data-testid={`card-feature-${index}`}
+                >
+                  <div className="flex flex-col items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-[#FFC700] flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-8 h-8 text-black" />
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="flex justify-center gap-4 mt-8">
-              <Button
-                size="icon"
-                variant="outline"
-                onClick={goToPrevious}
-                className="bg-black text-white hover:bg-gray-800 border-black"
-                data-testid="button-features-prev"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </Button>
-
-              <Button
-                size="icon"
-                variant="outline"
-                onClick={goToNext}
-                className="bg-black text-white hover:bg-gray-800 border-black"
-                data-testid="button-features-next"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </Button>
-            </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-900 mb-2" data-testid={`text-feature-title-${index}`}>
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm text-gray-700 dark:text-gray-700" data-testid={`text-feature-description-${index}`}>
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
