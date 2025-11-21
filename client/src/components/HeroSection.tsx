@@ -75,56 +75,45 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FFC700] dark:bg-[#FFC700]">
       {/* Top Left - Laptop with Books */}
       <motion.div 
-        className="absolute left-4 top-24 lg:left-16 lg:top-28 w-28 lg:w-40 opacity-90 z-10"
+        className="absolute left-8 top-32 lg:left-32 lg:top-40 w-28 lg:w-40 opacity-90 z-10"
         variants={floatingVariants}
         animate="animate"
       >
         <img src={laptopBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-      {/* Top Left - Decorative Arrow */}
-      <svg className="absolute left-32 top-40 lg:left-56 lg:top-52 w-16 lg:w-24 opacity-60 z-0" viewBox="0 0 100 100">
-        <path d="M 10 50 Q 30 20, 60 40" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
-      </svg>
+
       {/* Top Right - Stack of Books */}
       <motion.div 
-        className="absolute right-4 top-16 lg:right-20 lg:top-20 w-32 lg:w-48 opacity-90 z-10"
+        className="absolute right-8 top-24 lg:right-32 lg:top-32 w-32 lg:w-48 opacity-90 z-10"
         variants={floatingVariants2}
         animate="animate"
       >
         <img src={stackBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-      {/* Top Right - Decorative Arrow */}
-      <svg className="absolute right-32 top-32 lg:right-64 lg:top-40 w-20 lg:w-28 opacity-60 z-0" viewBox="0 0 120 80">
-        <path d="M 10 10 Q 50 5, 80 30 T 110 50" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
-        <path d="M 100 45 L 110 50 L 105 55" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
+
       {/* Bottom Left - Backpack */}
       <motion.div 
-        className="absolute left-4 bottom-32 lg:left-12 lg:bottom-40 w-28 lg:w-40 opacity-90 z-10"
+        className="absolute left-8 bottom-40 lg:left-32 lg:bottom-48 w-28 lg:w-40 opacity-90 z-10"
         variants={floatingVariants3}
         animate="animate"
       >
         <img src={backpackIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-      {/* Bottom Left - Decorative Arrow */}
-      <svg className="absolute left-28 bottom-48 lg:left-48 lg:bottom-56 w-20 lg:w-32 opacity-60 z-0" viewBox="0 0 120 100">
-        <path d="M 10 80 Q 40 40, 80 50 T 110 30" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
-      </svg>
+
       {/* Bottom Right - School Building */}
       <motion.div 
-        className="absolute right-4 bottom-28 lg:right-16 lg:bottom-36 w-32 lg:w-48 opacity-90 z-10"
+        className="absolute right-8 bottom-36 lg:right-32 lg:bottom-44 w-32 lg:w-48 opacity-90 z-10"
         variants={floatingVariants4}
         animate="animate"
       >
         <img src={schoolBuildingIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-      {/* Bottom Right - Decorative Arrow */}
-      <svg className="absolute right-32 bottom-52 lg:right-60 lg:bottom-64 w-20 lg:w-28 opacity-60 z-0" viewBox="0 0 100 120">
-        <path d="M 80 20 Q 50 60, 30 100" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
-      </svg>
+
       <div className="relative z-10 max-w-5xl mx-auto px-4 lg:px-8 text-center">
         <div className="space-y-8">
-          <h1 className="sm:text-5xl lg:text-6xl xl:text-7xl text-gray-900 dark:text-gray-900 font-black text-[79px]" data-testid="text-hero-headline">Bantu Raih Impianmu        Jadi Nyata!</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900 dark:text-gray-900" data-testid="text-hero-headline">
+            Bantu Raih Impianmu Jadi Nyata!
+          </h1>
           
           <p className="text-sm sm:text-base lg:text-lg text-gray-800 dark:text-gray-800 leading-relaxed max-w-3xl mx-auto" data-testid="text-hero-description">
             Ambivers telah memberikan dampak positif bagi <strong>50.000+</strong> pelajar di seluruh Indonesia.<br />
