@@ -129,8 +129,8 @@ export default function HeroSection() {
           {/* Background Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-yellow-200/30 dark:bg-yellow-900/20 blur-[80px] rounded-full -z-10"></div>
 
-          {/* Main Image Container - Group Photo 16:9 aspect ratio */}
-          <div className="relative w-full max-w-[900px] aspect-[16/9]">
+          {/* Main Image Container - Group Photo 900x650 */}
+          <div className="relative w-full max-w-[900px] h-[650px]">
             <img 
               src={workshopPhoto}
               alt="Workshop Team" 
