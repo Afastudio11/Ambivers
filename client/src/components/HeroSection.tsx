@@ -50,10 +50,10 @@ export default function HeroSection() {
         <div className="flex-1 w-full xl:max-w-[45%] z-10 flex flex-col gap-6 lg:gap-8">
           
           <div className="space-y-1">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Poppins", "Plus Jakarta Sans", sans-serif', fontWeight: 900 }}>
               Bantu Raih Impianmu
             </h1>
-             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900">
+             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Poppins", "Plus Jakarta Sans", sans-serif', fontWeight: 900 }}>
               <span className="relative inline-block">
                 Jadi Nyata!
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-gray-900 opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -64,13 +64,13 @@ export default function HeroSection() {
           </div>
 
           <p className="text-gray-800 dark:text-gray-800 text-lg md:text-xl leading-relaxed max-w-xl font-medium">
-            Ambivers telah memberikan dampak positif bagi <span className="font-bold">50.000+</span> pelajar di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
+            Ambivers telah memberikan dampak bagi <span className="font-black text-2xl md:text-3xl bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">50.000+</span> pelajar di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center pt-4">
             <button 
               onClick={scrollToProgram}
-              className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-3"
+              className="rounded-full px-8 py-3.5 text-base md:text-lg font-semibold cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-3"
               style={{
                 backgroundColor: 'rgba(26, 26, 26, 0.9)',
                 backdropFilter: 'blur(12px)',
