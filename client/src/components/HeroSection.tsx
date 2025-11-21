@@ -45,7 +45,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-[#FFC107] dark:bg-[#FFC107]">
       
-      <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-start gap-4 lg:gap-6 w-full px-0">
+      <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-start gap-0 lg:gap-2 w-full px-0">
         {/* Left Content Column */}
         <div className="flex-0 w-full xl:w-auto xl:max-w-[450px] z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start">
           
