@@ -111,12 +111,12 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 lg:px-8 text-center">
         <div className="space-y-8">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-gray-900 dark:text-gray-900" data-testid="text-hero-headline">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900 dark:text-gray-900" data-testid="text-hero-headline">
             Bantu Raih Impianmu<br />
             Jadi Nyata!
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-800 dark:text-gray-800 leading-relaxed max-w-4xl mx-auto" data-testid="text-hero-description">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-800 dark:text-gray-800 leading-relaxed max-w-3xl mx-auto" data-testid="text-hero-description">
             Ambivers telah memberikan dampak positif bagi <strong>50.000+</strong> pelajar di seluruh Indonesia.<br />
             Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus<br className="hidden lg:block" />
             membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
