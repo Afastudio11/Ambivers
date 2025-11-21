@@ -1,162 +1,126 @@
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-import laptopBooksIcon from "@assets/1 (3)_1763697804794.png";
-import backpackIcon from "@assets/1 (4)_1763697804794.png";
-import stackBooksIcon from "@assets/1 (1)_1763697804795.png";
-import schoolBuildingIcon from "@assets/1 (2)_1763697804795.png";
-
-const floatingVariants = {
-  animate: {
-    y: [0, -20, 0],
-    rotate: [-3, 3, -3],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
-};
-
-const floatingVariants2 = {
-  animate: {
-    y: [0, -15, 0],
-    rotate: [2, -2, 2],
-    transition: {
-      duration: 2.5,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: 0.5
-    }
-  }
-};
-
-const floatingVariants3 = {
-  animate: {
-    y: [0, -25, 0],
-    rotate: [-2, 4, -2],
-    transition: {
-      duration: 3.5,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: 1
-    }
-  }
-};
-
-const floatingVariants4 = {
-  animate: {
-    y: [0, -18, 0],
-    rotate: [3, -3, 3],
-    transition: {
-      duration: 2.8,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: 0.3
-    }
-  }
-};
+import { Star, Users, Building2, School } from 'lucide-react';
+import { StatCard } from './StatCard';
 
 export default function HeroSection() {
-  const scrollToProgram = () => {
-    const element = document.getElementById("program");
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+  const stats = [
+    {
+      icon: <Building2 className="w-5 h-5 text-yellow-800" />,
+      value: "100+",
+      label: "Corporate partners",
+      position: "md:absolute -top-6 -left-6 animate-float"
+    },
+    {
+      icon: <School className="w-5 h-5 text-yellow-800" />,
+      value: "40+",
+      label: "School partners",
+      position: "md:absolute -top-6 -right-6 animate-float",
+      delay: 1000
+    },
+    {
+      icon: <Users className="w-5 h-5 text-yellow-800" />,
+      value: "50.000+",
+      label: "Beneficiaries",
+      position: "md:absolute -bottom-6 -right-6 animate-float",
+      delay: 2000
     }
-  };
+  ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FFC700] dark:bg-[#FFC700]">
-      {/* Top Left - Laptop with Books */}
-      <motion.div 
-        className="absolute left-8 top-32 lg:left-32 lg:top-40 w-40 lg:w-56 opacity-90 z-10"
-        variants={floatingVariants}
-        animate="animate"
-      >
-        <img src={laptopBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
-      </motion.div>
-
-      {/* Top Right - Stack of Books */}
-      <motion.div 
-        className="absolute right-8 top-24 lg:right-32 lg:top-32 w-44 lg:w-64 opacity-90 z-10"
-        variants={floatingVariants2}
-        animate="animate"
-      >
-        <img src={stackBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
-      </motion.div>
-
-      {/* Bottom Left - Backpack */}
-      <motion.div 
-        className="absolute left-8 bottom-40 lg:left-32 lg:bottom-48 w-40 lg:w-56 opacity-90 z-10"
-        variants={floatingVariants3}
-        animate="animate"
-      >
-        <img src={backpackIcon} alt="" className="w-full h-auto drop-shadow-lg" />
-      </motion.div>
-
-      {/* Bottom Right - School Building */}
-      <motion.div 
-        className="absolute right-8 bottom-36 lg:right-32 lg:bottom-44 w-44 lg:w-64 opacity-90 z-10"
-        variants={floatingVariants4}
-        animate="animate"
-      >
-        <img src={schoolBuildingIcon} alt="" className="w-full h-auto drop-shadow-lg" />
-      </motion.div>
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 lg:px-8 text-center">
-        <div className="space-y-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900 dark:text-gray-900" data-testid="text-hero-headline">
-            Bantu Raih Impianmu<br />
-            Jadi Nyata!
-          </h1>
+    <section className="px-6 md:px-12 lg:px-20 pt-8 pb-16 md:pt-12 lg:pt-16 flex flex-col gap-12 lg:gap-16 bg-white dark:bg-gray-950">
+      
+      <div className="flex flex-col lg:flex-col xl:flex-row items-center gap-12 lg:gap-20">
+        {/* Left Content Column */}
+        <div className="flex-1 w-full xl:max-w-[45%] z-10 flex flex-col gap-6 lg:gap-8">
           
-          <p className="text-sm sm:text-base lg:text-lg text-gray-800 dark:text-gray-800 leading-relaxed max-w-3xl mx-auto" data-testid="text-hero-description">
-            Ambivers telah memberikan dampak positif bagi <strong>50.000+</strong> pelajar di seluruh Indonesia.<br />
-            Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus<br className="hidden lg:block" />
-            membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
+          <div className="space-y-1">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white">
+              Bantu Raih Impianmu
+            </h1>
+             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white">
+              <span className="relative inline-block">
+                Jadi Nyata!
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-white opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
+                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="5" fill="none" />
+                </svg>
+              </span>
+            </h1>
+          </div>
+
+          <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl font-medium">
+            Ambivers telah memberikan dampak positif bagi <span className="font-bold">50.000+</span> pelajar di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
           </p>
 
-          <div className="flex justify-center pt-4">
-            <button 
-              onClick={scrollToProgram}
-              className="group relative flex items-center justify-center gap-3 rounded-full font-semibold cursor-pointer transition-all duration-300 px-6 py-4 sm:px-8 sm:py-4 border-2"
-              style={{
-                minWidth: '240px',
-                backgroundColor: 'rgba(26, 26, 26, 0.85)',
-                backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
-                boxShadow: 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)',
-                color: '#ffffff',
-                borderColor: 'rgba(255, 255, 255, 0.2)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = 'inset 2px 2px 6px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(255, 255, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.3)';
-                e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)';
-                e.currentTarget.style.transform = 'translateY(0) scale(1)';
-              }}
-              onFocus={(e) => {
-                e.currentTarget.style.boxShadow = 'inset 2px 2px 6px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(255, 255, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.3)';
-              }}
-              onBlur={(e) => {
-                e.currentTarget.style.boxShadow = 'inset 4px 4px 12px rgba(0, 0, 0, 0.3), inset -4px -4px 12px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2)';
-              }}
-              data-testid="button-jelajahi"
-            >
-              <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-1000 group-hover:rotate-[360deg]" />
-              <span className="text-base sm:text-lg">Jelajahi program kami</span>
+          <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center pt-4">
+            <button className="bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-lg font-semibold px-8 py-4 rounded-full transition-all hover:shadow-lg hover:-translate-y-1 active:translate-y-0" data-testid="button-mulai-sekarang">
+              Mulai Sekarang
             </button>
+
+            {/* Review Badge */}
+            <div className="flex items-center gap-4 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-3 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm">
+              <div className="flex -space-x-3">
+                {[
+                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80",
+                  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64&q=80"
+                ].map((src, i) => (
+                  <img 
+                    key={i} 
+                    src={src} 
+                    alt="Student" 
+                    className="w-10 h-10 rounded-full border-2 border-yellow-400 object-cover" 
+                  />
+                ))}
+                <div className="w-10 h-10 rounded-full bg-black dark:bg-white border-2 border-yellow-400 flex flex-col items-center justify-center text-white dark:text-black">
+                  <span className="text-xs font-bold flex items-center">4.8 <Star className="w-2 h-2 text-yellow-400 ml-0.5 fill-yellow-400"/></span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col">
+                <span className="text-gray-900 dark:text-white text-sm font-bold">Student Review</span>
+                <span className="text-gray-600 dark:text-gray-400 text-xs">Based on 10k+ feedbacks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Image Column */}
+        <div className="flex-1 w-full relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+          
+          {/* Background Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-yellow-200/30 dark:bg-yellow-900/20 blur-[80px] rounded-full -z-10"></div>
+
+          {/* Main Image Container - Group Photo 4:3 aspect ratio */}
+          <div className="relative w-full max-w-[800px] aspect-[4/3]">
+            <img 
+              src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1000&auto=format&fit=crop"
+              alt="Workshop Team" 
+              className="w-full h-full object-cover rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 relative z-10"
+            />
+
+            {/* Floating Stats - Desktop: Absolute, Mobile: Hidden */}
+            <div className="hidden md:block">
+               {stats.map((stat, index) => (
+                <StatCard 
+                  key={index}
+                  {...stat}
+                  positionClass={`${stat.position} z-20`}
+                />
+               ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Mobile Stats Grid (Visible only on small screens) */}
+      <div className="grid grid-cols-2 gap-4 md:hidden">
+        {stats.map((stat, index) => (
+          <StatCard 
+            key={index}
+            {...stat}
+            positionClass={`relative w-full ${index === stats.length - 1 ? 'col-span-2' : ''}`}
+          />
+        ))}
+      </div>
+
     </section>
   );
 }
