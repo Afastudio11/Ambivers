@@ -124,9 +124,8 @@ export default function HeroSection() {
       </svg>
       <div className="relative z-10 max-w-5xl mx-auto px-4 lg:px-8 text-center">
         <div className="space-y-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" data-testid="text-hero-headline">
-            <span className="text-gray-900 dark:text-gray-900 font-bold">Bantu Raih </span>
-            <span className="font-bold text-gray-900 dark:text-gray-900">Impian</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900 dark:text-gray-900" data-testid="text-hero-headline">
+            Bantu Raih Impianmu Jadi Nyata!
           </h1>
           
           <p className="text-sm sm:text-base lg:text-lg text-gray-800 dark:text-gray-800 leading-relaxed max-w-3xl mx-auto" data-testid="text-hero-description">
