@@ -1,7 +1,21 @@
-import { Star, Users, Building2, School } from 'lucide-react';
+import { Star, Users, Building2, School, ArrowRight } from 'lucide-react';
 import { StatCard } from './StatCard';
 
 export default function HeroSection() {
+  const scrollToProgram = () => {
+    const element = document.getElementById("program");
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const stats = [
     {
       icon: <Building2 className="w-5 h-5 text-yellow-800" />,
@@ -51,8 +65,13 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center pt-4">
-            <button className="bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-lg font-semibold px-8 py-4 rounded-full transition-all hover:shadow-lg hover:-translate-y-1 active:translate-y-0" data-testid="button-mulai-sekarang">
-              Mulai Sekarang
+            <button 
+              onClick={scrollToProgram}
+              className="group relative flex items-center justify-center gap-3 rounded-full font-semibold cursor-pointer transition-all duration-300 px-6 py-4 sm:px-8 sm:py-4 border-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-base sm:text-lg"
+              data-testid="button-jelajahi"
+            >
+              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-1000 group-hover:rotate-[360deg]" />
+              <span>Jelajahi Program</span>
             </button>
 
             {/* Review Badge */}
