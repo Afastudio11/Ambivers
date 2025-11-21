@@ -1,8 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import clipboardIcon from "@assets/generated_images/clipboard_checklist_icon.png";
-import bookIcon from "@assets/generated_images/open_book_illustration.png";
-import pencilIcon from "@assets/generated_images/pencil_writing_tool.png";
+import laptopBooksIcon from "@assets/1 (3)_1763697804794.png";
+import backpackIcon from "@assets/1 (4)_1763697804794.png";
+import stackBooksIcon from "@assets/1 (1)_1763697804795.png";
+import schoolBuildingIcon from "@assets/1 (2)_1763697804795.png";
 
 const floatingVariants = {
   animate: {
@@ -72,13 +73,13 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FFC700] dark:bg-[#FFC700]">
-      {/* Top Left - Laptop Illustration */}
+      {/* Top Left - Laptop with Books */}
       <motion.div 
         className="absolute left-4 top-24 lg:left-16 lg:top-28 w-28 lg:w-40 opacity-90 z-10"
         variants={floatingVariants}
         animate="animate"
       >
-        <img src={clipboardIcon} alt="" className="w-full h-auto" />
+        <img src={laptopBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
 
       {/* Top Left - Decorative Arrow */}
@@ -86,13 +87,13 @@ export default function HeroSection() {
         <path d="M 10 50 Q 30 20, 60 40" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
       </svg>
 
-      {/* Top Right - Books Stack */}
+      {/* Top Right - Stack of Books */}
       <motion.div 
         className="absolute right-4 top-16 lg:right-20 lg:top-20 w-32 lg:w-48 opacity-90 z-10"
         variants={floatingVariants2}
         animate="animate"
       >
-        <img src={bookIcon} alt="" className="w-full h-auto" />
+        <img src={stackBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
 
       {/* Top Right - Decorative Arrow */}
@@ -107,7 +108,7 @@ export default function HeroSection() {
         variants={floatingVariants3}
         animate="animate"
       >
-        <img src={pencilIcon} alt="" className="w-full h-auto" />
+        <img src={backpackIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
 
       {/* Bottom Left - Decorative Arrow */}
@@ -115,13 +116,13 @@ export default function HeroSection() {
         <path d="M 10 80 Q 40 40, 80 50 T 110 30" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
       </svg>
 
-      {/* Bottom Right - Building Illustration */}
+      {/* Bottom Right - School Building */}
       <motion.div 
         className="absolute right-4 bottom-28 lg:right-16 lg:bottom-36 w-32 lg:w-48 opacity-90 z-10"
         variants={floatingVariants4}
         animate="animate"
       >
-        <img src={bookIcon} alt="" className="w-full h-auto" />
+        <img src={schoolBuildingIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
 
       {/* Bottom Right - Decorative Arrow */}
