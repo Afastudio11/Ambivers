@@ -32,7 +32,7 @@ export default function ProgramHero({
             <p className="text-base lg:text-lg text-muted-foreground dark:text-muted-foreground leading-relaxed" data-testid="text-program-hero-description">
               {description}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col gap-4 w-fit">
               {primaryButtonText && (
                 primaryButtonLink ? (
                   <a href={primaryButtonLink} target="_blank" rel="noopener noreferrer">
