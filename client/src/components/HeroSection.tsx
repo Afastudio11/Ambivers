@@ -50,10 +50,10 @@ export default function HeroSection() {
         <div className="flex-1 w-full xl:max-w-[45%] z-10 flex flex-col gap-6 lg:gap-8">
           
           <div className="space-y-1">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Poppins", "Plus Jakarta Sans", sans-serif', fontWeight: 900 }}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700 }}>
               Bantu Raih Impianmu
             </h1>
-             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Poppins", "Plus Jakarta Sans", sans-serif', fontWeight: 900 }}>
+             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"EB Garamond", serif', fontWeight: 900 }}>
               <span className="relative inline-block">
                 Jadi Nyata!
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-gray-900 opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
