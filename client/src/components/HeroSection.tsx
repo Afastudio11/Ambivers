@@ -45,9 +45,9 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-[#FFC107] dark:bg-[#FFC107]">
       
-      <div className="flex flex-col lg:flex-col xl:flex-row items-center gap-12 lg:gap-20 w-full">
+      <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-center gap-12 lg:gap-20 w-full max-w-7xl mx-auto">
         {/* Left Content Column */}
-        <div className="flex-1 w-full xl:max-w-[45%] z-10 flex flex-col gap-6 lg:gap-8">
+        <div className="flex-1 w-full xl:w-auto z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start">
           
           <div className="space-y-1">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700 }}>
