@@ -45,7 +45,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-[#FFC107] dark:bg-[#FFC107]">
       
-      <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-center gap-12 lg:gap-20 w-full max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-center gap-12 lg:gap-20 w-full">
         {/* Left Content Column */}
         <div className="flex-1 w-full xl:w-auto z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start">
           
@@ -130,7 +130,7 @@ export default function HeroSection() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-yellow-200/30 dark:bg-yellow-900/20 blur-[80px] rounded-full -z-10"></div>
 
           {/* Main Image Container - Group Photo 4:5 aspect ratio */}
-          <div className="relative w-full max-w-[850px] aspect-[4/5]">
+          <div className="relative w-full max-w-[950px] aspect-[4/5]">
             <img 
               src={workshopPhoto}
               alt="Workshop Team" 
