@@ -70,11 +70,33 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center pt-4">
             <button 
               onClick={scrollToProgram}
-              className="group relative flex items-center justify-center gap-3 rounded-full font-semibold cursor-pointer transition-all duration-300 px-6 py-4 sm:px-8 sm:py-4 border-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-base sm:text-lg"
+              className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-3"
+              style={{
+                backgroundColor: 'rgba(26, 26, 26, 0.9)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                boxShadow: 'inset 4px 4px 10px #000000, inset -4px -4px 10px #4d4d4d',
+                color: '#ffffff',
+                borderColor: '#333333',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #000000, inset -2px -2px 5px #4d4d4d, 2px 2px 5px #000000, -2px -2px 5px #4d4d4d';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #000000, inset -4px -4px 10px #4d4d4d';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #000000, inset -2px -2px 5px #4d4d4d, 2px 2px 5px #000000, -2px -2px 5px #4d4d4d';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #000000, inset -4px -4px 10px #4d4d4d';
+              }}
               data-testid="button-jelajahi"
             >
-              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-1000 group-hover:rotate-[360deg]" />
-              <span>Jelajahi Program</span>
+              <ArrowRight className="w-5 h-5" />
+              <span>Jelajahi Program Kami</span>
             </button>
 
             {/* Review Badge */}
