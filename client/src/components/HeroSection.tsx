@@ -81,12 +81,10 @@ export default function HeroSection() {
       >
         <img src={laptopBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-
       {/* Top Left - Decorative Arrow */}
       <svg className="absolute left-32 top-40 lg:left-56 lg:top-52 w-16 lg:w-24 opacity-60 z-0" viewBox="0 0 100 100">
         <path d="M 10 50 Q 30 20, 60 40" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
       </svg>
-
       {/* Top Right - Stack of Books */}
       <motion.div 
         className="absolute right-4 top-16 lg:right-20 lg:top-20 w-32 lg:w-48 opacity-90 z-10"
@@ -95,13 +93,11 @@ export default function HeroSection() {
       >
         <img src={stackBooksIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-
       {/* Top Right - Decorative Arrow */}
       <svg className="absolute right-32 top-32 lg:right-64 lg:top-40 w-20 lg:w-28 opacity-60 z-0" viewBox="0 0 120 80">
         <path d="M 10 10 Q 50 5, 80 30 T 110 50" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
         <path d="M 100 45 L 110 50 L 105 55" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
-
       {/* Bottom Left - Backpack */}
       <motion.div 
         className="absolute left-4 bottom-32 lg:left-12 lg:bottom-40 w-28 lg:w-40 opacity-90 z-10"
@@ -110,12 +106,10 @@ export default function HeroSection() {
       >
         <img src={backpackIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-
       {/* Bottom Left - Decorative Arrow */}
       <svg className="absolute left-28 bottom-48 lg:left-48 lg:bottom-56 w-20 lg:w-32 opacity-60 z-0" viewBox="0 0 120 100">
         <path d="M 10 80 Q 40 40, 80 50 T 110 30" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
       </svg>
-
       {/* Bottom Right - School Building */}
       <motion.div 
         className="absolute right-4 bottom-28 lg:right-16 lg:bottom-36 w-32 lg:w-48 opacity-90 z-10"
@@ -124,16 +118,14 @@ export default function HeroSection() {
       >
         <img src={schoolBuildingIcon} alt="" className="w-full h-auto drop-shadow-lg" />
       </motion.div>
-
       {/* Bottom Right - Decorative Arrow */}
       <svg className="absolute right-32 bottom-52 lg:right-60 lg:bottom-64 w-20 lg:w-28 opacity-60 z-0" viewBox="0 0 100 120">
         <path d="M 80 20 Q 50 60, 30 100" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round"/>
       </svg>
-
       <div className="relative z-10 max-w-5xl mx-auto px-4 lg:px-8 text-center">
         <div className="space-y-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" data-testid="text-hero-headline">
-            <span className="font-normal text-gray-900 dark:text-gray-900">Bantu Raih </span>
+            <span className="text-gray-900 dark:text-gray-900 font-bold">Bantu Raih </span>
             <span className="font-bold text-gray-900 dark:text-gray-900">Impian</span>
           </h1>
           
