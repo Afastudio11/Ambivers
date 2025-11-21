@@ -1,3 +1,4 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import ProgramCard from "./ProgramCard";
 import foundationImg from "@assets/generated_images/Ambivers_Foundation_program_card_7872171c.png";
 import asypImg from "@assets/generated_images/ASYP_program_card_05c8c781.png";
@@ -6,6 +7,7 @@ import utbkImg from "@assets/generated_images/Bimbel_UTBK_program_card_c5c70a1b.
 import studyAbroadImg from "@assets/generated_images/Study_Abroad_program_card_0f0c03b5.png";
 
 export default function ProgramsSection() {
+  const { ref, className } = useScrollAnimation();
   const programs = [
     {
       title: "Ambivers Foundation",
@@ -53,7 +55,7 @@ export default function ProgramsSection() {
 
   return (
     <section id="program" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div ref={ref} className={`max-w-7xl mx-auto px-4 lg:px-8 ${className}`}>
         <h2 className="text-3xl lg:text-5xl font-bold text-center mb-16" data-testid="text-programs-title">
           Program kami
         </h2>

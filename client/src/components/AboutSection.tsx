@@ -1,12 +1,15 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import aboutPhoto1 from "@assets/selfie-time-26356foo.jpg_sharp.jpg_1762451240814.jpg";
 import aboutPhoto2 from "@assets/IMG20220806150217_Original_1762451240815.jpg";
 import aboutPhoto3 from "@assets/DSCF0449_1762451240816.jpg";
 import aboutPhoto4 from "@assets/about-photo-4.jpg";
 
 export default function AboutSection() {
+  const { ref, className } = useScrollAnimation();
+
   return (
     <section id="tentang-kami" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-950">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div ref={ref} className={`max-w-7xl mx-auto px-4 lg:px-8 ${className}`}>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-testid="text-about-title">
