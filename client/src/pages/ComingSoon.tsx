@@ -38,9 +38,10 @@ export default function ComingSoon() {
             Fitur login dan registrasi akan segera tersedia. Nantikan update selanjutnya!
           </p>
           
-          <Link href="/" data-testid="link-home">
-            <button 
-              className="rounded-full px-8 py-2.5 text-lg font-semibold cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-2"
+          <div className="flex justify-center">
+            <Link href="/" data-testid="link-home">
+              <button 
+                className="rounded-full px-8 py-2.5 text-lg font-semibold cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-2"
               style={{
                 backgroundColor: 'rgba(255, 199, 0, 0.9)',
                 backdropFilter: 'blur(12px)',
@@ -67,8 +68,9 @@ export default function ComingSoon() {
             >
               <Home className="w-5 h-5" />
               Kembali ke Beranda
-            </button>
-          </Link>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
