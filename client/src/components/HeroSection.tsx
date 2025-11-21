@@ -75,7 +75,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FFC700] dark:bg-[#FFC700]">
       {/* Top Left - Laptop with Books */}
       <motion.div 
-        className="absolute left-8 top-32 lg:left-32 lg:top-40 w-28 lg:w-40 opacity-90 z-10"
+        className="absolute left-8 top-32 lg:left-32 lg:top-40 w-40 lg:w-56 opacity-90 z-10"
         variants={floatingVariants}
         animate="animate"
       >
@@ -84,7 +84,7 @@ export default function HeroSection() {
 
       {/* Top Right - Stack of Books */}
       <motion.div 
-        className="absolute right-8 top-24 lg:right-32 lg:top-32 w-32 lg:w-48 opacity-90 z-10"
+        className="absolute right-8 top-24 lg:right-32 lg:top-32 w-44 lg:w-64 opacity-90 z-10"
         variants={floatingVariants2}
         animate="animate"
       >
@@ -93,7 +93,7 @@ export default function HeroSection() {
 
       {/* Bottom Left - Backpack */}
       <motion.div 
-        className="absolute left-8 bottom-40 lg:left-32 lg:bottom-48 w-28 lg:w-40 opacity-90 z-10"
+        className="absolute left-8 bottom-40 lg:left-32 lg:bottom-48 w-40 lg:w-56 opacity-90 z-10"
         variants={floatingVariants3}
         animate="animate"
       >
@@ -102,7 +102,7 @@ export default function HeroSection() {
 
       {/* Bottom Right - School Building */}
       <motion.div 
-        className="absolute right-8 bottom-36 lg:right-32 lg:bottom-44 w-32 lg:w-48 opacity-90 z-10"
+        className="absolute right-8 bottom-36 lg:right-32 lg:bottom-44 w-44 lg:w-64 opacity-90 z-10"
         variants={floatingVariants4}
         animate="animate"
       >
