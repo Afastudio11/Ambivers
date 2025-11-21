@@ -26,9 +26,9 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="px-6 md:px-12 lg:px-20 pt-8 pb-16 md:pt-12 lg:pt-16 flex flex-col gap-12 lg:gap-16 bg-white dark:bg-gray-950">
+    <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-white dark:bg-gray-950">
       
-      <div className="flex flex-col lg:flex-col xl:flex-row items-center gap-12 lg:gap-20">
+      <div className="flex flex-col lg:flex-col xl:flex-row items-center gap-12 lg:gap-20 w-full">
         {/* Left Content Column */}
         <div className="flex-1 w-full xl:max-w-[45%] z-10 flex flex-col gap-6 lg:gap-8">
           
