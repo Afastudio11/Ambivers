@@ -130,7 +130,7 @@ export default function HeroSection() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-yellow-200/30 dark:bg-yellow-900/20 blur-[80px] rounded-full -z-10"></div>
 
           {/* Main Image Container - Group Photo 3:4 aspect ratio */}
-          <div className="relative w-full max-w-[950px] aspect-[3/4]">
+          <div className="relative w-full max-w-[650px] aspect-[3/4]">
             <img 
               src={workshopPhoto}
               alt="Workshop Team" 
