@@ -45,15 +45,15 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-[#FFC107] dark:bg-[#FFC107]">
       
-      <div className="flex flex-col lg:flex-col xl:flex-row items-start justify-between gap-0 lg:gap-2 w-full px-0">
+      <div className="flex flex-col lg:flex-col xl:flex-row items-center justify-center gap-0 lg:gap-2 w-full max-w-7xl mx-auto">
         {/* Left Content Column */}
-        <div className="flex-0 w-full xl:w-[35%] z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start pt-4 xl:pt-0">
+        <div className="flex-1 w-full xl:w-auto z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start">
           
-          <div className="space-y-1 w-full">
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700 }}>
+          <div className="space-y-1">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700 }}>
               Bantu Raih Impianmu
             </h1>
-             <h1 className="text-6xl md:text-7xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"EB Garamond", serif', fontWeight: 900 }}>
+             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"EB Garamond", serif', fontWeight: 900 }}>
               <span className="relative inline-block">
                 Jadi Nyata!
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-gray-900 opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -124,7 +124,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image Column */}
-        <div className="flex-1 w-full xl:w-[65%] relative flex justify-center lg:justify-end items-start mt-8 lg:mt-0 min-h-fit">
+        <div className="flex-1 w-full relative flex justify-center lg:justify-end mt-8 lg:mt-0">
           
           {/* Background Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-yellow-200/30 dark:bg-yellow-900/20 blur-[80px] rounded-full -z-10"></div>
