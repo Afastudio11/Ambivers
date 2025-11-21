@@ -45,9 +45,9 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-[#FFC107] dark:bg-[#FFC107]">
       
-      <div className="flex flex-col lg:flex-col xl:flex-row items-stretch justify-between gap-8 lg:gap-16 w-full">
+      <div className="flex flex-col lg:flex-col xl:flex-row items-start justify-start gap-12 lg:gap-20 w-full">
         {/* Left Content Column */}
-        <div className="flex-1 w-full xl:w-auto z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start justify-start pt-0 xl:pt-8">
+        <div className="flex-1 w-full xl:flex-0 z-10 flex flex-col gap-6 lg:gap-8 items-center xl:items-start">
           
           <div className="space-y-1">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700 }}>
@@ -124,7 +124,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image Column */}
-        <div className="flex-1 w-full relative flex justify-center lg:justify-end items-start mt-8 lg:mt-0 pt-4 xl:pt-0">
+        <div className="flex-1 w-full relative flex justify-center items-start mt-8 lg:mt-0">
           
           {/* Background Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-yellow-200/30 dark:bg-yellow-900/20 blur-[80px] rounded-full -z-10"></div>
