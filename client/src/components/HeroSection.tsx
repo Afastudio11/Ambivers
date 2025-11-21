@@ -2,6 +2,7 @@ import { Star, Users, Building2, School, ArrowRight } from 'lucide-react';
 import { StatCard } from './StatCard';
 import ridhaPhoto from "@assets/Ridha Alfinanianty_1763550478826.png";
 import margarethPhoto from "@assets/Margareth Angelin Chatarina_1763550478825.png";
+import workshopPhoto from "@assets/IMG_1980_1763700220618.JPG";
 
 export default function HeroSection() {
   const scrollToProgram = () => {
@@ -42,27 +43,27 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-white dark:bg-gray-950">
+    <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-yellow-300 dark:bg-yellow-400">
       
       <div className="flex flex-col lg:flex-col xl:flex-row items-center gap-12 lg:gap-20 w-full">
         {/* Left Content Column */}
         <div className="flex-1 w-full xl:max-w-[45%] z-10 flex flex-col gap-6 lg:gap-8">
           
           <div className="space-y-1">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900">
               Bantu Raih Impianmu
             </h1>
-             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white">
+             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900">
               <span className="relative inline-block">
                 Jadi Nyata!
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-white opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-gray-900 opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="5" fill="none" />
                 </svg>
               </span>
             </h1>
           </div>
 
-          <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl font-medium">
+          <p className="text-gray-800 dark:text-gray-800 text-lg md:text-xl leading-relaxed max-w-xl font-medium">
             Ambivers telah memberikan dampak positif bagi <span className="font-bold">50.000+</span> pelajar di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
           </p>
 
@@ -77,7 +78,7 @@ export default function HeroSection() {
             </button>
 
             {/* Review Badge */}
-            <div className="flex items-center gap-4 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-3 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm">
+            <div className="flex items-center gap-4 bg-white/70 dark:bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm">
               <div className="flex -space-x-3">
                 {[ridhaPhoto, margarethPhoto].map((src, i) => (
                   <img 
@@ -93,8 +94,8 @@ export default function HeroSection() {
               </div>
               
               <div className="flex flex-col">
-                <span className="text-gray-900 dark:text-white text-sm font-bold">Student Review</span>
-                <span className="text-gray-600 dark:text-gray-400 text-xs">Based on 10k+ feedbacks</span>
+                <span className="text-gray-900 dark:text-gray-900 text-sm font-bold">Student Review</span>
+                <span className="text-gray-700 dark:text-gray-700 text-xs">Based on 10k+ feedbacks</span>
               </div>
             </div>
           </div>
@@ -109,7 +110,7 @@ export default function HeroSection() {
           {/* Main Image Container - Group Photo 4:3 aspect ratio */}
           <div className="relative w-full max-w-[800px] aspect-[4/3]">
             <img 
-              src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1000&auto=format&fit=crop"
+              src={workshopPhoto}
               alt="Workshop Team" 
               className="w-full h-full object-cover rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 relative z-10"
             />
