@@ -1,5 +1,7 @@
 import { Star, Users, Building2, School, ArrowRight } from 'lucide-react';
 import { StatCard } from './StatCard';
+import ridhaPhoto from "@assets/Ridha Alfinanianty_1763550478826.png";
+import margarethPhoto from "@assets/Margareth Angelin Chatarina_1763550478825.png";
 
 export default function HeroSection() {
   const scrollToProgram = () => {
@@ -77,10 +79,7 @@ export default function HeroSection() {
             {/* Review Badge */}
             <div className="flex items-center gap-4 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-3 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm">
               <div className="flex -space-x-3">
-                {[
-                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80",
-                  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64&q=80"
-                ].map((src, i) => (
+                {[ridhaPhoto, margarethPhoto].map((src, i) => (
                   <img 
                     key={i} 
                     src={src} 
