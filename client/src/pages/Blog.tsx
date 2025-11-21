@@ -140,6 +140,56 @@ const blogPosts: BlogPost[] = [
     readTime: "5 menit",
     image: domesticScholarshipImg,
     author: "Tim Ambivers"
+  },
+  {
+    id: 12,
+    title: "Panduan Lengkap Persiapan Wawancara Masuk Universitas Impian",
+    excerpt: "Wawancara adalah tahap krusial dalam seleksi masuk universitas. Pelajari strategi dan persiapan mendalam untuk membuat kesan terbaik di hadapan pewawancara dan meningkatkan peluang penerimaan ke universitas impianmu.",
+    category: "Tips & Trik",
+    date: "18 Januari 2025",
+    readTime: "9 menit",
+    image: majorSelectionImg,
+    author: "Dr. Rianti Wijaya"
+  },
+  {
+    id: 13,
+    title: "Mengembangkan Kemampuan Leadership untuk Generasi Muda Indonesia",
+    excerpt: "Leadership bukan hanya tentang memimpin, tetapi juga tentang memberdayakan orang lain. Temukan bagaimana mengembangkan soft skills kepemimpinan yang dibutuhkan oleh industri modern dan organisasi global.",
+    category: "Pengembangan Diri",
+    date: "15 Januari 2025",
+    readTime: "10 menit",
+    image: softSkillsImg,
+    author: "Budi Santoso"
+  },
+  {
+    id: 14,
+    title: "Tren Industri Tech 2025 dan Karir yang Paling Dibutuhkan",
+    excerpt: "Industri teknologi terus berkembang dengan pesat. Pelajari tren terbaru, skill yang paling dicari perusahaan tech, dan persiapan yang perlu dilakukan untuk mendapatkan posisi di perusahaan tech terkemuka.",
+    category: "Karir",
+    date: "10 Januari 2025",
+    readTime: "8 menit",
+    image: techCareerImg,
+    author: "Ahmad Syaiful"
+  },
+  {
+    id: 15,
+    title: "Strategi Menulis Essay Beasiswa yang Memenangkan Hati Reviewer",
+    excerpt: "Essay beasiswa adalah kesempatan untuk menceritakan kisahmu kepada reviewer. Pelajari struktur, tips menulis persuasif, dan contoh essay yang berhasil mendapatkan beasiswa bergengsi dari institusi terkemuka.",
+    category: "Beasiswa",
+    date: "8 Januari 2025",
+    readTime: "9 menit",
+    image: studyAbroadImg,
+    author: "Siti Nurhaliza"
+  },
+  {
+    id: 16,
+    title: "Mengatasi Kecemasan Akademik dan Stres Ujian dengan Cara Sehat",
+    excerpt: "Kecemasan akademik adalah masalah umum yang dihadapi oleh banyak siswa. Temukan strategi psikologis dan praktis untuk mengelola stres ujian, meningkatkan kepercayaan diri, dan menciptakan ruang belajar yang sehat.",
+    category: "Pendidikan",
+    date: "5 Januari 2025",
+    readTime: "8 menit",
+    image: mentoringImg,
+    author: "Psikolog Pendidikan Ambivers"
   }
 ];
 
