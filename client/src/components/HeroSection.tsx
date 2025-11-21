@@ -43,7 +43,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-yellow-300 dark:bg-yellow-400">
+    <section className="min-h-screen px-6 md:px-12 lg:px-20 flex items-center justify-center bg-[#FFC107] dark:bg-[#FFC107]">
       
       <div className="flex flex-col lg:flex-col xl:flex-row items-center gap-12 lg:gap-20 w-full">
         {/* Left Content Column */}
@@ -115,30 +115,10 @@ export default function HeroSection() {
               className="w-full h-full object-cover rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 relative z-10"
             />
 
-            {/* Floating Stats - Desktop: Absolute, Mobile: Hidden */}
-            <div className="hidden md:block">
-               {stats.map((stat, index) => (
-                <StatCard 
-                  key={index}
-                  {...stat}
-                  positionClass={`${stat.position} z-20`}
-                />
-               ))}
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Stats Grid (Visible only on small screens) */}
-      <div className="grid grid-cols-2 gap-4 md:hidden">
-        {stats.map((stat, index) => (
-          <StatCard 
-            key={index}
-            {...stat}
-            positionClass={`relative w-full ${index === stats.length - 1 ? 'col-span-2' : ''}`}
-          />
-        ))}
-      </div>
 
     </section>
   );
