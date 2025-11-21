@@ -53,7 +53,7 @@ export default function HeroSection() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700 }}>
               Bantu Raih Impianmu
             </h1>
-             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"EB Garamond", serif', fontWeight: 900 }}>
+             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-gray-900" style={{ fontFamily: '"EB Garamond", serif', fontWeight: 900 }}>
               <span className="relative inline-block">
                 Jadi Nyata!
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-gray-900 dark:text-gray-900 opacity-20" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -64,13 +64,35 @@ export default function HeroSection() {
           </div>
 
           <p className="text-gray-800 dark:text-gray-800 text-lg md:text-xl leading-relaxed max-w-xl font-medium">
-            Ambivers telah memberikan dampak bagi <span className="font-black text-2xl md:text-3xl bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">50.000+</span> pelajar di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
+            Ambivers telah memberikan dampak bagi <span className="font-black text-2xl md:text-3xl text-black">50.000+</span> pelajar di seluruh Indonesia. Kami membantu lebih banyak pelajar selangkah lebih dekat menuju mimpinya, sekaligus membuka kesempatan yang lebih luas untuk melanjutkan pendidikan tinggi.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center pt-4">
+          <div className="flex flex-col gap-6 items-start pt-6">
+            {/* Review Badge */}
+            <div className="flex items-center gap-4 bg-white/70 dark:bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm">
+              <div className="flex -space-x-3">
+                {[ridhaPhoto, margarethPhoto].map((src, i) => (
+                  <img 
+                    key={i} 
+                    src={src} 
+                    alt="Student" 
+                    className="w-10 h-10 rounded-full border-2 border-yellow-400 object-cover" 
+                  />
+                ))}
+                <div className="w-10 h-10 rounded-full bg-black dark:bg-white border-2 border-yellow-400 flex flex-col items-center justify-center text-white dark:text-black">
+                  <span className="text-xs font-bold flex items-center">4.8 <Star className="w-2 h-2 text-yellow-400 ml-0.5 fill-yellow-400"/></span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col">
+                <span className="text-gray-900 dark:text-gray-900 text-sm font-bold">Student Review</span>
+                <span className="text-gray-700 dark:text-gray-700 text-xs">Based on 10k+ feedbacks</span>
+              </div>
+            </div>
+
             <button 
               onClick={scrollToProgram}
-              className="rounded-full px-8 py-3.5 text-base md:text-lg font-semibold cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-3"
+              className="rounded-full px-10 py-4 text-lg md:text-xl font-semibold cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-3 w-full sm:w-auto"
               style={{
                 backgroundColor: 'rgba(26, 26, 26, 0.9)',
                 backdropFilter: 'blur(12px)',
@@ -95,31 +117,9 @@ export default function HeroSection() {
               }}
               data-testid="button-jelajahi"
             >
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-6 h-6" />
               <span>Jelajahi Program Kami</span>
             </button>
-
-            {/* Review Badge */}
-            <div className="flex items-center gap-4 bg-white/70 dark:bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-black/5 dark:border-white/10 shadow-sm">
-              <div className="flex -space-x-3">
-                {[ridhaPhoto, margarethPhoto].map((src, i) => (
-                  <img 
-                    key={i} 
-                    src={src} 
-                    alt="Student" 
-                    className="w-10 h-10 rounded-full border-2 border-yellow-400 object-cover" 
-                  />
-                ))}
-                <div className="w-10 h-10 rounded-full bg-black dark:bg-white border-2 border-yellow-400 flex flex-col items-center justify-center text-white dark:text-black">
-                  <span className="text-xs font-bold flex items-center">4.8 <Star className="w-2 h-2 text-yellow-400 ml-0.5 fill-yellow-400"/></span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col">
-                <span className="text-gray-900 dark:text-gray-900 text-sm font-bold">Student Review</span>
-                <span className="text-gray-700 dark:text-gray-700 text-xs">Based on 10k+ feedbacks</span>
-              </div>
-            </div>
           </div>
         </div>
 
