@@ -133,7 +133,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 lg:px-8 text-center">
         <div className="space-y-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" data-testid="text-hero-headline">
-            <span className="italic font-normal text-gray-900 dark:text-gray-900">Bantu Raih </span>
+            <span className="font-normal text-gray-900 dark:text-gray-900">Bantu Raih </span>
             <span className="font-bold text-gray-900 dark:text-gray-900">Impian</span>
           </h1>
           
