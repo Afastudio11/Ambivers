@@ -37,7 +37,29 @@ export default function ProgramHero({
                 primaryButtonLink ? (
                   <a href={primaryButtonLink} target="_blank" rel="noopener noreferrer">
                     <button 
-                      className="rounded-md px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 bg-[#FFC700] dark:bg-[#FFC700] text-gray-900 dark:text-gray-900 hover-elevate active-elevate-2"
+                      className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                      style={{
+                        backgroundColor: 'rgba(255, 199, 0, 0.9)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                        color: '#1a1a1a',
+                        borderColor: '#FFD700',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
+                      onFocus={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                      }}
                       data-testid="button-program-hero-primary"
                     >
                       {primaryButtonText}
@@ -45,7 +67,29 @@ export default function ProgramHero({
                   </a>
                 ) : (
                   <button 
-                    className="rounded-md px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 bg-[#FFC700] dark:bg-[#FFC700] text-gray-900 dark:text-gray-900 hover-elevate active-elevate-2"
+                    className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                    style={{
+                      backgroundColor: 'rgba(255, 199, 0, 0.9)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)',
+                      boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                      color: '#1a1a1a',
+                      borderColor: '#FFD700',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                    }}
                     onClick={onPrimaryClick}
                     data-testid="button-program-hero-primary"
                   >
@@ -57,7 +101,29 @@ export default function ProgramHero({
                 secondaryButtonLink ? (
                   <a href={secondaryButtonLink} target="_blank" rel="noopener noreferrer">
                     <button 
-                      className="rounded-md px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 bg-secondary dark:bg-secondary text-secondary-foreground dark:text-secondary-foreground hover-elevate active-elevate-2"
+                      className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                      style={{
+                        backgroundColor: 'rgba(91, 155, 213, 0.9)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        boxShadow: 'inset 4px 4px 10px #3a6b9e, inset -4px -4px 10px #7cb3ff',
+                        color: '#ffffff',
+                        borderColor: '#4a8fd9',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #3a6b9e, inset -2px -2px 5px #7cb3ff, 2px 2px 5px #3a6b9e, -2px -2px 5px #7cb3ff';
+                        e.currentTarget.style.transform = 'translateY(-1px)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #3a6b9e, inset -4px -4px 10px #7cb3ff';
+                        e.currentTarget.style.transform = 'translateY(0)';
+                      }}
+                      onFocus={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #3a6b9e, inset -2px -2px 5px #7cb3ff, 2px 2px 5px #3a6b9e, -2px -2px 5px #7cb3ff';
+                      }}
+                      onBlur={(e) => {
+                        e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #3a6b9e, inset -4px -4px 10px #7cb3ff';
+                      }}
                       data-testid="button-program-hero-secondary"
                     >
                       {secondaryButtonText}
@@ -65,7 +131,29 @@ export default function ProgramHero({
                   </a>
                 ) : (
                   <button 
-                    className="rounded-md px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 bg-secondary dark:bg-secondary text-secondary-foreground dark:text-secondary-foreground hover-elevate active-elevate-2"
+                    className="rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all duration-200 border-2"
+                    style={{
+                      backgroundColor: 'rgba(91, 155, 213, 0.9)',
+                      backdropFilter: 'blur(12px)',
+                      WebkitBackdropFilter: 'blur(12px)',
+                      boxShadow: 'inset 4px 4px 10px #3a6b9e, inset -4px -4px 10px #7cb3ff',
+                      color: '#ffffff',
+                      borderColor: '#4a8fd9',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #3a6b9e, inset -2px -2px 5px #7cb3ff, 2px 2px 5px #3a6b9e, -2px -2px 5px #7cb3ff';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #3a6b9e, inset -4px -4px 10px #7cb3ff';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #3a6b9e, inset -2px -2px 5px #7cb3ff, 2px 2px 5px #3a6b9e, -2px -2px 5px #7cb3ff';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #3a6b9e, inset -4px -4px 10px #7cb3ff';
+                    }}
                     onClick={onSecondaryClick}
                     data-testid="button-program-hero-secondary"
                   >

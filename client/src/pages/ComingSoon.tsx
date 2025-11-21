@@ -39,14 +39,35 @@ export default function ComingSoon() {
           </p>
           
           <Link href="/" data-testid="link-home">
-            <Button 
-              size="lg"
-              className="bg-[#FFC700] text-black hover:bg-[#FFD700] font-semibold px-8"
+            <button 
+              className="rounded-full px-8 py-2.5 text-lg font-semibold cursor-pointer transition-all duration-200 border-2 flex items-center justify-center gap-2"
+              style={{
+                backgroundColor: 'rgba(255, 199, 0, 0.9)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                boxShadow: 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d',
+                color: '#1a1a1a',
+                borderColor: '#FFD700',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 2px 2px 5px #d9a700, inset -2px -2px 5px #ffe14d, 2px 2px 5px #d9a700, -2px -2px 5px #ffe14d';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 4px 4px 10px #d9a700, inset -4px -4px 10px #ffe14d';
+              }}
               data-testid="button-back-home"
             >
-              <Home className="w-5 h-5 mr-2" />
+              <Home className="w-5 h-5" />
               Kembali ke Beranda
-            </Button>
+            </button>
           </Link>
         </div>
       </div>
