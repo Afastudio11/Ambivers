@@ -1,4 +1,4 @@
-import teamImage from "@assets/Desain tanpa judul(1)_1763705270048.png";
+import teamImage from "@assets/Desain tanpa judul(2)_1763706595816.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "wouter";
